@@ -1,0 +1,46 @@
+courseId: courseID 
+lang: y
+title: Petljadoc Course
+description:
+  willLearn: 
+    - Preview of Petljadoc course
+  requirements:
+    - Petljadoc
+    - Runestone
+    - Sphinx
+  toc:
+    - Intro to Petljadoc INDEX.yaml
+  externalLinks:  
+    - text: Sphinx Docs
+      href: https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html
+    - text: Petljadoc
+      href: https://github.com/Petlja/PetljaDoc/blob/master/README.md
+    - text: Runestone Interactive
+      href: https://github.com/RunestoneInteractive/overview
+  longDescription: |
+    This is an example of a long description...
+  shortDescription: Курс вероватноће и статистике за средњу школу
+
+
+lessons:
+  - title: Статистика
+    guid: c2c651cd-53d9-4a3d-ba4f-650b8422f0bc
+    description: Your first lesson. Description is not required attribute
+    folder: 1_lekcija
+    activities:
+      - type: reading
+        title: Појам статистике и њени елементи
+        file: 1_st.rst 
+        description: #Optional
+        guid: 71c00155-f7f3-410d-8019-e88d22cb7f01
+      - type: reading
+        title: Подела и развој статистике
+        file: 2_st.rst 
+        description: #Optional
+        guid: 71c00155-m4b4-410d-8019-e88d22cb7f01
+      - type: reading
+        title: Примена и значај статистике
+        file: 3_st.rst 
+        description: #Optional
+        guid: 98d00155-m4b4-410d-8019-e88d22cb7f01
+      
