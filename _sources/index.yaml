@@ -27,20 +27,15 @@ lessons:
     folder: 2_lekcija
     activities:
       - type: reading
-        title: Појам статистике и њени елементи
+        title: Подаци
         file: 2_pod.rst 
         description: #Optional
         guid: 71c03455-f7f3-410d-8019-e88d22cb7f01
       - type: reading
-        title: Подела и развој статистике
+        title: Дескриптивна статистика
         file: 2_pod.rst 
         description: #Optional
         guid: 71c00908-m4b4-410d-8019-e88d22cb7f01
-      - type: reading
-        title: Примена и значај статистике
-        file: 2_pod.rst 
-        description: #Optional
-        guid: 98d00973-m4b4-410d-8019-e88d22cb7f01
   - title: Статистика
     guid: c2c651cd-53d9-4a3d-ba4f-650b8422f0bc
     description: Your first lesson. Description is not required attribute
