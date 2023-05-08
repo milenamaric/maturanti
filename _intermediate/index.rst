@@ -16,4 +16,5 @@ Petljadoc Course
     :hidden:
     :maxdepth: 3
 
+    Подаци <2_lekcija/index>
     Статистика <1_lekcija/index>

@@ -27,6 +27,31 @@ lang: y
 lessons:
 - activities:
   - description: ''
+    file: 2_pod.html
+    guid: 71c03455-f7f3-410d-8019-e88d22cb7f01
+    src: 2_pod.rst
+    title: Појам статистике и њени елементи
+    type: reading
+  - description: ''
+    file: 2_pod.html
+    guid: 71c00908-m4b4-410d-8019-e88d22cb7f01
+    src: 2_pod.rst
+    title: Подела и развој статистике
+    type: reading
+  - description: ''
+    file: 2_pod.html
+    guid: 98d00973-m4b4-410d-8019-e88d22cb7f01
+    src: 2_pod.rst
+    title: Примена и значај статистике
+    type: reading
+  archived-activities: []
+  description: Your first lesson. Description is not required attribute
+  folder: 2_lekcija
+  guid: c2c6523d-53d9-4a3d-ba4f-650b8422f0bc
+  normalized_title: Подаци
+  title: Подаци
+- activities:
+  - description: ''
     file: 1_st.html
     guid: 71c00155-f7f3-410d-8019-e88d22cb7f01
     src: 1_st.rst
