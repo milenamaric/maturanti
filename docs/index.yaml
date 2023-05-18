@@ -9,20 +9,23 @@ description:
     text: Runestone Interactive
   longDescription: '<div class="document">
 
-    <p>This is an example of a long description...</p>
+    <p>Овај курс је намењен свим заинтересованим ученицима за изучавање основних појмова
+    из области вероватноће и статистике. Курс је настао као резултат писања матурског
+    рада из математике рада осам ученика Девете гимназије &quot;Михаило Петровић Алас&quot;.
+    Професор ментор, Милена Марић.</p>
 
     </div>
 
     '
   requirements:
-  - Petljadoc
-  - Runestone
-  - Sphinx
+  - Добра воља!
   shortDescription: Курс вероватноће и статистике за средњу школу
   toc:
   - Intro to Petljadoc INDEX.yaml
   willLearn:
-  - Preview of Petljadoc course
+  - комбинаторика
+  - основи појмови вероватноће
+  - основни појмови статистике
 lang: y
 lessons:
 - activities:
@@ -30,19 +33,13 @@ lessons:
     file: 2_pod.html
     guid: 71c03455-f7f3-410d-8019-e88d22cb7f01
     src: 2_pod.rst
-    title: Појам статистике и њени елементи
+    title: Подаци
     type: reading
   - description: ''
     file: 2_pod.html
     guid: 71c00908-m4b4-410d-8019-e88d22cb7f01
     src: 2_pod.rst
-    title: Подела и развој статистике
-    type: reading
-  - description: ''
-    file: 2_pod.html
-    guid: 98d00973-m4b4-410d-8019-e88d22cb7f01
-    src: 2_pod.rst
-    title: Примена и значај статистике
+    title: Дескриптивна статистика
     type: reading
   archived-activities: []
   description: Your first lesson. Description is not required attribute

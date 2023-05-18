@@ -3,7 +3,9 @@ lang: y
 title: Petljadoc Course
 description:
   willLearn: 
-    - Preview of Petljadoc course
+    - комбинаторика
+    - основи појмови вероватноће
+    - основни појмови статистике
   requirements:
     - Добра воља!
   
