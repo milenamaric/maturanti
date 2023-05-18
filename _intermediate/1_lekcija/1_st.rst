@@ -133,4 +133,9 @@
 
 
 
-Ако желиш још мало да се упознаш са основама статистике `линк <https://www.youtube.com/watch?v=sxQaBpKfDRk>`_.
+Ако желиш још мало да се упознаш са основама статистике 
+
+.. ytpopup:: sxQaBpKfDRk
+    :width: 935
+    :height: 600
+    :align: center

@@ -5,9 +5,8 @@ description:
   willLearn: 
     - Preview of Petljadoc course
   requirements:
-    - Petljadoc
-    - Runestone
-    - Sphinx
+    - Добра воља!
+  
   toc:
     - Intro to Petljadoc INDEX.yaml
   externalLinks:  
@@ -18,7 +17,7 @@ description:
     - text: Runestone Interactive
       href: https://github.com/RunestoneInteractive/overview
   longDescription: |
-    This is an example of a long description...
+    Овај курс је намењен свим заинтересованим ученицима за изучавање основних појмова из области вероватноће и статистике. Курс је настао као резултат писања матурског рада из математике рада осам ученика Девете гимназије "Михаило Петровић Алас". Професор ментор, Милена Марић. 
   shortDescription: Курс вероватноће и статистике за средњу школу
 lessons:
   - title: Подаци

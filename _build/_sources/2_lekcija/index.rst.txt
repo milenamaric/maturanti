@@ -7,4 +7,3 @@
 
     2_pod.rst
     2_pod.rst
-    2_pod.rst
