@@ -54,6 +54,12 @@ lessons:
     src: 1_lekcija.rst
     title: Емпиријска вероватноћа
     type: reading
+  - description: ''
+    file: 2_lekcija.html
+    guid: 82c03488-f7f3-410d-8019-e88d22cb7f01
+    src: 2_lekcija.rst
+    title: Геометријска вероватноћа
+    type: reading
   archived-activities: []
   description: Your first lesson. Description is not required attribute
   folder: 3_lekcija

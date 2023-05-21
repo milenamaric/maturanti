@@ -6,3 +6,4 @@
     :maxdepth: 1
 
     1_lekcija.rst
+    2_lekcija.rst

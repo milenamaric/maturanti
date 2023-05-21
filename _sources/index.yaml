@@ -47,6 +47,11 @@ lessons:
         file: 1_lekcija.rst 
         description: #Optional
         guid: 71c03488-f7f3-410d-8019-e88d22cb7f01
+      - type: reading
+        title: Геометријска вероватноћа
+        file: 2_lekcija.rst 
+        description: #Optional
+        guid: 82c03488-f7f3-410d-8019-e88d22cb7f01
   - title: Статистика
     guid: c2c651cd-53d9-4a3d-ba4f-650b8422f0bc
     description: Your first lesson. Description is not required attribute

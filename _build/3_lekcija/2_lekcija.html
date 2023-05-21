@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Подаци</title>
+    <title>Геометријска вероватноћа</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
@@ -130,6 +130,7 @@
     <script src="../_static/jszip.js"></script>
     <script src="../_static/editor-i18n.en.js"></script>
     <script src="../_static/editor-i18n.y.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../_static/jquery-fix.js"></script>
     <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
@@ -277,13 +278,177 @@
     <div id="main-content">
     
   <section id="id1">
-<h1>Подаци<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="2_pod.html">Подаци</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2_pod.html">Подаци</a></li>
-</ul>
-</div>
+<h1>Геометријска вероватноћа<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<p>У овом делу ћеш научити још један начин рачунања вероватноће,
+овог пута израчунавање броја могућих решења биће рађено коришћењем
+геометријских појмова као што су: <em>дужина</em>, <em>површина</em> или <em>запремина</em>.</p>
+<p>Геометријска вероватноћа је нарочито корисна код проблема са непрекидним бројем решења као нпр:</p>
+<ol class="arabic simple">
+<li><p>Аутобус ће доћи на станицу у неком тренутку између 12 и 1 сат.
+Ако се појавиш у 12:30 колика је вероватноћа да ћеш стићи на аутобус?</p></li>
+</ol>
+<a class="reference internal image-reference" href="../_images/brprava.png"><img alt="../_images/brprava.png" class="align-center" src="../_images/brprava.png" style="width: 500px;" /></a>
+<p>Приказаћемо овај проблем геометријски преко бојевне праве.
+Уочавамо да је дужина од 12:30 до 1 иста као од 12 до 12.30, па је решење <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span>.</p>
+<p>У овоj лекцији проћи ћеш кроз <em>једнодимензионалне</em>, <em>дводимензионалне</em> и <em>тродимензионалне</em>
+примере.</p>
+<section id="id2">
+<h2>Једнодимензионална геометријска варијабилност<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<p>Нека је x неки број од 0 до 7. Колика је вароватноћа да је x ближе 0 него 4?</p>
+<a class="reference internal image-reference" href="../_images/numberline5.png"><img alt="../_images/numberline5.png" class="align-center" src="../_images/numberline5.png" style="width: 600px;" /></a>
+<p>Број решења овог задатка је бесконачан. Али са бројевне праве увиђамо да ће x бити ближе 2
+ако   <strong>0&lt;x&lt;2</strong>.</p>
+<p>Сада искористимо дужине од могућих решења и убацимо их у регуларну формулу за вероватноћу:</p>
+<p>P(x ближе 0 него 4) <span class="math notranslate nohighlight">\(= \frac{дужинагде 0&lt;x&lt;2}{дужинагде 0&lt;x&lt;7} = \frac{2}{7} ≈ 28.5\%\)</span></p>
+<p>Суштина једнодимензионалне геометријске варијабилности је да користи бројевну праву на
+којој се &quot;мере&quot; решења користећи <em>дужину</em>.</p>
+</section>
+<section id="id3">
+<h2>Дводимензионална геометријска варијабилност<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<p>Наравно, јако мало проблема ће имати само једну променљиву. Зато за 2 променљиве се
+користи <strong>Дводимензионална геометријска варијабилност</strong>.</p>
+<p>Како једнодимензионална варијабилност се користи дужином, дводимензионална варијабилност
+се користи <strong>површином</strong> геометријских фигура.</p>
+<p>Па је тако формула за изачунавање задатака користећи ову методу:</p>
+<p><span class="math notranslate nohighlight">\(x = \frac{Површина тражених решења}{Површина свих решења}\)</span></p>
+<p>Урадимо сада један пример користећи ново научену методу:</p>
+<p>У квадрат странице a = 10 уписан је круг. Колике су шансе да ће се произвољна тачка наћи у кругу?</p>
+<a class="reference internal image-reference" href="../_images/2dprimer1.png"><img alt="../_images/2dprimer1.png" class="align-center" src="../_images/2dprimer1.png" style="width: 500px;" /></a>
+<p>Уочавамо да је полупречник датог круга r = 5</p>
+<p>Сада израчунајмо површине датих фигура:</p>
+<p><span class="math notranslate nohighlight">\(P1(површина квадрата) = a^2 = 100\)</span></p>
+<p>Затим површину круга(P2)</p>
+<p><span class="math notranslate nohighlight">\(P2 = r^2 \pi = 5^2 \pi = 25\pi\)</span></p>
+<p>Пошто се траши вероватноћа да тачка буде у кругу површина круга је сада наша &quot;површина тражених решења&quot;.</p>
+<p>Применимо нашу формулу:</p>
+<p><span class="math notranslate nohighlight">\(X = \frac{25\pi}{100} ≈ 78\%\)</span></p>
+<p>Наравно нису сви проблеми наизглед геометријски. То не значи да се они не могу урадити на геометријску начин.</p>
+<p>Урадимо сада један такав пример:</p>
+<p>Марко и Лука обојица долазе у школу у неком тренутку између 9 и 10 сати.
+Договорили су се да  чекају 15 минута ако се други не појави.
+Колике су шансе да се Марко и Лука сретну?</p>
+<p>Ово наизглед не личи на геометријски проблем, али можемо га лако претворити.</p>
+<p>У овом задатку имамо 2 променљиве: Време кад Марко долази у школу</p>
+<ol class="loweralpha simple">
+<li><p>и време кад Лука долази у школу (b).</p></li>
+</ol>
+<p>Самим тим ово можемо представити као квадрат странице 60 и сва могућа решења су тачке у том квадрату.</p>
+<p>Међутим, Марко чека луку 15 мин. тако да, да би се срели лука мора доћи најкасније 15 мин после марка</p>
+<p>b &lt; a+15</p>
+<p>Исто тако, ако би лука дошао пре Марка чекао би га 15 минута тако да мора доћи исто најраније 15 мин пре Марка</p>
+<p>b &gt; a-15</p>
+<p>Када све то додамо у наш квадрат добијемо овакву фигуру:</p>
+<a class="reference internal image-reference" href="../_images/2dprimer2.png"><img alt="../_images/2dprimer2.png" class="align-center" src="../_images/2dprimer2.png" style="width: 500px;" /></a>
+<p>Површина дате фигуре је:</p>
+<p><span class="math notranslate nohighlight">\(60^2 - \frac{45^2}{2} * 2 = 3600 - 2025 = 1575\)</span></p>
+<p>Површина квадрата је 60^2 = 3600</p>
+<p>Применимо сад формулу:</p>
+<p><span class="math notranslate nohighlight">\(x = \frac{1575}{3600} ≈ 44\%\)</span></p>
+</section>
+<section id="id4">
+<h2>Тродимензионална геометријска варијабилност<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
+<p>Ако се задаци са две променљиве раде помоћу дводимензионалне варијабилности,
+може се лако претпоставити да се Тродимензионална варијабилност ради са <strong>три</strong> променљиве.</p>
+<p>Овог пута се уместо површине рачунају <strong>запремине</strong> датих тела и
+убацују се у врло сличну формулу која гласи:</p>
+<p><span class="math notranslate nohighlight">\(x = \frac{запремина тражених решења}{запремина свих решења}\)</span></p>
+<p>Сада кад имамо све што нам треба, урадићемо пример врло сличан примеру из прошле главе
+само сада са 3 променљиве</p>
+<p>У коцку странице a=10 уписана лопта полупречика 5.Колике су шансе да се произвољна тачка нађе у лопти.</p>
+<a class="reference internal image-reference" href="../_images/3dprimer1.png"><img alt="../_images/3dprimer1.png" class="align-center" src="../_images/3dprimer1.png" style="width: 500px;" /></a>
+<p>Као што примећујемо број свих решења је запремина коцке која гласи</p>
+<p><span class="math notranslate nohighlight">\(V = a^3 = 1000\)</span></p>
+<p>Сада изачунајмо запремину лопте која ће бити број наших тражених решења.</p>
+<p><span class="math notranslate nohighlight">\(V = \frac{4}{3} r^3\pi = \frac{4}{3}125\pi\)</span></p>
+<p>Примењујемо опет формулу:</p>
+<p><span class="math notranslate nohighlight">\(x = \frac{\frac{4}{3}125\pi}{1000} = \frac{\frac{1570}{3}}{1000} ≈ 52\%\)</span></p>
+<p>Уrадимо сада један пример који наизглед није геометријски:</p>
+<p>Изаберимо нека 3 броја из скупа [0,1]. Колике су шансе да збир њихових квадрата буде мањи од 1?</p>
+<p>Најпре, пошто имамо 3 (a, b ,c) променљиве уочавамо да су сва решења садржана у коцки која обухвата скуп [0,1].</p>
+<p>Дакле запремина дате коцке је  <span class="math notranslate nohighlight">\(1^3 = 1\)</span>.</p>
+<p>Затим имамо да је: <span class="math notranslate nohighlight">\(a^2 + b^2 + c^2 &lt; 1\)</span></p>
+<p>То је по геометријској формули лопта са полупречником 1, али пошто a, b, c ≥ 0 само $$ (frac{1}{2})^3 = frac{1}{8}$$ ове лопте заправо припада нашим решењима.</p>
+<a class="reference internal image-reference" href="../_images/3dprimer2.png"><img alt="../_images/3dprimer2.png" class="align-center" src="../_images/3dprimer2.png" style="width: 500px;" /></a>
+<p>Па је површина наших тражених решења:</p>
+<p><span class="math notranslate nohighlight">\(\frac{1}{8} \cdot (\frac{4\pi}{3} \cdot 1^3) = \frac{\pi}{6}\)</span></p>
+<p>Тако да:</p>
+<p>:math:<a href="#id5"><span class="problematic" id="id6">`</span></a>x=frac{frac{pi}{6}}{1}=frac{pi}{6}=52%'</p>
+<aside class="system-message" id="id5">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/home/milena/Desktop/maturanti/_intermediate/3_lekcija/2_lekcija.rst</span>, line 223); <em><a href="#id6">backlink</a></em></p>
+<p>Inline interpreted text or phrase reference start-string without end-string.</p>
+</aside>
+</section>
+<section id="id7">
+<h2>Задаци<a class="headerlink" href="#id7" title="Permalink to this heading">¶</a></h2>
+
+    <div class="quiz-question">
+
+            <div class="course-box course-box-question course-content petlja-problem-box choice-question">
+                <div class="image-background"></div>
+                <div class="petlja-problem-box-icon-holder"> </div>
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="question484">
+            <p>Q-57: На страни улице дуге 50м где ауто треба да се паркира стоји хидрант на средини.Ако је забрањено паркирање у близини од 5
+метара поред хидранта колика је вероватноћа да се ауто паркира непрописно?</p>
+
+            <li data-component="answer" data-correct id="question484_opt_a">20\%</li><li data-component="feedback" id="question484_opt_a">Тачно</li>
+            
+            <li data-component="answer"  id="question484_opt_b">25\%</li><li data-component="feedback" id="question484_opt_b">Нетачно</li>
+            
+            <li data-component="answer"  id="question484_opt_c">80\%</li><li data-component="feedback" id="question484_opt_c">Нетачно</li>
+            
+
+            </ul>
+            </div>
+            
+    </div>
+
+    <div class="quiz-question">
+
+            <div class="course-box course-box-question course-content petlja-problem-box choice-question">
+                <div class="image-background"></div>
+                <div class="petlja-problem-box-icon-holder"> </div>
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="question4234">
+            <p>Q-58: Изаберимо неке 2 тачке на кружници  полупречника r.
+Колике су шансе да удаљеност тих двају тачака буде мања од полупречника кружнице?</p>
+
+            <li data-component="answer"  id="question4234_opt_a">16\%</li><li data-component="feedback" id="question4234_opt_a">Нетачно</li>
+            
+            <li data-component="answer" data-correct id="question4234_opt_b">33\%</li><li data-component="feedback" id="question4234_opt_b">Тачно</li>
+            
+            <li data-component="answer"  id="question4234_opt_c">60\%</li><li data-component="feedback" id="question4234_opt_c">Нетачно</li>
+            
+
+            </ul>
+            </div>
+            
+    </div>
+
+    <div class="quiz-question">
+
+            <div class="course-box course-box-question course-content petlja-problem-box choice-question">
+                <div class="image-background"></div>
+                <div class="petlja-problem-box-icon-holder"> </div>
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="question493">
+            <p>Q-59: Изаберимо нека 3 броја из скупа [0,1].Колике су шансе да је квадрат једног од тих бројева већи од збира квадрата друга 2?</p>
+
+            <li data-component="answer"  id="question493_opt_a">33\%</li><li data-component="feedback" id="question493_opt_a">Нетачно</li>
+            
+            <li data-component="answer"  id="question493_opt_b">80\%</li><li data-component="feedback" id="question493_opt_b">Нетачно</li>
+            
+            <li data-component="answer" data-correct id="question493_opt_c">78\%</li><li data-component="feedback" id="question493_opt_c">Тачно</li>
+            
+
+            </ul>
+            </div>
+            
+    </div>
+</section>
 </section>
 
 
@@ -291,7 +456,7 @@
     
     <div>
 <div class="lecture-prev-next-toggle">
-  <a  href="../index.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Previous chapter </span> </a>
+  <a  href="1_lekcija.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Previous chapter </span> </a>
   
   <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Next chapter</span>  <i class="fas fa-arrow-right fa"></i> </a>
 </div>
