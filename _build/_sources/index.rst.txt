@@ -17,4 +17,5 @@ Petljadoc Course
     :maxdepth: 3
 
     Подаци <2_lekcija/index>
+    Вероватноћа <3_lekcija/index>
     Статистика <1_lekcija/index>

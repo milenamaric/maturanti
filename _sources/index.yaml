@@ -37,6 +37,16 @@ lessons:
         file: 2_pod.rst 
         description: #Optional
         guid: 71c00908-m4b4-410d-8019-e88d22cb7f01
+  - title: Вероватноћа
+    guid: c2c6523d-53m0-4a3d-ba4f-650b8422f0bc
+    description: Your first lesson. Description is not required attribute
+    folder: 3_lekcija
+    activities:
+      - type: reading
+        title: Емпиријска вероватноћа
+        file: 1_lekcija.rst 
+        description: #Optional
+        guid: 71c03488-f7f3-410d-8019-e88d22cb7f01
   - title: Статистика
     guid: c2c651cd-53d9-4a3d-ba4f-650b8422f0bc
     description: Your first lesson. Description is not required attribute

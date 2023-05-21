@@ -49,6 +49,19 @@ lessons:
   title: Подаци
 - activities:
   - description: ''
+    file: 1_lekcija.html
+    guid: 71c03488-f7f3-410d-8019-e88d22cb7f01
+    src: 1_lekcija.rst
+    title: Емпиријска вероватноћа
+    type: reading
+  archived-activities: []
+  description: Your first lesson. Description is not required attribute
+  folder: 3_lekcija
+  guid: c2c6523d-53m0-4a3d-ba4f-650b8422f0bc
+  normalized_title: Вероватноћа
+  title: Вероватноћа
+- activities:
+  - description: ''
     file: 1_st.html
     guid: 71c00155-f7f3-410d-8019-e88d22cb7f01
     src: 1_st.rst
