@@ -56,5 +56,11 @@ lessons:
         title: Примена и значај статистике
         file: 3_st.rst 
         description: #Optional
-        guid: 98d00155-m4b4-410d-8019-e88d22cb7f01
+        guid: 98d00615-m4b4-410d-8019-e88d22cb7f01
+      - type: reading
+        title: Примена статистике у музици
+        file: 4_str.rst 
+        description: #Optional
+        guid: 98d00905-m4b4-410d-8019-e88d22cb7f01
+      
       

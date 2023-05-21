@@ -62,9 +62,15 @@ lessons:
     type: reading
   - description: ''
     file: 3_st.html
-    guid: 98d00155-m4b4-410d-8019-e88d22cb7f01
+    guid: 98d00615-m4b4-410d-8019-e88d22cb7f01
     src: 3_st.rst
     title: Примена и значај статистике
+    type: reading
+  - description: ''
+    file: 4_str.html
+    guid: 98d00905-m4b4-410d-8019-e88d22cb7f01
+    src: 4_str.rst
+    title: Примена статистике у музици
     type: reading
   archived-activities: []
   description: Your first lesson. Description is not required attribute

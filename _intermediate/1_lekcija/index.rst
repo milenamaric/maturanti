@@ -8,3 +8,4 @@
     1_st.rst
     2_st.rst
     3_st.rst
+    4_str.rst
