@@ -20,4 +20,5 @@ Petljadoc Course
     Подаци <2_lekcija/index>
     Вероватноћа <3_lekcija/index>
     Случајне променљиве <6_lekcija/index>
+    Условна вероватноћа <7_lekcija/index>
     Статистика <1_lekcija/index>

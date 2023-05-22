@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="y">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Стабло вероватноће</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/runestonevideo.js"></script>
+    <script src="../_static/matrixeq.js"></script>
+    <script src="../_static/animationbase.js"></script>
+    <script src="../_static/lib/prettify.js"></script>
+    <script src="../_static/lib/hammer.min.js"></script>
+    <script src="../_static/parsons.js"></script>
+    <script src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="../_static/parsons-i18n.en.js"></script>
+    <script src="../_static/parsons-i18n.y.js"></script>
+    <script src="../_static/timedparsons.js"></script>
+    <script src="../_static/poll.js"></script>
+    <script src="../_static/showEval.js"></script>
+    <script src="../_static/tabbedstuff.js"></script>
+    <script src="../_static/mchoice.js"></script>
+    <script src="../_static/timedmc.js"></script>
+    <script src="../_static/timed.js"></script>
+    <script src="../_static/mchoice-i18n.en.js"></script>
+    <script src="../_static/mchoice-i18n.y.js"></script>
+    <script src="../_static/reveal.js"></script>
+    <script src="../_static/jquery.highlight.js"></script>
+    <script src="../_static/bookfuncs.js"></script>
+    <script src="../_static/codemirror.js"></script>
+    <script src="../_static/xml.js"></script>
+    <script src="../_static/css.js"></script>
+    <script src="../_static/python.js"></script>
+    <script src="../_static/htmlmixed.js"></script>
+    <script src="../_static/javascript.js"></script>
+    <script src="../_static/activecode-i18n.en.js"></script>
+    <script src="../_static/activecode-i18n.y.js"></script>
+    <script src="../_static/activecode.js"></script>
+    <script src="../_static/clike.js"></script>
+    <script src="../_static/timed_activecode.js"></script>
+    <script src="../_static/d3.v2.min.js"></script>
+    <script src="../_static/jquery.ba-bbq.min.js"></script>
+    <script src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script src="../_static/pytutor.js"></script>
+    <script src="../_static/codelens.js"></script>
+    <script src="../_static/clickable.js"></script>
+    <script src="../_static/timedclickable.js"></script>
+    <script src="../_static/shortanswer.js"></script>
+    <script src="../_static/timed_shortanswer.js"></script>
+    <script src="../_static/dragndrop.js"></script>
+    <script src="../_static/timeddnd.js"></script>
+    <script src="../_static/dragndrop-i18n.en.js"></script>
+    <script src="../_static/dragndrop-i18n.y.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script src="../_static/datafile.js"></script>
+    <script src="../_static/fitb.js"></script>
+    <script src="../_static/timedfitb.js"></script>
+    <script src="../_static/fitb-i18n.en.js"></script>
+    <script src="../_static/fitb-i18n.y.js"></script>
+    <script src="../_static/webglinteractive.js"></script>
+    <script src="../_static/FileSaver.min.js"></script>
+    <script src="../_static/Blob.js"></script>
+    <script src="../_static/karelCorner.js"></script>
+    <script src="../_static/karelRobot.js"></script>
+    <script src="../_static/karelWorld.js"></script>
+    <script src="../_static/karelChat.js"></script>
+    <script src="../_static/karelRobotDrawer.js"></script>
+    <script src="../_static/karelUI.js"></script>
+    <script src="../_static/karel.js"></script>
+    <script src="../_static/karel-i18n.en.js"></script>
+    <script src="../_static/karel-i18n.y.js"></script>
+    <script src="../_static/notes.js"></script>
+    <script src="../_static/pygamelib-init.js"></script>
+    <script src="../_static/gallery.js"></script>
+    <script src="../_static/associations.js"></script>
+    <script src="../_static/associations-i18n.en.js"></script>
+    <script src="../_static/associations-i18n.y.js"></script>
+    <script src="../_static/editor.js"></script>
+    <script src="../_static/jszip.js"></script>
+    <script src="../_static/editor-i18n.en.js"></script>
+    <script src="../_static/editor-i18n.y.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../_static/course-errors.js"></script>
+    <script src="../_static/petlja.js"></script>
+    <script src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'verovatnocaStatistika';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'verovatnocaStatistika';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Useful links</div>
+          <div class="useful-link">
+            <a href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html" target="_blank">Sphinx Docs</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/Petlja/PetljaDoc/blob/master/README.md" target="_blank">Petljadoc</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/RunestoneInteractive/overview" target="_blank">Runestone Interactive</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Курс вероватноће и статистике за средњу школу</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Table of content </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-4_lekcija>
+                    <h5>Комбинаторика</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../4_lekcija/1_lek.html><div class="studioLecture" id=activity-1_lek><i class="fas fa-file-alt activity-icon"></i>Комбинаторика - увод</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-2_lekcija>
+                    <h5>Подаци</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../2_lekcija/2_pod.html><div class="studioLecture" id=activity-2_pod><i class="fas fa-file-alt activity-icon"></i>Подаци</div></a>
+                <a href=../2_lekcija/2_pod.html><div class="studioLecture" id=activity-2_pod><i class="fas fa-file-alt activity-icon"></i>Дескриптивна статистика</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-3_lekcija>
+                    <h5>Вероватноћа</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../3_lekcija/1_lekcija.html><div class="studioLecture" id=activity-1_lekcija><i class="fas fa-file-alt activity-icon"></i>Емпиријска вероватноћа</div></a>
+                <a href=../3_lekcija/2_lekcija.html><div class="studioLecture" id=activity-2_lekcija><i class="fas fa-file-alt activity-icon"></i>Геометријска вероватноћа</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-6_lekcija>
+                    <h5>Случајне променљиве</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../6_lekcija/1_str.html><div class="studioLecture" id=activity-1_str><i class="fas fa-file-alt activity-icon"></i>Случајне променљиве</div></a>
+                <a href=../6_lekcija/2_str.html><div class="studioLecture" id=activity-2_str><i class="fas fa-file-alt activity-icon"></i>Дискретне случајне променљиве</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-7_lekcija>
+                    <h5>Условна вероватноћа</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../7_lekcija/1_deo.html><div class="studioLecture" id=activity-1_deo><i class="fas fa-file-alt activity-icon"></i>Условна вероватноћа, Бајесова формула и независни догађаји</div></a>
+                <a href=../7_lekcija/2_deo.html><div class="studioLecture" id=activity-2_deo><i class="fas fa-file-alt activity-icon"></i>Стабло вероватноће</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-1_lekcija>
+                    <h5>Статистика</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../1_lekcija/1_st.html><div class="studioLecture" id=activity-1_st><i class="fas fa-file-alt activity-icon"></i>Појам статистике и њени елементи</div></a>
+                <a href=../1_lekcija/2_st.html><div class="studioLecture" id=activity-2_st><i class="fas fa-file-alt activity-icon"></i>Дискретне случајне променљиве</div></a>
+                <a href=../1_lekcija/3_st.html><div class="studioLecture" id=activity-3_st><i class="fas fa-file-alt activity-icon"></i>Примена и значај статистике</div></a>
+                <a href=../1_lekcija/4_str.html><div class="studioLecture" id=activity-4_str><i class="fas fa-file-alt activity-icon"></i>Примена статистике у музици</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <section id="id1">
+<h1>Стабло вероватноће<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<p><em>Стабло вероватноће</em>, због своје прегледности и систематичности, врло често се примењује за рачунање вероватноће низа догађаја. Из тог разлога, можемо га искористити и у овом кратком примеру.</p>
+<p>Узмимо пример крвних група. Случајно одабрана осба може имати једну од ледећих комбинација крвних група и Rh фактора</p>
+<ul class="simple">
+<li><p>0+</p></li>
+<li><p>А+</p></li>
+<li><p>Б+</p></li>
+<li><p>АБ+</p></li>
+<li><p>0-</p></li>
+<li><p>А-</p></li>
+<li><p>Б-</p></li>
+<li><p>АБ-</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/stablo.jpg"><img alt="../_images/stablo.jpg" src="../_images/stablo.jpg" style="width: 450px;" /></a>
+</figure>
+<p>Подаци о распрострањености крвних група у Хрватској из састава АБО и подаци уз састава RhD приказају се преко стабла вероватноће.</p>
+<p>Прво гранање показује да је у Хрватској 85% становништва <span class="math notranslate nohighlight">\(R_{h}\)</span> позитивно, а 15% Rh негативно, односно вероватноћа да је особа <span class="math notranslate nohighlight">\(R_{h}\)</span> позитивна износи 0,85 а да је <span class="math notranslate nohighlight">\(R_{h}\)</span> негативна 0,15.</p>
+<p>Друго гранање наставља се на сваку од претходних грана, а показује вероватноћу да нека особа има крвну групу 0, А, Б или АБ.</p>
+<p>Уколико се користе подаци са једне гране са првог и једне гране са другог гранања која је са њом повезана може се израчунати вероватноћа свих комбинација крвне групе и <span class="math notranslate nohighlight">\(R_{h}\)</span> фактора.</p>
+<p>На пример, будући да 34% особа има крвну групу 0, рачунамо да ће 34% од 85% <span class="math notranslate nohighlight">\(R_{h}\)</span> позитивних особа имати крвну групу 0, па је
+:math`:p(0+) = 0,34 cdot 0,85 = 0,289`.</p>
+<p>Слично се рачуна и за остале комбинације:</p>
+<ul class="simple">
+<li><p>p (А+) = 0,85 ∙ 0,42 = 0,357</p></li>
+<li><p>p (Б+) = 0,85 ∙ 0,17 = 0,1445</p></li>
+<li><p>p (АБ+) = 0,85 ∙ 0,07 = 0,0595</p></li>
+<li><p>p (0-) = 0,15 ∙ 0,34 = 0,051</p></li>
+<li><p>p (А-) = 0,15 ∙ 0,42 = 0,063</p></li>
+<li><p>p (Б-) = 0,15 ∙ 0,17 = 0,0255</p></li>
+<li><p>p (АБ-) = 0,15 ∙ 0,07 = 0,0105</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/kg.jpg"><img alt="../_images/kg.jpg" src="../_images/kg.jpg" style="width: 450px;" /></a>
+</figure>
+<p>Уочимо да је збир вероватноћа у сваком гранању једнак 1,
+као и збир вериватноћа коначних исхода јер су то сви
+могући исходи за постављен експеримент.</p>
+<section id="id2">
+<h2>Задатак за самосталан рад<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<p>Нацртај стабло вероватноће за експеримент бацања три новчића.</p>
+</section>
+<section id="id3">
+<h2>Независни догађаји<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<p><strong>Пример 1</strong></p>
+<p>Бацамо новчић и коцку. Новчић је могао пасти на писмо или главу, а на коцки један од шест бројева.</p>
+<ul class="simple">
+<li><p>Зависи ли исход бацања коцке од исхода бацања новчића?</p></li>
+</ul>
+<p>Јасно је да та два догађаја нису повезана, односно да исход једног од њих не утиче на исход другог.</p>
+<ul class="simple">
+<li><p>У вероватноћи се овакви догађаји означавају као <em>независни догађаји</em>.</p></li>
+<li><p>Како независност утиче на вероватноћу?</p></li>
+<li><p>Погледати пример 1.</p></li>
+</ul>
+<p><strong>Пример 2</strong></p>
+<p>Бацамо новчић и коцку. Нека су догађаји:</p>
+<ol class="arabic simple">
+<li><p>А = {новчић је пао на писмо}</p></li>
+<li><p>Б = {на коцки је пао број 4}</p></li>
+</ol>
+<ul class="simple">
+<li><p>Одредимо вероватноћу p (А) и p (Б).</p></li>
+<li><p>Колика је вероватноћа да је пало писмо и број 4?</p></li>
+</ul>
+<p>Израчунати умножак p (А) ∙ p (Б) и упоредити резултате.</p>
+<p><strong>Решење</strong></p>
+<ul class="simple">
+<li><p>Бацање новчића има 2 једнако вероватна исхода па је <span class="math notranslate nohighlight">\(P (А) = \frac{1}{2}\)</span></p></li>
+<li><p>Бацање коцке има 6 једнако вероватних исхода па је <span class="math notranslate nohighlight">\(P (Б) = $\frac{1}{6}\)</span></p></li>
+<li><p>Бацање новчића и коцке има 2∙6 једнако вероватних исхода па је <span class="math notranslate nohighlight">\(P (А ∩ Б) = \frac{1}{12}\)</span></p></li>
+</ul>
+<p>Дакле,</p>
+<ul class="simple">
+<li><p>P (А ∩ Б) = P (А) ∙ P (Б)</p></li>
+<li><p>Видели смо у претходном примеру да за независне догађаје вреди P (А ∩ Б)= P (А) ∙ P (Б). То се често користи и као дефинција вероватно независних догађаја.</p></li>
+</ul>
+</section>
+<section id="id4">
+<h2>Дефинција<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>За два догађаја А и Б кажемо да су независни ако важи:</p></li>
+<li><p>p (А ∩ Б) = p (А) ∙ p (Б)</p></li>
+</ul>
+<p>Ако је интуитивно јасно или из текста задатка да су догађаји независни, дефиниција незвисности се употребљава за рачунање <em>вероватних пресека</em>.</p>
+</section>
+<section id="id5">
+<h2>Пример 3<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h2>
+<p>У кутији се налази 8 црвених и 5 плавих куглица. Извучемо једну куглицу, вратимо је у кутију, па извучемо још једну.
+- Колика је вероватноћа да је прва извучена куглица црвена, а друга плава?
+- Колика је вероватноћа да су извучене црвена и плава куглица?</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/kl.jpg"><img alt="../_images/kl.jpg" src="../_images/kl.jpg" style="width: 450px;" /></a>
+</figure>
+<p><strong>Решење</strong></p>
+<ul class="simple">
+<li><p>У кутији је 13 куглица. Означима са А и Б догађаје:</p></li>
+<li><p>A = {прва куглица је црвена}</p></li>
+<li><p>Б = {друга куглица је плава}</p></li>
+</ul>
+<p>Након што извучемо једну куглицу, вратимо је у кутију. За друго извлачење имамо 13 куглица у кутији па је јасно да исход првог извлачења не утиче на исход другог извалачења, односно да су догађаји А и Б независни.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(p (А ∩ Б) = p (А) \cdot p (Б) = \frac{8}{13} \cdot $\frac{5}{13}$ = \frac{40}{169}\)</span></p></li>
+<li><p>Догађај Ц = {извучене су црвена и плава куглица} можемо записати као унију догађаја {прва куглица је црвена, друга куглица је плава} и {прва куглица је плава, друга куглица је црвена}.</p></li>
+<li><p>Догађај {прва куглица је плава} = {друга куглица није плава} = Г</p></li>
+<li><p>Аналогно, {друга куглица је црвена} = {друга куглица није плава} = Д</p></li>
+<li><p>Сада је</p></li>
+<li><p><span class="math notranslate nohighlight">\(p (Ц) = p ((А ∩ Б) ∪ (Г ∩ Д)) = p (А ∩ Б) + p (Г ∩ Д) = (\frac{8}{13} \cdot \frac{5}{13}) + ($\frac{5}{13}$ \cdot \frac{8}{13}) = \frac{80}{169}\)</span></p></li>
+</ul>
+<p><strong>Задатак за самосталан рад 1</strong></p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/ts.jpg"><img alt="../_images/ts.jpg" src="../_images/ts.jpg" style="width: 450px;" /></a>
+</figure>
+<ul class="simple">
+<li><p>Два пута завртимо коло среће са слике. Колика је вероватноћа да смо:</p></li>
+</ul>
+<p>а) први пут добили број мањи од 4, а други пут паран број</p>
+<p>б) оба пута добили паран број</p>
+<p>ц) први пут добили црвено, а други пут непаран број?</p>
+<p><strong>Пример 4</strong></p>
+<ul class="simple">
+<li><p>Три стрелца независно један од другог гађају мету. Вероватноћа њихових погодака су редом</p></li>
+</ul>
+<aside class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/home/milena/Desktop/maturanti/_intermediate/7_lekcija/2_deo.rst</span>, line 156)</p>
+<p>Bullet list ends without a blank line; unexpected unindent.</p>
+</aside>
+<p><span class="math notranslate nohighlight">\(\frac{3}{5}\)</span>, <span class="math notranslate nohighlight">\(\frac{2}{3}\)</span>, <span class="math notranslate nohighlight">\(\frac{5}{6}\)</span>. Колика је вероватноћа догађаја:</p>
+<ol class="loweralpha simple">
+<li><p>сва 3 стрелца су погодила мету</p></li>
+</ol>
+<p>б. тачно је један стрелац погодио мету</p>
+<p>ц. барем је један стрелац погодио мету</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/ss.jpg"><img alt="../_images/ss.jpg" src="../_images/ss.jpg" style="width: 450px;" /></a>
+</figure>
+<p>Решење</p>
+<ul class="simple">
+<li><p>А = {први стрелац је погодио мету}</p></li>
+<li><p>Б = {други стрелац је погодио мету}</p></li>
+<li><p>Ц = {трећи стрелац је погодио мету}</p></li>
+<li><p>Овде је задато да су догађаји А, Б и Ц независни. Сада је</p></li>
+<li><p>p (А ∩ Б ∩ Ц) = p (А) ∙ p (Б) ∙ p (Ц) = $frac{3}{5}$ ∙ $frac{2}{3}$ ∙ $frac{5}{6}$ = $frac{1}{3}$</p></li>
+<li><p>Догађај {тачно један стрелац је погодио мету} = {први је погодио и други није погодио и трећи није погодио или први није погодио и други није погодио и трећи је погодио}</p></li>
+<li><p>Сва три случаја се међусобно искључују, а погодак или промашај једног од стрелаца не утиче на остала два стрелца. Сада је: p ((А ∩ Б&quot; ∩ Ц&quot;)) ∪ ((Ā ∩ Б ∩ Ц&quot;)) ∪ ((Ā ∩ Б&quot; ∩ Ц)) = p ((А ∩ Б&quot; ∩ Ц&quot;)) + ((Ā ∩ Б ∩ Ц&quot;)) + ((Ā ∩ Б&quot; ∩ Ц)) = p (А) ∙ p (Б&quot;) ∙ p (Ц&quot;) + p (Ā) ∙ p (Б) ∙ p (Ц&quot;) + p (Ā) ∙ p (Б&quot;) ∙ p (Ц) = $frac{3}{5}$ ∙ $frac{1}{3}$ ∙ $frac{1}{6}$ + $frac{2}{5}$ ∙ $frac{2}{3}$ ∙ $frac{1}{6}$ + $frac{2}{5}$ ∙ $frac{1}{3}$ ∙ $frac{5}{6}$ = $frac{17}{90}$</p></li>
+<li><p>Догађај (барем је један стрелац погодио мету) је унија догађаја А, Б и Ц, односно мету је погодио тачно један стрелац или тачно два стрелца или тачно три стрелца. Међутим, тај догађај је супротан догађају {ниједан стрелац није погодио}, што је једноставније израчунати.</p></li>
+<li><p>p {барем је један стрелац погодио} = 1 - p {ниједан стрелац није погодио}</p></li>
+</ul>
+<aside class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/home/milena/Desktop/maturanti/_intermediate/7_lekcija/2_deo.rst</span>, line 181)</p>
+<p>Bullet list ends without a blank line; unexpected unindent.</p>
+</aside>
+<p>p (А ∩ B ∩ Ц) = 1 - p (Ā ∩ Б&quot; ∩ Ц&quot;) = 1 - $frac{2}{5}$ ∙ $frac{1}{3}$ ∙ $frac{1}{6}$ = $frac{44}{45}$</p>
+</section>
+<section id="id6">
+<h2>Задатак за самосталан рад 2<a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h2>
+<p>Вероватноћа да Луција закасни у школу је 0,3 , вероватноћа да Ива закасни је 0,1 док је вероватноћа да Дорија закасни 0,35. Њихови доласци у школу су међусобно независни. Колика је вероватноћа да неки дан тачно две закасне у школу?</p>
+<p><strong>Напомена</strong></p>
+<p>Дефиниција нам омогућава и једноставну проверу независности неких догађаја у којима се вероватноћа пресека може израчунати на неки други начин.</p>
+</section>
+<section id="id7">
+<h2>Пример 5<a class="headerlink" href="#id7" title="Permalink to this heading">¶</a></h2>
+<p>У некој породици са троје деце свако је с једнаком вероватноћом девојчица или дечак, независно од остале деце. Нека су догађаји:</p>
+<ul class="simple">
+<li><p>А = {сва деца су истог пола}</p></li>
+<li><p>Б = {највише је једно дете девојчица}</p></li>
+<li><p>Ц = {барем је једно дете девојчица}</p></li>
+<li><p>Покажимо да су А и Б, те и Б и Ц међусобно независни. Јесу ли А и Ц међусобно независни?</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/fm.jpg"><img alt="../_images/fm.jpg" src="../_images/fm.jpg" style="width: 450px;" /></a>
+</figure>
+<p><strong>Решење</strong></p>
+<p>Решење се добије цртањем стабла вероватноће након што девојчицу ознаћимо са Ж, а дечака са М.</p>
+<ul class="simple">
+<li><p>A = {ЖЖЖ, МММ}</p></li>
+<li><p>Б = {ЖММ, МЖМ, ММЖ, МММ}</p></li>
+<li><p>Ц = {ЖЖЖ, ЖЖМ, ЖМЖ, ЖММ, МЖЖ, МЖМ, ММЖ}</p></li>
+</ul>
+<p>Будући да је А ∩ B = {МММ}, следи</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/stablo6.jpg"><img alt="../_images/stablo6.jpg" src="../_images/stablo6.jpg" style="width: 450px;" /></a>
+</figure>
+<ul class="simple">
+<li><p>p (А) ∙ p (Б) = $frac{2}{8}$ ∙ $frac{4}{8}$ = $frac{1}{8}$ = p (А ∩ Б) чиме смо доказали да су догађаји А и Б независни.</p></li>
+<li><p>Из Б ∩ Ц = {ЖММ, МЖМ, ММЖ} следи p (Б) ∙ p (Ц) = $frac{4}{8}$ ∙ $frac{6}{8}$ = $frac{3}{8}$ = p (Б ∩ Ц) па су и догађаји Б и Ц независни.</p></li>
+<li><p>Видимо да је А ∩ Ц = {ЖЖЖ} па је p (А) ∙ p (Ц) = $frac{2}{8}$ ∙ $frac{7}{8}$ = $frac{7}{32}$ што није p (А ∩ Ц) = $frac{1}{8}$</p></li>
+<li><p>Следи да А и Ц нису независни догађаји.</p></li>
+</ul>
+</section>
+<section id="id8">
+<h2>Дефиниција<a class="headerlink" href="#id8" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Три догађаја А, Б и Ц су независна ако је:</p></li>
+<li><p>p (А ∩ Б) = p (А) ∙ p (Б)</p></li>
+<li><p>p (А ∩ Ц) = p (А) ∙ p (Ц)</p></li>
+<li><p>p (Б ∩ Ц) = p (Б) ∙ p (Ц)</p></li>
+<li><p>p (А ∩ Б ∩ Ц) = p (А) ∙ p (Б) ∙ p (Ц)</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/ie.png"><img alt="../_images/ie.png" src="../_images/ie.png" style="width: 450px;" /></a>
+</figure>
+<p><strong>Пример 6</strong></p>
+<p>Бацамо две симетричне коцке и разматрамо 3 догађаја:</p>
+<ul class="simple">
+<li><p>A = {на првој је коцки пао број 1 или 2 или 3}</p></li>
+<li><p>Б = {на другој коцки је пао број 4 или 5 или 6}</p></li>
+<li><p>Ц = {збир добијених бројева је 9}</p></li>
+<li><p>Јесу ли сва три догађаја међусобно независна?</p></li>
+</ul>
+<p><strong>Решење</strong></p>
+<p>Сваки од 36 елементарних догађаја једнако је могућ па знамо израчунати вероватноћу:</p>
+<ul class="simple">
+<li><p>p (А) =  $frac{18}{36}$= $frac{1}{2}$, p (Б) = $frac{18}{36}$ = $frac{1}{2}$, p (Ц) = $frac{4}{36}$ =  $frac{1}{9}$</p></li>
+<li><p>Будући да је А ∩ Б ∩ Ц = {(3,6)}, следи</p></li>
+<li><p>p (А ∩ Б ∩ Ц) = $frac{1}{36}$ = p (А) ∙ p (Б) ∙ p (Ц).</p></li>
+<li><p>Треба још израчунати и вероватноћу по паровима:</p></li>
+<li><p>p (А ∩ Б) = $frac{9}{36}$ = $frac{1}{4}$ = p (А) ∙ p (Б)</p></li>
+<li><p>p (А ∩ Ц) = $frac{1}{36}$ = p (А) ∙ p (Ц)</p></li>
+<li><p>p (Б ∩ Ц) = $frac{1}{12}$ = p (Б) ∙ p (Ц)</p></li>
+<li><p>Закључак је да сва три догађаја <em>нису</em> међусобно независна.</p></li>
+</ul>
+</section>
+<section id="id9">
+<h2>Задатак 3 за самосталан рад<a class="headerlink" href="#id9" title="Permalink to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Бацамо две симетричне коцке и посматрамо следећа три догађаја:</p></li>
+</ol>
+<ul class="simple">
+<li><p>A = {на првој коцки је пао број 4}</p></li>
+<li><p>Б = {на другој коцки је пао број 1}</p></li>
+<li><p>Ц = {збир добијених бројева је 5}</p></li>
+<li><p>Јесу ли сва три догађаја међусобно независна?</p></li>
+</ul>
+</section>
+<section id="id10">
+<h2>Задаци и питалице за проверу знања о независним догађајима<a class="headerlink" href="#id10" title="Permalink to this heading">¶</a></h2>
+
+    <div class="quiz-question">
+
+            <div class="course-box course-box-question course-content petlja-problem-box choice-question">
+                <div class="image-background"></div>
+                <div class="petlja-problem-box-icon-holder"> </div>
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="question172">
+            <p>Q-44: Три пута бацамо коцку. Колика је вероватноћа да смо добили:</p>
+
+            <li data-component="answer"  id="question172_opt_a">барем једну шестицу</li><li data-component="feedback" id="question172_opt_a">Нетачно</li>
+            
+            <li data-component="answer" data-correct id="question172_opt_b">тачно једну шестицу</li><li data-component="feedback" id="question172_opt_b">Тачно</li>
+            
+            <li data-component="answer"  id="question172_opt_c">највише једну шестицу</li><li data-component="feedback" id="question172_opt_c">Нетачно</li>
+            
+
+            </ul>
+            </div>
+            
+    </div>
+
+    <div class="quiz-question">
+
+            <div class="course-box course-box-question course-content petlja-problem-box choice-question">
+                <div class="image-background"></div>
+                <div class="petlja-problem-box-icon-holder"> </div>
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="question171">
+            <p>Q-45: Матеја и Немања бирају место за годишњи одмор. У ужем избору су им заливи Крк, Пашман и Дуги оток а на копну градови Сплит, Задар, Пула, Макрска и Цриквеница. Сва места су написали на папириће и извлаче два папирића. Колика је вероватноћа да ће извући (означи тачан одговор):</p>
+
+            <li data-component="answer"  id="question171_opt_a">оба места на мору</li><li data-component="feedback" id="question171_opt_a">Нетачно</li>
+            
+            <li data-component="answer"  id="question171_opt_b">оба места на копну</li><li data-component="feedback" id="question171_opt_b">Нетачно</li>
+            
+            <li data-component="answer" data-correct id="question171_opt_c">оба места на мору или оба на копну</li><li data-component="feedback" id="question171_opt_c">Тачно</li>
+            
+
+            </ul>
+            </div>
+            
+    </div>
+
+    <div class="quiz-question">
+
+            <div class="course-box course-box-question course-content petlja-problem-box choice-question">
+                <div class="image-background"></div>
+                <div class="petlja-problem-box-icon-holder"> </div>
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="question1790">
+            <p>Q-46: Када су догађаји А, Б и Ц независни? Када је:</p>
+
+            <li data-component="answer"  id="question1790_opt_a">p (А ∩ Б) = p (А) ∙ p (Ц)</li><li data-component="feedback" id="question1790_opt_a">Нетачно</li>
+            
+            <li data-component="answer" data-correct id="question1790_opt_b">p (А ∩ Б ∩ Ц) = p (А) ∙ p (Б) ∙ p (Ц)</li><li data-component="feedback" id="question1790_opt_b">Тачно</li>
+            
+            <li data-component="answer"  id="question1790_opt_c">p (А ∩ Ц) = p (А) ∙ p (Б)</li><li data-component="feedback" id="question1790_opt_c">Нетачно</li>
+            
+
+            </ul>
+            </div>
+            
+    </div>
+
+    <div class="quiz-question">
+
+            <div class="course-box course-box-question course-content petlja-problem-box choice-question">
+                <div class="image-background"></div>
+                <div class="petlja-problem-box-icon-holder"> </div>
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="question179090">
+            <p>Q-47: Изабери тачне тврдње о независним догађајима:</p>
+
+            <li data-component="answer" data-correct id="question179090_opt_a">ако су догађаји А и Б независни, барем један од њих је немогућ догађај</li><li data-component="feedback" id="question179090_opt_a">Тачно</li>
+            
+            <li data-component="answer"  id="question179090_opt_b">ако су догађаји А и Б независни, тада реализација догађаја Б утиче на вероватноћу догађаја А</li><li data-component="feedback" id="question179090_opt_b">Нетачно</li>
+            
+            <li data-component="answer" data-correct id="question179090_opt_c">ако су догађаји А и Б независни, то не значи да су дисјунктни</li><li data-component="feedback" id="question179090_opt_c">Тачно</li>
+            
+            <li data-component="answer"  id="question179090_opt_d">да би три догађаја А, Б и Ц била независна не мора да важи правило множења за све могуће подскупове</li><li data-component="feedback" id="question179090_opt_d">Нетачно</li>
+            
+
+            </ul>
+            </div>
+            
+    </div>
+<p>Занимљив видео клип о независним догађајима</p>
+
+    <div  id="7QlZjoLmg3I" class="ytvideo"  style="text-align: center; margin: 15px; cursor:pointer;">
+        <div style="background-image: url('https://img.youtube.com/vi/7QlZjoLmg3I/mqdefault.jpg'); background-repeat: no-repeat;background-position: center; height: 210px; width: 310px; margin: 0 auto; border: 1px solid #20c997">
+            <img src="../_static/images/play_button.svg" style="margin-top: 78px;" /> 
+        </div>
+      
+
+        </div>
+    <div id="modal-7QlZjoLmg3I" class="ytvideoclose" style="display: none; background-color: transparent; z-index: 10000;">
+        <div style="background-color: white; position: relative; width:  780px; height:  500px; z-index: 100;" id="YTmodal-7QlZjoLmg3I">
+        </div>
+    </div>
+    
+    
+    </section>
+</section>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="1_deo.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Previous chapter </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Next chapter</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Letters</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>
