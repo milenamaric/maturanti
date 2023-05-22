@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="y">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Условна вероватноћа</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/runestonevideo.js"></script>
+    <script src="../_static/matrixeq.js"></script>
+    <script src="../_static/animationbase.js"></script>
+    <script src="../_static/lib/prettify.js"></script>
+    <script src="../_static/lib/hammer.min.js"></script>
+    <script src="../_static/parsons.js"></script>
+    <script src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="../_static/parsons-i18n.en.js"></script>
+    <script src="../_static/parsons-i18n.y.js"></script>
+    <script src="../_static/timedparsons.js"></script>
+    <script src="../_static/poll.js"></script>
+    <script src="../_static/showEval.js"></script>
+    <script src="../_static/tabbedstuff.js"></script>
+    <script src="../_static/mchoice.js"></script>
+    <script src="../_static/timedmc.js"></script>
+    <script src="../_static/timed.js"></script>
+    <script src="../_static/mchoice-i18n.en.js"></script>
+    <script src="../_static/mchoice-i18n.y.js"></script>
+    <script src="../_static/reveal.js"></script>
+    <script src="../_static/jquery.highlight.js"></script>
+    <script src="../_static/bookfuncs.js"></script>
+    <script src="../_static/codemirror.js"></script>
+    <script src="../_static/xml.js"></script>
+    <script src="../_static/css.js"></script>
+    <script src="../_static/python.js"></script>
+    <script src="../_static/htmlmixed.js"></script>
+    <script src="../_static/javascript.js"></script>
+    <script src="../_static/activecode-i18n.en.js"></script>
+    <script src="../_static/activecode-i18n.y.js"></script>
+    <script src="../_static/activecode.js"></script>
+    <script src="../_static/clike.js"></script>
+    <script src="../_static/timed_activecode.js"></script>
+    <script src="../_static/d3.v2.min.js"></script>
+    <script src="../_static/jquery.ba-bbq.min.js"></script>
+    <script src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script src="../_static/pytutor.js"></script>
+    <script src="../_static/codelens.js"></script>
+    <script src="../_static/clickable.js"></script>
+    <script src="../_static/timedclickable.js"></script>
+    <script src="../_static/shortanswer.js"></script>
+    <script src="../_static/timed_shortanswer.js"></script>
+    <script src="../_static/dragndrop.js"></script>
+    <script src="../_static/timeddnd.js"></script>
+    <script src="../_static/dragndrop-i18n.en.js"></script>
+    <script src="../_static/dragndrop-i18n.y.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script src="../_static/datafile.js"></script>
+    <script src="../_static/fitb.js"></script>
+    <script src="../_static/timedfitb.js"></script>
+    <script src="../_static/fitb-i18n.en.js"></script>
+    <script src="../_static/fitb-i18n.y.js"></script>
+    <script src="../_static/webglinteractive.js"></script>
+    <script src="../_static/FileSaver.min.js"></script>
+    <script src="../_static/Blob.js"></script>
+    <script src="../_static/karelCorner.js"></script>
+    <script src="../_static/karelRobot.js"></script>
+    <script src="../_static/karelWorld.js"></script>
+    <script src="../_static/karelChat.js"></script>
+    <script src="../_static/karelRobotDrawer.js"></script>
+    <script src="../_static/karelUI.js"></script>
+    <script src="../_static/karel.js"></script>
+    <script src="../_static/karel-i18n.en.js"></script>
+    <script src="../_static/karel-i18n.y.js"></script>
+    <script src="../_static/notes.js"></script>
+    <script src="../_static/pygamelib-init.js"></script>
+    <script src="../_static/gallery.js"></script>
+    <script src="../_static/associations.js"></script>
+    <script src="../_static/associations-i18n.en.js"></script>
+    <script src="../_static/associations-i18n.y.js"></script>
+    <script src="../_static/editor.js"></script>
+    <script src="../_static/jszip.js"></script>
+    <script src="../_static/editor-i18n.en.js"></script>
+    <script src="../_static/editor-i18n.y.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../_static/course-errors.js"></script>
+    <script src="../_static/petlja.js"></script>
+    <script src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'verovatnocaStatistika';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'verovatnocaStatistika';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Useful links</div>
+          <div class="useful-link">
+            <a href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html" target="_blank">Sphinx Docs</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/Petlja/PetljaDoc/blob/master/README.md" target="_blank">Petljadoc</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/RunestoneInteractive/overview" target="_blank">Runestone Interactive</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Курс вероватноће и статистике за средњу школу</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Table of content </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-4_lekcija>
+                    <h5>Комбинаторика</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../4_lekcija/1_lek.html><div class="studioLecture" id=activity-1_lek><i class="fas fa-file-alt activity-icon"></i>Комбинаторика - увод</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-2_lekcija>
+                    <h5>Подаци</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../2_lekcija/2_pod.html><div class="studioLecture" id=activity-2_pod><i class="fas fa-file-alt activity-icon"></i>Подаци</div></a>
+                <a href=../2_lekcija/2_pod.html><div class="studioLecture" id=activity-2_pod><i class="fas fa-file-alt activity-icon"></i>Дескриптивна статистика</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-3_lekcija>
+                    <h5>Вероватноћа</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../3_lekcija/1_lekcija.html><div class="studioLecture" id=activity-1_lekcija><i class="fas fa-file-alt activity-icon"></i>Емпиријска вероватноћа</div></a>
+                <a href=../3_lekcija/2_lekcija.html><div class="studioLecture" id=activity-2_lekcija><i class="fas fa-file-alt activity-icon"></i>Геометријска вероватноћа</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-6_lekcija>
+                    <h5>Случајне променљиве</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../6_lekcija/1_str.html><div class="studioLecture" id=activity-1_str><i class="fas fa-file-alt activity-icon"></i>Случајне променљиве</div></a>
+                <a href=../6_lekcija/2_str.html><div class="studioLecture" id=activity-2_str><i class="fas fa-file-alt activity-icon"></i>Дискретне случајне променљиве</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-7_lekcija>
+                    <h5>Условна вероватноћа</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../7_lekcija/1_deo.html><div class="studioLecture" id=activity-1_deo><i class="fas fa-file-alt activity-icon"></i>Условна вероватноћа, Бајесова формула и независни догађаји</div></a>
+                <a href=../7_lekcija/2_deo.html><div class="studioLecture" id=activity-2_deo><i class="fas fa-file-alt activity-icon"></i>Стабло вероватноће</div></a>
+                <a href=../7_lekcija/3_deo.html><div class="studioLecture" id=activity-3_deo><i class="fas fa-file-alt activity-icon"></i>Бернулијева шема</div></a>
+                <a href=../7_lekcija/4_deo.html><div class="studioLecture" id=activity-4_deo><i class="fas fa-file-alt activity-icon"></i>Условна вероватноћа</div></a>
+                <a href=../7_lekcija/5_deo.html><div class="studioLecture" id=activity-5_deo><i class="fas fa-file-alt activity-icon"></i>Потпуна вероватноћа</div></a>
+                <a href=../7_lekcija/6_deo.html><div class="studioLecture" id=activity-6_deo><i class="fas fa-file-alt activity-icon"></i>Бајесова формула</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-1_lekcija>
+                    <h5>Статистика</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../1_lekcija/1_st.html><div class="studioLecture" id=activity-1_st><i class="fas fa-file-alt activity-icon"></i>Појам статистике и њени елементи</div></a>
+                <a href=../1_lekcija/2_st.html><div class="studioLecture" id=activity-2_st><i class="fas fa-file-alt activity-icon"></i>Дискретне случајне променљиве</div></a>
+                <a href=../1_lekcija/3_st.html><div class="studioLecture" id=activity-3_st><i class="fas fa-file-alt activity-icon"></i>Примена и значај статистике</div></a>
+                <a href=../1_lekcija/4_str.html><div class="studioLecture" id=activity-4_str><i class="fas fa-file-alt activity-icon"></i>Примена статистике у музици</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <section id="id1">
+<h1>Условна вероватноћа<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<p>Понекад се током посматрања случајног експеримента дође до сазнања које може променити вероватноћу посматраног догађаја.</p>
+<ul class="simple">
+<li><p>На пример, уколико погађате исход бацања две коцке, а неко вам кришом каже да су пали исти бројеви, вероватноћа догађаја (пале су две шестице) наравно ће се повећати.</p></li>
+<li><p>Тада говоримо о <em>условној вероватноћи</em> или вероватноћи да су пале две шестице уз услов да су пали исти бројеви.</p></li>
+</ul>
+<p><em>Дефиниција</em></p>
+<ul class="simple">
+<li><p>Вероватноћа догађаја Б условно од догађаја А или условна вероватноћа догађаја Б у односу на догађај А је p</p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\((Б | А)=\frac{p(АБ)}{p(A)}\)</span>.</p>
+<ul class="simple">
+<li><p>Условна вероватноћа догађаја Б уз услов да се догодио догађај A симболички се записује као</p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(p (Б | A)\)</span>.</p>
+<p>Читамо &quot;вероватноћа догађаја Б уз услов A&quot;.
+Размотримо неколико примера, после којих се налазе и задаци за самосталан рад.</p>
+<p><strong>Пример 1</strong></p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/sp.jpg"><img alt="../_images/sp.jpg" src="../_images/sp.jpg" style="width: 450px;" /></a>
+</figure>
+<p>Чекајући почетак карташке вечери два пријатеља су се забављала извлачењем карте из шпила од 52 карте.</p>
+<ul class="simple">
+<li><p>Један од њих је извукао карту.</p></li>
+</ul>
+<p><em>Питање:</em> Колика је вероватноћа да је извучена десетка?</p>
+<ul class="simple">
+<li><p>Други је пријатељ погледао извучену карту и рекао да је црна карта с бројем (од 2 до 10 - није ас, жандар, дама или краљ).</p></li>
+</ul>
+<p><em>Питање:</em> Колика је вероватноћа да је извучена десетка ако се зна да је црна карта с бројем?</p>
+<p><strong>Решење примера</strong></p>
+<ul class="simple">
+<li><p>Нека је А = {извучена је десетка}, Б = {извучена је црна карта с бројем}.</p></li>
+<li><p>Простор свих елементарних догађаја има 52 елемента и сву су једнако могући, па вероватноћу догађаја А рачунамо према класичној дефиницији p(A) = $frac{k (A)}{k(Ω)}$ = $frac{4}{52}$ = $frac{1}{13}$</p></li>
+<li><p>Након спознаје да је извучена црна карта с бројем, скуп свих могућих исхода више није скуп Ω, него скуп Б, а повољни су исходи две црне десетке, елементи скупа А ∩ Б.</p></li>
+<li><p>Стога је вероватноћа догађаја А уз услов да се десио догађај Б: <span class="math notranslate nohighlight">\(p (A | Б) = \frac{k (A ∩ Б)}{k(Б)}$  = \frac{2}{18}  = \frac{1}{9}\)</span></p></li>
+</ul>
+<section id="id2">
+<h2>Задатак 1 за самосталан рад<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Ако је случајан експеримент бацање две коцке, а догађај А = {пале су две шестице} и Б = {пали су исти бројеви}.</p></li>
+</ul>
+<p><strong>Пример 2</strong></p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/od.jpg"><img alt="../_images/od.jpg" src="../_images/od.jpg" style="width: 450px;" /></a>
+</figure>
+<ul class="simple">
+<li><p>У групи од 30 ученика, 21 ученик има смеђу косу, 19 смеђе очи, а њих 15 има и смеђу косу и смеђе очи.</p></li>
+</ul>
+<p><em>Питање:</em> Колика је вероватноћа да случајно одабрани ученик има смеђе очи ако се зна да има смеђу косу?</p>
+<p><em>Решење примера</em></p>
+<ul class="simple">
+<li><p>Тражимо условну вероватноћу p (A | Б) где је А = {ученик има смеђе очи} и Б = {ученик има смеђу косу}. Прикажи догађаје Венеовим дијаграмом.</p></li>
+<li><p>Дакле, вероватноћа да ученик има смеђе очи уз услов да има смеђу косу је p <span class="math notranslate nohighlight">\((A | Б) = \frac{k (A ∩ Б)}{k(Б)} = \frac{15}{21}  = 0,7143\)</span></p></li>
+<li><p>Нека су општи догађаји Ω, А и Б приказани Венеовим дијаграмом. Потребно је одредити вероватноћу p (A | Б), p (A ∩ Б), p (Б).
+Постоји ли веза међу њима? Погледајмо.</p></li>
+<li><p>Као и у претходном примеру, повољне исходе за A ┃ Б пребројимо у скупу A ∩ Б, а све могуће исходе у скупу Б. Следи:</p></li>
+<li><p><span class="math notranslate nohighlight">\(p (A | Б) =  \frac{k (A ∩ Б)}{k(Б)}$ =  \frac{p (A ∩ Б)}{p(Б)}\)</span>.</p></li>
+</ul>
+<p>Аналогно се показује да је  <span class="math notranslate nohighlight">\(p (Б | A) = \frac{p (A ∩ Б)}{p(A)}\)</span>.(<em>Докажи!</em>)</p>
+<p><em>Дефиниција</em></p>
+<ul class="simple">
+<li><p>Нека су А и Б произвољни догађаји такви да је p (Б)&gt; 0.
+Условна вероватноћа догађаја А уз услов да се догодио догађај Б јесте:
+<span class="math notranslate nohighlight">\(p (A | Б) =  \frac{p (A ∩ Б)}{p(Б)}\)</span>. Још пишемо <span class="math notranslate nohighlight">\(p (A ∩ Б) = p (A | Б) \cdot p(Б)\)</span>.</p></li>
+<li><p>Ова формула нам омогућава рачунање условне вероватноће у било којем вероватном простору, не само у класичном,
+а користећи се обликом  <span class="math notranslate nohighlight">\(p (A ∩ Б) =  p (Б) \cdot p (A | Б)\)</span> или <span class="math notranslate nohighlight">\(p (A ∩ Б) = p (A) \cdot p (Б | A)\)</span>
+можемо рачунати вероватноћу просека било која два догађаја А и Б.</p></li>
+</ul>
+</section>
+<section id="id3">
+<h2>Задатак 2 за самосталан рад<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<p>Показати да је тачна вредност израза:</p>
+<p>p (A | Б)= 1 - p (A | Б)</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/gb.jpg"><img alt="../_images/gb.jpg" src="../_images/gb.jpg" style="width: 450px;" /></a>
+</figure>
+<p>Пример 3</p>
+<p>Врећица садржи 15 бомбона са укусом јагоде (Ј) и 10 са укусом ментола (М). Марко случајно узима две бомбоне из врећице.</p>
+<p>а) Прво је извукао бомбону са укусом ментола, а с обзиром на то да је то омиљени укус, запитао се колика је сада вероватноћа да друга бомбона такође има укус ментола?</p>
+<p>б) Колика је вероватноћа да ће извући обе бомбоне са укусом ментола?</p>
+<p>в) Колика је вероватноћа да редослед укуса буде јагода па ментол (ЈМ)?</p>
+<p><em>Решење</em></p>
+<p>Нека је А = {прва извучена бомбона је М-укус ментола}, Б = {друга извучена бомбона је М}</p>
+<p>а) Треба израчунати вероватноћу догађаја Б ако знамо да се десио догађај А, односно условну вероватноћу p (Б ┃ A). Након што је прва бомбона извучена, у врећици је остало 24 бомбоне, од којих 9 са укусом ментола, па је p (Б ┃ A) = $frac{9}{24}$ = 0,375.</p>
+<p>б) У овом случају не знамо да ли се десио догађај А, а занима нас вероватноћа да се догоди и догађај А и догађај Б, односно вероватноћа просека p (A ∩ Б) = p (А) ∙ p (Б ┃ A) = $frac{10}{25}$ ∙ $frac{9}{24}$ = 0,15
+Напомена: p (A ∩ Б) се може израчунати и класично као p (A ∩ Б) = 0,15.</p>
+<p>ц) И у овом случају можемо рачунати користећи се формулом условне вероватноће што се обично кратко записује:
+p (JM) = $frac{15}{25}$ (вероватноћа да је прва извучена бомбона од јагоде) ∙ $frac{10}{24}$ (вероватноћа да је друга извучена бомбона од јагоде) = 0,25</p>
+</section>
+<section id="id4">
+<h2>Задатак 3 за самосталан рад<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
+<ol class="loweralpha simple">
+<li><p>Покажи да за три догађаја вреди p (A ∩ Б ∩ Ц) = p (А) ∙ p (Б ┃ A) ∙ p (Ц ┃ A ∩ Б) и формулу уопштити за пресек од n догађаја.</p></li>
+</ol>
+<p>б) Из шпила од 52 карте извлачимо три карте, једну по једну, без враћања. Одредити вероватноћу да је редослед извлачења ас, краљ, ас.</p>
+<p><strong>Пример 4</strong></p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/v.png"><img alt="../_images/v.png" src="../_images/v.png" style="width: 450px;" /></a>
+</figure>
+<ul class="simple">
+<li><p>Према једној анкети, вероватноћа да ће у другом кругу на изборе за градоначелника изаћи мушкарац је 0,55 а жена 0,45. Од мушкараца који су изашли на изборе њих 32% ће гласати за кандидата X, а преостали за кандидата Y. Од жена које су изашле на изборе њих 56% ће гласати за кандидата X.</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/stablo5.jpg"><img alt="../_images/stablo5.jpg" src="../_images/stablo5.jpg" style="width: 450px;" /></a>
+</figure>
+<p>а) Описана ситуација се најбоље приказује коришћењем стабла вероватноће</p>
+<p>б) Да ли је већа вероватноћа да је случајно одабрани глсач мушкарац који ће дати свој глас кандидату X или жена која ће дати глас кандидату Y?</p>
+<p><em>Решење</em></p>
+<p>а) Означимо догађаје и придружимо гранама на стаблу њихове вероватноће.</p>
+<ul class="simple">
+<li><p>М = {гласао је мушкарац}</p></li>
+<li><p>Ж = {глсала је жена}</p></li>
+<li><p>X = {X је добио глас}</p></li>
+<li><p>Y = {Y је добио глас}</p></li>
+</ul>
+<p>Уочимо да је грани која води до коначног исхода придружена условна вероватноћа.</p>
+<ul class="simple">
+<li><p>На пример, 0,32 (32%) је вероватноћа да је неко глсао за X уз услов да је та особа мушкарац.</p></li>
+</ul>
+<p>б) Множењем означених вероватноћа по гранама долазимо до тражених вероватноћа:</p>
+<p>p (M ∩ X) = p (M) ∙ p (X ┃ M) = 0,55 ∙ 0,32 = 0,176</p>
+<p>p (Ж ∩ Y) = 0,45 ∙ 0,44 = 0,198</p>
+<ul class="simple">
+<li><p>Дакле, већа је вероватноћа да је неки глсач жена која гласа за кандидата Y.</p></li>
+</ul>
+<p><strong>Пример 5</strong></p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/klik.jpg"><img alt="../_images/klik.jpg" src="../_images/klik.jpg" style="width: 450px;" /></a>
+</figure>
+<p>У кутији је 5 белих и 3 црне куглице. Играч случајно узме 2 куглице, једну по једну. Приказати исходе извлачења користећи се стаблом вероватноће и одредити вероватноћу да играч извуче прво белу, а затим црну куглицу ако куглицу након извлачења:</p>
+<p>а) враћа куглицу</p>
+<p>б) не враћа куглицу</p>
+</section>
+<section id="id5">
+<h2>Решење<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h2>
+<p>а) с враћањем куглице</p>
+<p>б) без враћања куглице</p>
+<p><span class="math notranslate nohighlight">\(p (БЦ)=\frac{5}{8} \cdot \frac{3}{8}=\frac{15}{64}\)</span></p>
+<p>Где је и зашто настала разлика у решењима ова 2 случаја?</p>
+<p>Подсетимо се, догађаји А и Б независни су ако је <span class="math notranslate nohighlight">\(p (А ∩ Б) = p (А) \cdot p (Б)\)</span>.</p>
+<p><em>Чему је једнака условна вероватноћа догађаја А уз услов да се десио догађај Б ако су А и Б независни догађаји?</em></p>
+<p>Интуитивно јасно, ако догађај А не зависи од тога да ли се десио догађај Б, онда је p (А ┃ Б) = p (А). Доказ је једноставан:</p>
+<p><span class="math notranslate nohighlight">\(p (А ┃ Б) = \frac{p (A ∩ Б)}{p(Б)} = p (А) \cdot \frac{p (Б)}{p (Б)} = p(A)\)</span></p>
+</section>
+<section id="id6">
+<h2>Задатак 4 за самосталан рад<a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h2>
+<p>Из кутије са 5 белих и 3 црне куглице играч узима три куглице, једну по једну. Колика је вероватноћа да
+ће их извући редоследом бела, црна, црна ако куглицу:</p>
+<p>а) враћа</p>
+<p>б) не враћа</p>
+</section>
+<section id="id7">
+<h2>Питалице и задаци за проверу знања о условној вероватноћи<a class="headerlink" href="#id7" title="Permalink to this heading">¶</a></h2>
+
+    <div class="quiz-question">
+
+            <div class="course-box course-box-question course-content petlja-problem-box choice-question">
+                <div class="image-background"></div>
+                <div class="petlja-problem-box-icon-holder"> </div>
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="question342233">
+            <p>Q-41: Колика је вероватноћа да од 32 карте за игру извучемо или каро (коцка) или аса?</p>
+
+            <li data-component="answer"  id="question342233_opt_a">1/6</li><li data-component="feedback" id="question342233_opt_a">Нетачно</li>
+            
+            <li data-component="answer" data-correct id="question342233_opt_b">1/4</li><li data-component="feedback" id="question342233_opt_b">Тачно</li>
+            
+            <li data-component="answer"  id="question342233_opt_c">1/3</li><li data-component="feedback" id="question342233_opt_c">Нетачно</li>
+            
+            <li data-component="answer"  id="question342233_opt_d">1/2</li><li data-component="feedback" id="question342233_opt_d">Нетачно</li>
+            
+
+            </ul>
+            </div>
+            
+    </div>
+
+    <div class="quiz-question">
+
+            <div class="course-box course-box-question course-content petlja-problem-box choice-question">
+                <div class="image-background"></div>
+                <div class="petlja-problem-box-icon-holder"> </div>
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="question345213">
+            <p>Q-42: Колика је вероватноћа да ће при бацању коцкице пасти број мањи од 3?</p>
+
+            <li data-component="answer"  id="question345213_opt_a">1/6</li><li data-component="feedback" id="question345213_opt_a">Нетачно</li>
+            
+            <li data-component="answer"  id="question345213_opt_b">1/4</li><li data-component="feedback" id="question345213_opt_b">Нетачно</li>
+            
+            <li data-component="answer" data-correct id="question345213_opt_c">1/3</li><li data-component="feedback" id="question345213_opt_c">Тачно</li>
+            
+            <li data-component="answer"  id="question345213_opt_d">1/2</li><li data-component="feedback" id="question345213_opt_d">Нетачно</li>
+            
+
+            </ul>
+            </div>
+            
+    </div>
+
+    <div class="quiz-question">
+
+            <div class="course-box course-box-question course-content petlja-problem-box choice-question">
+                <div class="image-background"></div>
+                <div class="petlja-problem-box-icon-holder"> </div>
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="question3457811290">
+            <p>Q-43: Бачене су две коцкице за игру и добијен је збир поена 10. Колика је вероватноћа догађаја да је пала бар једна шестица?</p>
+
+            <li data-component="answer"  id="question3457811290_opt_a">1/4</li><li data-component="feedback" id="question3457811290_opt_a">Нетачно</li>
+            
+            <li data-component="answer" data-correct id="question3457811290_opt_b">2/3</li><li data-component="feedback" id="question3457811290_opt_b">Тачно</li>
+            
+            <li data-component="answer"  id="question3457811290_opt_c">1/6</li><li data-component="feedback" id="question3457811290_opt_c">Нетачно</li>
+            
+            <li data-component="answer"  id="question3457811290_opt_d">2/5</li><li data-component="feedback" id="question3457811290_opt_d">Нетачно</li>
+            
+
+            </ul>
+            </div>
+            
+    </div>
+
+    <div class="quiz-question">
+
+            <div class="course-box course-box-question course-content petlja-problem-box choice-question">
+                <div class="image-background"></div>
+                <div class="petlja-problem-box-icon-holder"> </div>
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="question34578119898">
+            <p>Q-44: У кутији се налази 10 куглица (7 белих и 3 црне). Извлаче се, без враћања, куглице једна за другом. Колика је вероватноћа догађаја да друга извучена куглица буде црна?</p>
+
+            <li data-component="answer" data-correct id="question34578119898_opt_a">3/10</li><li data-component="feedback" id="question34578119898_opt_a">Тачно</li>
+            
+            <li data-component="answer"  id="question34578119898_opt_b">5/8</li><li data-component="feedback" id="question34578119898_opt_b">Нетачно</li>
+            
+            <li data-component="answer"  id="question34578119898_opt_c">4/2</li><li data-component="feedback" id="question34578119898_opt_c">Нетачно</li>
+            
+            <li data-component="answer"  id="question34578119898_opt_d">9/5</li><li data-component="feedback" id="question34578119898_opt_d">Нетачно</li>
+            
+
+            </ul>
+            </div>
+            
+    </div>
+
+    <div class="quiz-question">
+
+            <div class="course-box course-box-question course-content petlja-problem-box choice-question">
+                <div class="image-background"></div>
+                <div class="petlja-problem-box-icon-holder"> </div>
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="question34578777">
+            <p>Q-45: У контејнеру се налази 12 производа, од којих је 8 стандардних. Радник бира насумице два производа, прво један, затим други. Одредити вероватноћу да су оба производа нестандардна, а потом изабери тачан одговор.</p>
+
+            <li data-component="answer"  id="question34578777_opt_a">0.04</li><li data-component="feedback" id="question34578777_opt_a">Нетачно</li>
+            
+            <li data-component="answer" data-correct id="question34578777_opt_b">0,09</li><li data-component="feedback" id="question34578777_opt_b">Тачно</li>
+            
+            <li data-component="answer"  id="question34578777_opt_c">0,10</li><li data-component="feedback" id="question34578777_opt_c">Нетачно</li>
+            
+            <li data-component="answer"  id="question34578777_opt_d">0,08</li><li data-component="feedback" id="question34578777_opt_d">Нетачно</li>
+            
+
+            </ul>
+            </div>
+            
+    </div>
+<p>Занимљив видео клип о Бернулијевом доприносу вероватноћи</p>
+
+    <div  id="evyT3_8Dnhs" class="ytvideo"  style="text-align: center; margin: 15px; cursor:pointer;">
+        <div style="background-image: url('https://img.youtube.com/vi/evyT3_8Dnhs/mqdefault.jpg'); background-repeat: no-repeat;background-position: center; height: 210px; width: 310px; margin: 0 auto; border: 1px solid #20c997">
+            <img src="../_static/images/play_button.svg" style="margin-top: 78px;" /> 
+        </div>
+      
+
+        </div>
+    <div id="modal-evyT3_8Dnhs" class="ytvideoclose" style="display: none; background-color: transparent; z-index: 10000;">
+        <div style="background-color: white; position: relative; width:  780px; height:  500px; z-index: 100;" id="YTmodal-evyT3_8Dnhs">
+        </div>
+    </div>
+    
+    
+    </section>
+</section>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="3_deo.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Previous chapter </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Next chapter</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Letters</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

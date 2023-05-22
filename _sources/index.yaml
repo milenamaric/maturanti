@@ -96,7 +96,22 @@ lessons:
         title: Бернулијева шема
         file: 3_deo.rst 
         description: #Optional
-        guid: 56c03488-f7f3-410d-9519-e88d22kl7f01
+        guid: 56c03488-f7f3-410d-9519-e88dlkkl7f01
+      - type: reading
+        title: Условна вероватноћа
+        file: 4_deo.rst 
+        description: #Optional
+        guid: 89m03488-f7f3-410d-9519-e88d22kl7f01
+      - type: reading
+        title: Потпуна вероватноћа
+        file: 5_deo.rst 
+        description: #Optional
+        guid: mkl03488-f7f3-410d-9519-e88d22kl7f01
+      - type: reading
+        title: Бајесова формула
+        file: 6_deo.rst 
+        description: #Optional
+        guid: opl03488-f7f3-410d-9519-e88d22kl7f01
   - title: Статистика
     guid: c2c651cd-53d9-4a3d-ba4f-650b8422f0bc
     description: Your first lesson. Description is not required attribute

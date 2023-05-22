@@ -113,9 +113,27 @@ lessons:
     type: reading
   - description: ''
     file: 3_deo.html
-    guid: 56c03488-f7f3-410d-9519-e88d22kl7f01
+    guid: 56c03488-f7f3-410d-9519-e88dlkkl7f01
     src: 3_deo.rst
     title: Бернулијева шема
+    type: reading
+  - description: ''
+    file: 4_deo.html
+    guid: 89m03488-f7f3-410d-9519-e88d22kl7f01
+    src: 4_deo.rst
+    title: Условна вероватноћа
+    type: reading
+  - description: ''
+    file: 5_deo.html
+    guid: mkl03488-f7f3-410d-9519-e88d22kl7f01
+    src: 5_deo.rst
+    title: Потпуна вероватноћа
+    type: reading
+  - description: ''
+    file: 6_deo.html
+    guid: opl03488-f7f3-410d-9519-e88d22kl7f01
+    src: 6_deo.rst
+    title: Бајесова формула
     type: reading
   archived-activities: []
   description: Your first lesson. Description is not required attribute

@@ -1,3 +1,8 @@
+
+..
+  Бернулијева шема
+  reading
+
 =======================================================
 Бернулијева шема (понављање експеримента са два исхода)
 =======================================================
@@ -111,32 +116,16 @@ p ({тачно је пала шестица}) = $\frac{4}{3}$ ∙ $\frac{5}{6}$ 
 
 
 
-.. quizq::
-
-
-   .. mchoice:: question345781122
-      :correct: d
-      :answer_a: $\frac{5}{21}$
-      :answer_b: $\frac{2}{5}$
-      :answer_c: $\frac{1}{2}$
-      :answer_d: $\frac{4}{5}$
-      :feedback_a: Нетачно
-      :feedback_b: Нетачно
-      :feedback_c: Нетачно
-      :feedback_d: Тачно
-      
-      У кутији је 10 балона од којих су 4 пробушена. Ако извлачимо 5 балона, колика је вероватноћа да је међу њима тачно један пробушен?:
-
 
 .. quizq::
 
 
    .. mchoice:: question3457811567
       :correct: d
-      :answer_a: :math:`\frac{5}{21}`
-      :answer_b: :math:`\frac{2}{5}`
-      :answer_c: :math:`\frac{1}{2}`
-      :answer_d: :math:`\frac{4}{5}`
+      :answer_a: 5/21
+      :answer_b: 2/5
+      :answer_c: 1/2
+      :answer_d: 4/5
       :feedback_a: Нетачно
       :feedback_b: Нетачно
       :feedback_c: Нетачно
@@ -150,10 +139,10 @@ p ({тачно је пала шестица}) = $\frac{4}{3}$ ∙ $\frac{5}{6}$ 
 
    .. mchoice:: question34578119
       :correct: b
-      :answer_a: :math:`\frac{2}{9}`
-      :answer_b: :math:`\frac{1}{5}`
-      :answer_c: :math:`\frac{9}{3}`
-      :answer_d: :math:`\frac{5}{2}`
+      :answer_a: 2/9
+      :answer_b: 1/5
+      :answer_c: 9/3
+      :answer_d: 5/2
       :feedback_a: Нетачно
       :feedback_b: Тачно
       :feedback_c: Нетачно
