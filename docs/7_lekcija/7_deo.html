@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Бајесова формула (формула вероватноћа хипотеза)</title>
+    <title>Закључак</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
@@ -130,7 +130,6 @@
     <script src="../_static/jszip.js"></script>
     <script src="../_static/editor-i18n.en.js"></script>
     <script src="../_static/editor-i18n.y.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../_static/jquery-fix.js"></script>
     <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
@@ -315,220 +314,33 @@
     <div id="main-content">
     
   <section id="id1">
-<h1>Бајесова формула (формула вероватноћа хипотеза)<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
-<p>Бајесова формула и њена примена су од великог значаја и примене у свету око
-нас тако да је разумевање ове лекције јако битно за разумевање сржи вероватноће.</p>
+<h1>Закључак<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<p>Појмове из вероватноће је неопходно разумети и схватити на прави начин јер су од
+великог значаја за човеку садашњост, али и будућност.
+На пример, Бајесова формула има изузетну примену у генетици,
+производњи тестова на дроге и вирусе, као и решавању најразличитијих загонетки.
+Теорема указује и на то да уколико на пример 100% пацијената са раком има одређени симптом,
+када неко има исти симптом, то не значи да та особа има 100% шансе да већ има или добије рак.</p>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../_images/b.png"><img alt="../_images/b.png" src="../_images/b.png" style="width: 450px;" /></a>
+<a class="reference internal image-reference" href="../_images/model.jpg"><img alt="../_images/model.jpg" src="../_images/model.jpg" style="width: 450px;" /></a>
 </figure>
-<p><strong>Пример 1</strong></p>
-<p>Петар иде на посао возом, бициклом или аутомобилом. Ако иде возом, касни у 5% случајева, бициклом у 2%, а аутомобилом у 10% случајева.</p>
-<p>Бициклом иде три пута чешће него аутомобилом, а возом 4 пута чешће него аутомобилом. Петар је једног дана закаснио на посао.</p>
-<p>Колика је вероватноћа да је тај дан ишао на посао аутомобилом?</p>
-<p><strong>Решење</strong></p>
-<p>Вероватноћа хипотезе да Петар иде аутомобилом нам је позната, међутим након што смо сазнали да је Петар закаснио, та се вероватноћа мења. Нас занима условна вероватноћа да је Петар ишао аутомобилом ако знамо да је закаснио.</p>
-<p>Након цртања стабла вероватноће увиди да је повољан исход АК, а могући су сви исходи у којима Петар касни (на слици су њихове гране означене плавом). Стога бисмо тражену вероватноћу могли израчунати као</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(p (А | К) = \frac{0,0125}{0,0145} = \frac{5}{18} = 0,2778\)</span>.</p></li>
-</ul>
-<p>Како бисмо показали да је заиста тако, доказаћемо следећу формулу:</p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/stablo3.jpg"><img alt="../_images/stablo3.jpg" src="../_images/stablo3.jpg" style="width: 450px;" /></a>
-</figure>
-<p><em>Нека се догађаји $X_{1}$, $X_{2}$, ... $X_{n}$ међусобно искључују и Ω = $X_{1}$ ∪ $X_{2}$ ∪ ... ∪ $X_{n}$. За произвољни догађај А, p (А)&gt;0 и за све i = 1,2, ... n вреди Бајесова формула: p ($X_{i}$ ┃ А)</em></p>
-<p><em>Доказ</em></p>
-<p>Догађаји <span class="math notranslate nohighlight">\(X_{1}\)</span>, <span class="math notranslate nohighlight">\(X_{2}\)</span>, ... <span class="math notranslate nohighlight">\(X_{n}\)</span> су хипотезе па према формули потпуне вероватноће вреди</p>
-<p><span class="math notranslate nohighlight">\(p (А) = p (А | X_{1}) + p (X_{2}) \cdot p (А | X_{2}) + ... + (p $X_{n}) \cdot p (А | X_{n})\)</span>.</p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/formula1.jpg"><img alt="../_images/formula1.jpg" src="../_images/formula1.jpg" style="width: 450px;" /></a>
-</figure>
-<p>Слика приказује Бајесову формулу или теорему вероватноће хипотеза у општем облику, који се даље може упростити применом правила потпуне вероватноће.</p>
-<p><strong>Пример 2</strong></p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/crp.jpg"><img alt="../_images/crp.jpg" src="../_images/crp.jpg" style="width: 450px;" /></a>
-</figure>
-<p>У корпи је 8 белих и 10 црних чарапа. Приликом поспремања Тин је открио да једна чарапа недостаје.
-Након тога на случајан начин узима две чарапе и обе су беле.</p>
-<p><em>Пиатање:</em> Колика је верованоћа да је изгубљена чарапа беле боје?</p>
-<p><em>Решење</em></p>
-<p>Означимо хипотезе</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(X_{1}= {изгубљена је бела чарапа}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(X_{2} = {изгубљена је црна чарапа}\)</span></p></li>
-<li><p>а догађај А = {извучене су две беле чарапе}</p></li>
-</ul>
-<p>Треба израчунати <span class="math notranslate nohighlight">\(p (X_{1} | А)\)</span></p>
-<p><em>Задатак можете завршити за домаћи :)</em></p>
-<section id="id2">
-<h2>Задатак 1 за самосталан рад<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
-<ul class="simple">
-<li><p>Користећи се стаблом вероватноће, решити пример 8 у случају да у корпи недостају 2 чарапе, односно колика је вероватноћа да су изгубљене две беле чарапе ако се зна да су након тога извучене две беле чарапе.</p></li>
-</ul>
-<p><strong>Пример 2</strong></p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/epd.jpg"><img alt="../_images/epd.jpg" src="../_images/epd.jpg" style="width: 450px;" /></a>
-</figure>
-<p>Вратили сте се са путовања из земље у којој влада епидемија неке заразне болести и 1,5% популације је заражено.
-Иако немате симптоме, лекар вас је одлучио тестирати. Поузданост теста је 95%, што значи да је резултат
-теста позитиван код 95% заражених или негативан код 95% незаражених.</p>
-<p>Ваш тест је позитиван.</p>
-<p>Да ли вас је лекар с разлогом одлучио тестирати?</p>
-<p>Колика је вероватноћа да сте заиста заражени уколико је ваш тест позитиван?
-Ваш се пријатељ из исте те земље вратио 3 месеца касније, такође без симптома у тренутку
-када је већ 45% тамошње популације било заражено.</p>
-<p>Тестиран је истим тестом и тест је био ппозитиван. Има ли он разлога за бригу?</p>
-<p><em>Решење</em></p>
-<p>Нацртајмо стабло вероватноће и означимо следеће догађаје и вероватноће.</p>
-<ul class="simple">
-<li><p>З = {особа је заражена}</p></li>
-<li><p>Б ={особа није заражена}</p></li>
-<li><p>+=  {тест је позитиван}</p></li>
-<li><p>-= {тест је негативан}</p></li>
-</ul>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/stablo2.jpg"><img alt="../_images/stablo2.jpg" src="../_images/stablo2.jpg" style="width: 450px;" /></a>
-</figure>
-<p>Случајно одабран особа је заражена с вероватноћом p (Б) = 0,985.</p>
-<p>Из поузданости теста следи: p (+ | З) = 0,95 , p (+ | Б) = 0,05 , p (- | З)= 0,05 , p (- | Б) = 0,95.
-Вероватноћа хипотезе З уз услов да је тест позитиван рачунамо користећи се нацртаним стаблом:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(p (З | +) = \frac{0,01425}{0,01425 + 0,04925} = 0,22\)</span> (приближна вредност)</p></li>
-</ul>
-<p>Дакле, тест прогласи позитивнима око 22% особа које су заражене, а чак 78% оних које нису заражене.
-Стога је вероватноћа да сте заражени релативно мала, без обзира на позитиван тест.</p>
-<p>За вашег пријатеља ситуација је другачија јер</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(p (З | +) = \frac{0,45 \cdot 0,95}{0,45 \cdot 0,95 + 0,55 \cdot 0,05} = 0,94\)</span> (приближна вредност)</p></li>
-</ul>
-<p>Дакле, вероватноћа да је ваш пријатељ заражен је много већа јер иако се ради о истом тесту?</p>
-<p><em>Продискутујте зашто је дошло до тако велике разлике?</em></p>
-<p>Из претходног примера је јасно да уз малу учесталост болести позитиван резултат тестирања не значи и болест за тестирану особу.</p>
-<p><em>Стога у наредним задацима, уз ознаке као у примеру 5, истражи и продискутуј везу између вероватноће p (З | +), p (З), p (+ | З).</em></p>
-<p>Нека је поузданост теста 99%. Истражи зависност броја  p (З | +) од процента заражених у целој популацији, ако је тај проценат 0,8% , 3% , 10% , 30% , z%.</p>
-<p><em>Колико најмање људи треба бити заражено да би масовно тестирање имало смисла?</em></p>
-<ul class="simple">
-<li><p>Како поузданост теста утиче на претходна разматрања, односно на p (З | +)? Зависи ли поузданост теста од броја заражених у целој популацији?</p></li>
-</ul>
-<section id="id3">
-<h3>Занимљивост<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h3>
-<p>За вероватноћу да је резултат теста позитиван ако је особа заражена или p (+ | З) прецизније се употребљава назив <em>сензитивност</em> теста,
-а назив <em>специфичност</em> теста употребљава се за вероватноћу да је резултат теста негативан ако особа није заражена или p (- | З). Заједничким именом се називају <em>поузданостима</em> теста. У примеру 9 је узето да су вероватноће једнаке, иако у пракси најчешће нису.</p>
-</section>
-</section>
-<section id="id4">
-<h2>Питалице и задаци за проверу знања о Бајесовој формули<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
-
-    <div class="quiz-question">
-
-            <div class="course-box course-box-question course-content petlja-problem-box choice-question">
-                <div class="image-background"></div>
-                <div class="petlja-problem-box-icon-holder"> </div>
-                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
-                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
-            <ul data-component="multiplechoice" data-multipleanswers="true"  id="question390">
-            <p>Q-49: Шта говори Бајесова формула о вероватноћи?</p>
-
-            <li data-component="answer"  id="question390_opt_a">у случају са два догађаја А и Б, важи само када је остварен догађај Б</li><li data-component="feedback" id="question390_opt_a">Нетачно</li>
-            
-            <li data-component="answer" data-correct id="question390_opt_b">теорема која се користи приликом рачуна са условном вероватноћом</li><li data-component="feedback" id="question390_opt_b">Тачно</li>
-            
-            <li data-component="answer" data-correct id="question390_opt_c">у случају са два догађаја А и Б, важи само када је остварен догађај А</li><li data-component="feedback" id="question390_opt_c">Нетачно</li>
-            
-            <li data-component="answer"  id="question390_opt_d">даје нам прецизне податке о веродостојности неког теста</li><li data-component="feedback" id="question390_opt_d">Тачно</li>
-            
-
-            </ul>
-            </div>
-            
-    </div>
-
-    <div class="quiz-question">
-
-            <div class="course-box course-box-question course-content petlja-problem-box choice-question">
-                <div class="image-background"></div>
-                <div class="petlja-problem-box-icon-holder"> </div>
-                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
-                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="question3909">
-            <p>Q-50: Цела производња у фабрици се одвија на три машине. Три машине чине редом 20%, 30% и 50% фабричке производње. Удeо произведеног шкарта (неисправних производа) за прву машину износи 5%; 3% за другу машину; и 1% за трећу машину. Ако је случајно одабран производ неисправн, која је вероватноћа да је произведен од стране треће машине?</p>
-
-            <li data-component="answer" data-correct id="question3909_opt_a">0,21</li><li data-component="feedback" id="question3909_opt_a">Тачно</li>
-            
-            <li data-component="answer"  id="question3909_opt_b">0,89</li><li data-component="feedback" id="question3909_opt_b">Нетачно</li>
-            
-            <li data-component="answer"  id="question3909_opt_c">1,23</li><li data-component="feedback" id="question3909_opt_c">Нетачно</li>
-            
-            <li data-component="answer"  id="question3909_opt_d">4,56</li><li data-component="feedback" id="question3909_opt_d">Нетачно</li>
-            
-
-            </ul>
-            </div>
-            
-    </div>
-
-    <div class="quiz-question">
-
-            <div class="course-box course-box-question course-content petlja-problem-box choice-question">
-                <div class="image-background"></div>
-                <div class="petlja-problem-box-icon-holder"> </div>
-                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
-                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="question39094321">
-            <p>Q-51: У кутији А налазе се 9 листића нумерисаних бројевима од 1 до 9, а у кутији Б налази се 5 листића нумерисаних бројевима од 1 до 5. Бирамо кутију насумице и из ње извлачимо један листић. Ако је број на листићу паран, израчунати колика је вероватноћа да је листић извађен из кутије А.</p>
-
-            <li data-component="answer" data-correct id="question39094321_opt_a">0,53</li><li data-component="feedback" id="question39094321_opt_a">Тачно</li>
-            
-            <li data-component="answer"  id="question39094321_opt_b">0,94</li><li data-component="feedback" id="question39094321_opt_b">Нетачно</li>
-            
-            <li data-component="answer"  id="question39094321_opt_c">1,64</li><li data-component="feedback" id="question39094321_opt_c">Нетачно</li>
-            
-            <li data-component="answer"  id="question39094321_opt_d">5,28</li><li data-component="feedback" id="question39094321_opt_d">Нетачно</li>
-            
-
-            </ul>
-            </div>
-            
-    </div>
-
-    <div class="quiz-question">
-
-            <div class="course-box course-box-question course-content petlja-problem-box choice-question">
-                <div class="image-background"></div>
-                <div class="petlja-problem-box-icon-holder"> </div>
-                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
-                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="question3909432123">
-            <p>Q-52: Војник погађа мету са вероватноћом 0,8 (добар стрелац). Колика је вероватноћа да ће из 10 независних покушаја мету погодити тачно 9 пута?</p>
-
-            <li data-component="answer" data-correct id="question3909432123_opt_a">0,268</li><li data-component="feedback" id="question3909432123_opt_a">Тачно</li>
-            
-            <li data-component="answer"  id="question3909432123_opt_b">2,321</li><li data-component="feedback" id="question3909432123_opt_b">Нетачно</li>
-            
-            <li data-component="answer"  id="question3909432123_opt_c">3,982</li><li data-component="feedback" id="question3909432123_opt_c">Нетачно</li>
-            
-            <li data-component="answer"  id="question3909432123_opt_d">1,763</li><li data-component="feedback" id="question3909432123_opt_d">Нетачно</li>
-            
-
-            </ul>
-            </div>
-            
-    </div>
-<p>Видео клип уколико желиш да сазнаш нешто више о Бајесовом доприносу вероватноћи</p>
-
-    <div  id="OByl4RJxnKA" class="ytvideo"  style="text-align: center; margin: 15px; cursor:pointer;">
-        <div style="background-image: url('https://img.youtube.com/vi/OByl4RJxnKA/mqdefault.jpg'); background-repeat: no-repeat;background-position: center; height: 210px; width: 310px; margin: 0 auto; border: 1px solid #20c997">
-            <img src="../_static/images/play_button.svg" style="margin-top: 78px;" /> 
-        </div>
-      
-
-        </div>
-    <div id="modal-OByl4RJxnKA" class="ytvideoclose" style="display: none; background-color: transparent; z-index: 10000;">
-        <div style="background-color: white; position: relative; width:  780px; height:  500px; z-index: 100;" id="YTmodal-OByl4RJxnKA">
-        </div>
-    </div>
-    
-    
-    </section>
+<p>У генетици се Бајесова формула може користити за израчунавање вероватноће
+специфичног генотипа човека. Многи људи настоје да повећају своје шансе за
+избегавање болести које погађају само специфичне генотипове.
+Бајесова анализа се може извршити на основу породичне историје или генетског тестирања,
+како би се предвидело да ли ће појединац развити болест или ће је пренети на своју децу.</p>
+<p>Генетско тестирање је уобичајено за младе који желе да добију дете,
+али су забринути да би дете могло бити носилац неке рецесивне болести.
+Бајесова анализа се састоји из неколико корака који укључују међусобна
+искључивања (за одређени алел, појединац или јесте или није носилац), условну,
+заједничку и постериорну вероватноћу. Све у свему Бајесова формула пружа
+феноменалан увид у генетички материјал и могућност развитка одређене болести код човека.</p>
+<p>Сви смо у доба пандемије короне били свесни масовног тестирања и
+испитивања симптома болести које смо испољавали. Међутим колика је
+вероватноћа да чак и ако тест каже да смо заражени ми у ствари  нисмо (или јесмо) болесни?</p>
+<p>Знања из вероватноће нам пружају широки спектар знања који се
+врло често принењује, па зато не чуди што се људи који се
+баве овом облашћу математике називају савременим <em>видовњацима</em>.</p>
 </section>
 
 
@@ -536,7 +348,7 @@
     
     <div>
 <div class="lecture-prev-next-toggle">
-  <a  href="5_deo.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Previous chapter </span> </a>
+  <a  href="6_deo.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Previous chapter </span> </a>
   
   <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Next chapter</span>  <i class="fas fa-arrow-right fa"></i> </a>
 </div>

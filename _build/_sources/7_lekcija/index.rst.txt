@@ -11,3 +11,4 @@
     4_deo.rst
     5_deo.rst
     6_deo.rst
+    7_deo.rst

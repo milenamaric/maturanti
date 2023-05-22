@@ -135,6 +135,12 @@ lessons:
     src: 6_deo.rst
     title: Бајесова формула
     type: reading
+  - description: ''
+    file: 7_deo.html
+    guid: mjk03488-f7f3-410d-9519-e88d22kl7f01
+    src: 7_deo.rst
+    title: Резиме
+    type: reading
   archived-activities: []
   description: Your first lesson. Description is not required attribute
   folder: 7_lekcija
