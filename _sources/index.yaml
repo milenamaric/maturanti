@@ -62,6 +62,21 @@ lessons:
         file: 2_lekcija.rst 
         description: #Optional
         guid: 82c03488-f7f3-410d-8019-e88d22cb7f01
+  - title: Случајне променљиве
+    guid: c2c6523d-53m0-4a3d-ba4f-650b8422fvb3
+    description: Your first lesson. Description is not required attribute
+    folder: 6_lekcija
+    activities:
+      - type: reading
+        title: Случајне променљиве
+        file: 1_str.rst 
+        description: #Optional
+        guid: mm903488-f7f3-410d-8019-e88d22cb7f01
+      - type: reading
+        title: Дискретне случајне променљиве
+        file: 2_str.rst 
+        description: #Optional
+        guid: mm903488-f7f3-410d-8019-e88d22cbkl01
   - title: Статистика
     guid: c2c651cd-53d9-4a3d-ba4f-650b8422f0bc
     description: Your first lesson. Description is not required attribute
@@ -73,15 +88,15 @@ lessons:
         description: #Optional
         guid: 71c00155-f7f3-410d-8019-e88d22cb7f01
       - type: reading
-        title: Подела и развој статистике
+        title: Дискретне случајне променљиве
         file: 2_st.rst 
         description: #Optional
-        guid: 71c00155-m4b4-410d-8019-e88d22cb7f01
+        guid: 71c00155-m4b4-410d-8019-e88d22cb7m98
       - type: reading
         title: Примена и значај статистике
         file: 3_st.rst 
         description: #Optional
-        guid: 98d00615-m4b4-410d-8019-e88d22cb7f01
+        guid: 98d00615-m4b4-410d-8019-e88d22cb7fmm
       - type: reading
         title: Примена статистике у музици
         file: 4_str.rst 

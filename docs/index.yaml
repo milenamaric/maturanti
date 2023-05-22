@@ -81,6 +81,25 @@ lessons:
   title: Вероватноћа
 - activities:
   - description: ''
+    file: 1_str.html
+    guid: mm903488-f7f3-410d-8019-e88d22cb7f01
+    src: 1_str.rst
+    title: Случајне променљиве
+    type: reading
+  - description: ''
+    file: 2_str.html
+    guid: mm903488-f7f3-410d-8019-e88d22cbkl01
+    src: 2_str.rst
+    title: Дискретне случајне променљиве
+    type: reading
+  archived-activities: []
+  description: Your first lesson. Description is not required attribute
+  folder: 6_lekcija
+  guid: c2c6523d-53m0-4a3d-ba4f-650b8422fvb3
+  normalized_title: Случајне променљиве
+  title: Случајне променљиве
+- activities:
+  - description: ''
     file: 1_st.html
     guid: 71c00155-f7f3-410d-8019-e88d22cb7f01
     src: 1_st.rst
@@ -88,13 +107,13 @@ lessons:
     type: reading
   - description: ''
     file: 2_st.html
-    guid: 71c00155-m4b4-410d-8019-e88d22cb7f01
+    guid: 71c00155-m4b4-410d-8019-e88d22cb7m98
     src: 2_st.rst
-    title: Подела и развој статистике
+    title: Дискретне случајне променљиве
     type: reading
   - description: ''
     file: 3_st.html
-    guid: 98d00615-m4b4-410d-8019-e88d22cb7f01
+    guid: 98d00615-m4b4-410d-8019-e88d22cb7fmm
     src: 3_st.rst
     title: Примена и значај статистике
     type: reading
