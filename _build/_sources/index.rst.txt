@@ -16,6 +16,7 @@ Petljadoc Course
     :hidden:
     :maxdepth: 3
 
+    Комбинаторика <4_lekcija/index>
     Подаци <2_lekcija/index>
     Вероватноћа <3_lekcija/index>
     Статистика <1_lekcija/index>

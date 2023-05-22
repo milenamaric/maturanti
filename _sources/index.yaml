@@ -22,6 +22,16 @@ description:
     Овај курс је намењен свим заинтересованим ученицима за изучавање основних појмова из области вероватноће и статистике. Курс је настао као резултат писања матурског рада из математике рада осам ученика Девете гимназије "Михаило Петровић Алас". Професор ментор, Милена Марић. 
   shortDescription: Курс вероватноће и статистике за средњу школу
 lessons:
+  - title: Комбинаторика
+    guid: c2c6523d-53f3-4a3d-ba4f-650b8422f0bc
+    description: Your first lesson. Description is not required attribute
+    folder: 4_lekcija
+    activities:
+      - type: reading
+        title: Комбинаторика - увод
+        file: 1_lek.rst 
+        description: #Optional
+        guid: 71c03899-f7f3-410d-8019-e88d22cb7f01
   - title: Подаци
     guid: c2c6523d-53d9-4a3d-ba4f-650b8422f0bc
     description: Your first lesson. Description is not required attribute
