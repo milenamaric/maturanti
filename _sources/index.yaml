@@ -92,11 +92,6 @@ lessons:
         file: 2_deo.rst 
         description: #Optional
         guid: 71c03488-f7f3-410d-9519-e88d22kl7f01
-      - type: reading
-        title: Стабло вероватноће
-        file: 3_deo.rst 
-        description: #Optional
-        guid: 71c03489-f7f3-410d-9519-e88d22kl7f01
   - title: Статистика
     guid: c2c651cd-53d9-4a3d-ba4f-650b8422f0bc
     description: Your first lesson. Description is not required attribute

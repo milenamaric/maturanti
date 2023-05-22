@@ -100,6 +100,25 @@ lessons:
   title: Случајне променљиве
 - activities:
   - description: ''
+    file: 1_deo.html
+    guid: 71c03488-f7f3-410d-8019-e88d22kl7f01
+    src: 1_deo.rst
+    title: Условна вероватноћа, Бајесова формула и независни догађаји
+    type: reading
+  - description: ''
+    file: 2_deo.html
+    guid: 71c03488-f7f3-410d-9519-e88d22kl7f01
+    src: 2_deo.rst
+    title: Стабло вероватноће
+    type: reading
+  archived-activities: []
+  description: Your first lesson. Description is not required attribute
+  folder: 7_lekcija
+  guid: c2c6523d-53m0-4a3d-ba4f-650b8422f0mn
+  normalized_title: Условна вероватноћа
+  title: Условна вероватноћа
+- activities:
+  - description: ''
     file: 1_st.html
     guid: 71c00155-f7f3-410d-8019-e88d22cb7f01
     src: 1_st.rst
