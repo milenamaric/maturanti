@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Подаци</title>
+    <title>Бернулијева шема (понављање експеримента са два исхода)</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
@@ -130,6 +130,7 @@
     <script src="../_static/jszip.js"></script>
     <script src="../_static/editor-i18n.en.js"></script>
     <script src="../_static/editor-i18n.y.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../_static/jquery-fix.js"></script>
     <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
@@ -310,13 +311,208 @@
     <div id="main-content">
     
   <section id="id1">
-<h1>Подаци<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="2_pod.html">Подаци</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2_pod.html">Подаци</a></li>
+<h1>Бернулијева шема (понављање експеримента са два исхода)<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/bn.jpg"><img alt="../_images/bn.jpg" src="../_images/bn.jpg" style="width: 450px;" /></a>
+</figure>
+<p>Често случајан експеримент изводимо више пута за редом, при чему исходи
+експеримента не утичу на други, на пример, када бацамо новчић или коцку.</p>
+<p>Овде ћемо описати низ независних експеримената таквих да се у сваком
+експерименту или догоди догађај А или њему супротан догађај А.</p>
+<p>Када се понавља један експеримент са два исхода (бацање динара, убацивање лопте у кош,
+реакција у хемијском експерименту - позитивна, негативна). Ако се експеримент понавља n пута,
+на основу претходног, скуп исхода сложеног експеримента има исход 2 на n елемената.</p>
+<p><strong>Пример 1</strong></p>
+<p>Бацамо симетричну коцку четири пута. Колика је вероватноћа да ће тачно три пута пасти шестица?</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/kc.jpg"><img alt="../_images/kc.jpg" src="../_images/kc.jpg" style="width: 450px;" /></a>
+</figure>
+<p><strong>Решење</strong></p>
+<p>Овај случајан експеримент има много елементарних догађаја, тачније <span class="math notranslate nohighlight">\(6^{4}\)</span>.
+Ипак, нас у сваком бацању само занима да ли је пала шестица или није.</p>
+<ul class="simple">
+<li><p>Нацртајмо стабло вероватноће при чему 6 надвучено означава да није пао број 6.</p></li>
+<li><p>У том случају имамо 16 исхода. Повољни су 6666, 6666, 6666, 6666. То су четворочлани низови у којима се број 6 појављује тачно три пута. Знамо израчунати и да је таквих низова ($frac{4}{3}$).</p></li>
+<li><p>Због независности догађаја, вероватноћа сваког од ових исхода износи <span class="math notranslate nohighlight">\(p(6666) =\frac{1}{6} \cdot \frac{1}{6} \cdot \frac{1}{6}$ \cdot \frac{5}{6} = p(6666) = p(6666) = p(6666)\)</span>.</p></li>
 </ul>
-</div>
+<p>Коначно, применом формуле уније дисјунктних догађаја следи:
+p ({тачно је пала шестица}) = $frac{4}{3}$ ∙ $frac{5}{6}$ ∙ $frac{1}{6}$∙ $frac{1}{6}$ ∙ $frac{1}{6}$ = $frac{5}{324}$ = 0,0154.</p>
+<section id="id2">
+<h2>Дефиниција<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<p>Неки експеримент понављамо n пута узастопце при истим условима. Експеримент има само два исхода: успех или неуспех. Нека је вероватноћа успеха при једном извођењу експеримента једнака p, а вероватноћа неуспеха 1-p, тада је вероватноћа да се успех понови тачно k пута једнака p(тачно k пута успех) = $frac{n}{k}$ ∙ $p^{k}$ ∙ $(1-p)^{n-k}$, 0≤k≤n</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/formula2.jpg"><img alt="../_images/formula2.jpg" src="../_images/formula2.jpg" style="width: 450px;" /></a>
+</figure>
+<p>Овај модел се назива Бернулијева шема.</p>
+</section>
+<section id="id3">
+<h2>Задатак 1 за самосталан рад<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<p>Године 1654. француски коцкар <em>Мере</em> је математичару <em>Паскалу</em> поставио проблем
+који се сматра почетком теорије вероватноће:</p>
+<ul class="simple">
+<li><p>&quot;У шта се исплати више кладити - да ће у четири узастопна бацања коцке барем једном пасти шестица или да ће у 24 узастопна бацања пара коцкица барем једном пасти две шестице?&quot;</p></li>
+<li><p>Пробај да одговориш на ово питање.</p></li>
+</ul>
+</section>
+<section id="id4">
+<h2>Задаци и питалице за проверу знања о експериментима са два исхода<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
+
+    <div class="quiz-question">
+
+            <div class="course-box course-box-question course-content petlja-problem-box choice-question">
+                <div class="image-background"></div>
+                <div class="petlja-problem-box-icon-holder"> </div>
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="question3134">
+            <p>Q-49: Вероватноћа да ће при бацању коцке неће пасти ниједна шестица је:</p>
+
+            <li data-component="answer"  id="question3134_opt_a">0,33</li><li data-component="feedback" id="question3134_opt_a">Тачно</li>
+            
+            <li data-component="answer"  id="question3134_opt_b">1,54</li><li data-component="feedback" id="question3134_opt_b">Нетачно</li>
+            
+            <li data-component="answer"  id="question3134_opt_c">2,53</li><li data-component="feedback" id="question3134_opt_c">Нетачно</li>
+            
+
+            </ul>
+            </div>
+            
+    </div>
+
+    <div class="quiz-question">
+
+            <div class="course-box course-box-question course-content petlja-problem-box choice-question">
+                <div class="image-background"></div>
+                <div class="petlja-problem-box-icon-holder"> </div>
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="question323411">
+            <p>Q-50: Изабери тачну тврдњу. Бернулијева шема нам омогућава да:</p>
+
+            <li data-component="answer" data-correct id="question323411_opt_a">вероватноћу успеха при извођењу експеримената са два исхода (успех или неуспех)</li><li data-component="feedback" id="question323411_opt_a">Тачно</li>
+            
+            <li data-component="answer"  id="question323411_opt_b">вероватноћу успеха при извођењу n зависних експеримената</li><li data-component="feedback" id="question323411_opt_b">Нетачно</li>
+            
+            <li data-component="answer"  id="question323411_opt_c">вероватноћу при извођењу експеримената са више могућих исхода</li><li data-component="feedback" id="question323411_opt_c">Тачно</li>
+            
+
+            </ul>
+            </div>
+            
+    </div>
+
+    <div class="quiz-question">
+
+            <div class="course-box course-box-question course-content petlja-problem-box choice-question">
+                <div class="image-background"></div>
+                <div class="petlja-problem-box-icon-holder"> </div>
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="question34578112">
+            <p>Q-51: Кошаркаш изводи слободна бацања на кош. Бацања су независна и вероватноћа поготка у
+сваком бацању је 0,8. Вероватноћа догађаја да је из три бацања погодио три пута је:</p>
+
+            <li data-component="answer"  id="question34578112_opt_a">0,987</li><li data-component="feedback" id="question34578112_opt_a">Нетачно</li>
+            
+            <li data-component="answer"  id="question34578112_opt_b">0,432</li><li data-component="feedback" id="question34578112_opt_b">Нетачно</li>
+            
+            <li data-component="answer" data-correct id="question34578112_opt_c">0,512</li><li data-component="feedback" id="question34578112_opt_c">Тачно</li>
+            
+            <li data-component="answer"  id="question34578112_opt_d">0,213</li><li data-component="feedback" id="question34578112_opt_d">Нетачно</li>
+            
+
+            </ul>
+            </div>
+            
+    </div>
+
+    <div class="quiz-question">
+
+            <div class="course-box course-box-question course-content petlja-problem-box choice-question">
+                <div class="image-background"></div>
+                <div class="petlja-problem-box-icon-holder"> </div>
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="question345781122">
+            <p>Q-52: У кутији је 10 балона од којих су 4 пробушена. Ако извлачимо 5 балона, колика је вероватноћа да је међу њима тачно један пробушен?:</p>
+
+            <li data-component="answer"  id="question345781122_opt_a">$\frac{5}{21}$</li><li data-component="feedback" id="question345781122_opt_a">Нетачно</li>
+            
+            <li data-component="answer"  id="question345781122_opt_b">$\frac{2}{5}$</li><li data-component="feedback" id="question345781122_opt_b">Нетачно</li>
+            
+            <li data-component="answer"  id="question345781122_opt_c">$\frac{1}{2}$</li><li data-component="feedback" id="question345781122_opt_c">Нетачно</li>
+            
+            <li data-component="answer" data-correct id="question345781122_opt_d">$\frac{4}{5}$</li><li data-component="feedback" id="question345781122_opt_d">Тачно</li>
+            
+
+            </ul>
+            </div>
+            
+    </div>
+
+    <div class="quiz-question">
+
+            <div class="course-box course-box-question course-content petlja-problem-box choice-question">
+                <div class="image-background"></div>
+                <div class="petlja-problem-box-icon-holder"> </div>
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="question3457811567">
+            <p>Q-53: У кутији је 10 балона од којих су 4 пробушена. Ако извлачимо 5 балона, колика је вероватноћа да је међу њима тачно један пробушен?:</p>
+
+            <li data-component="answer"  id="question3457811567_opt_a">:math:`\frac{5}{21}`</li><li data-component="feedback" id="question3457811567_opt_a">Нетачно</li>
+            
+            <li data-component="answer"  id="question3457811567_opt_b">:math:`\frac{2}{5}`</li><li data-component="feedback" id="question3457811567_opt_b">Нетачно</li>
+            
+            <li data-component="answer"  id="question3457811567_opt_c">:math:`\frac{1}{2}`</li><li data-component="feedback" id="question3457811567_opt_c">Нетачно</li>
+            
+            <li data-component="answer" data-correct id="question3457811567_opt_d">:math:`\frac{4}{5}`</li><li data-component="feedback" id="question3457811567_opt_d">Тачно</li>
+            
+
+            </ul>
+            </div>
+            
+    </div>
+
+    <div class="quiz-question">
+
+            <div class="course-box course-box-question course-content petlja-problem-box choice-question">
+                <div class="image-background"></div>
+                <div class="petlja-problem-box-icon-holder"> </div>
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="question34578119">
+            <p>Q-54: На пријемном испиту кандидати одговарају на 20 питања. За свако питање понуђено је пет одговора од којих је само један тачан. Вероватноћа догађаја да је ученик који случајно бира тачан одговор све погодио је:</p>
+
+            <li data-component="answer"  id="question34578119_opt_a">:math:`\frac{2}{9}`</li><li data-component="feedback" id="question34578119_opt_a">Нетачно</li>
+            
+            <li data-component="answer" data-correct id="question34578119_opt_b">:math:`\frac{1}{5}`</li><li data-component="feedback" id="question34578119_opt_b">Тачно</li>
+            
+            <li data-component="answer"  id="question34578119_opt_c">:math:`\frac{9}{3}`</li><li data-component="feedback" id="question34578119_opt_c">Нетачно</li>
+            
+            <li data-component="answer"  id="question34578119_opt_d">:math:`\frac{5}{2}`</li><li data-component="feedback" id="question34578119_opt_d">Нетачно</li>
+            
+
+            </ul>
+            </div>
+            
+    </div>
+<p>Занимљив видео клип о Бернулијевом доприносу вероватноћи</p>
+
+    <div  id="bT1p5tJwn_0" class="ytvideo"  style="text-align: center; margin: 15px; cursor:pointer;">
+        <div style="background-image: url('https://img.youtube.com/vi/bT1p5tJwn_0/mqdefault.jpg'); background-repeat: no-repeat;background-position: center; height: 210px; width: 310px; margin: 0 auto; border: 1px solid #20c997">
+            <img src="../_static/images/play_button.svg" style="margin-top: 78px;" /> 
+        </div>
+      
+
+        </div>
+    <div id="modal-bT1p5tJwn_0" class="ytvideoclose" style="display: none; background-color: transparent; z-index: 10000;">
+        <div style="background-color: white; position: relative; width:  780px; height:  500px; z-index: 100;" id="YTmodal-bT1p5tJwn_0">
+        </div>
+    </div>
+    
+    
+    </section>
 </section>
 
 
@@ -324,7 +520,7 @@
     
     <div>
 <div class="lecture-prev-next-toggle">
-  <a  href="../4_lekcija/1_lek.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Previous chapter </span> </a>
+  <a  href="2_deo.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Previous chapter </span> </a>
   
   <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Next chapter</span>  <i class="fas fa-arrow-right fa"></i> </a>
 </div>

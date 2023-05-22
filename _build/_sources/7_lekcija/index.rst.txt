@@ -7,3 +7,4 @@
 
     1_deo.rst
     2_deo.rst
+    3_deo.rst

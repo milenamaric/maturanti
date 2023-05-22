@@ -111,6 +111,12 @@ lessons:
     src: 2_deo.rst
     title: Стабло вероватноће
     type: reading
+  - description: ''
+    file: 3_deo.html
+    guid: 56c03488-f7f3-410d-9519-e88d22kl7f01
+    src: 3_deo.rst
+    title: Бернулијева шема
+    type: reading
   archived-activities: []
   description: Your first lesson. Description is not required attribute
   folder: 7_lekcija
