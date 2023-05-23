@@ -62,6 +62,12 @@ lessons:
   title: Подаци
 - activities:
   - description: ''
+    file: 0_uvod.html
+    guid: 71c98788-f7f3-410d-8019-e88d22cb7f01
+    src: 0_uvod.rst
+    title: Кратка историја вероватноће
+    type: reading
+  - description: ''
     file: 1_lekcija.html
     guid: 71c03488-f7f3-410d-8019-e88d22cb7f01
     src: 1_lekcija.rst

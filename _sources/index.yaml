@@ -53,6 +53,11 @@ lessons:
     folder: 3_lekcija
     activities:
       - type: reading
+        title: Кратка историја вероватноће
+        file: 0_uvod.rst 
+        description: #Optional
+        guid: 71c98788-f7f3-410d-8019-e88d22cb7f01
+      - type: reading
         title: Емпиријска вероватноћа
         file: 1_lekcija.rst 
         description: #Optional
