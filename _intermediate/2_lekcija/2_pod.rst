@@ -1,10 +1,5 @@
 
 ..
-  Дескриптивна статистика
-  reading
-
-
-..
   Подаци
   reading
 
@@ -14,7 +9,7 @@
 
 .. infonote:: **У овој лекцији ћеш учити о томе шта су подаци**
 
-  Појмови које ћеш научити су:
+   Појмови које ћеш научити су:
 
   - подаци 
   - нумерички подаци
@@ -189,7 +184,7 @@
 .. quizq:: 
 
 
-   .. mchoice:: question41
+   .. mchoice:: question41678
       :correct: c
       :answer_a: Кошарком
       :answer_b: Одбојком
@@ -208,7 +203,7 @@
 .. quizq:: 
 
 
-   .. mchoice:: question42
+   .. mchoice:: question42345
       :correct: c
       :answer_a: Дечака
       :answer_b: Девојчица
@@ -383,7 +378,7 @@
 .. quizq:: 
 
 
-   .. mchoice:: question492
+   .. mchoice:: question49267
       :correct: b
       :answer_a: Т1
       :answer_b: Т4
@@ -398,7 +393,7 @@
 .. quizq:: 
 
 
-   .. mchoice:: question491
+   .. mchoice:: question49189
       :correct: a
       :answer_a: Плавом
       :answer_b: Црвеном
@@ -421,7 +416,7 @@
 .. quizq:: 
 
 
-   .. mchoice:: question410
+   .. mchoice:: question41067
       :correct: c
       :answer_a: 1. maja
       :answer_b: 2. maja
@@ -436,7 +431,7 @@
 .. quizq:: 
 
 
-   .. mchoice:: question411
+   .. mchoice:: question41178
       :correct: b
       :answer_a: 1. maja
       :answer_b: 5. maja
@@ -451,7 +446,7 @@
 .. quizq:: 
 
 
-   .. mchoice:: question412
+   .. mchoice:: question41289
       :correct: b
       :answer_a: 25 центиметара
       :answer_b: 10 центиметара
