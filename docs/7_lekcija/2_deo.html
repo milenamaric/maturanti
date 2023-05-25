@@ -236,6 +236,7 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../4_lekcija/1_lek.html><div class="studioLecture" id=activity-1_lek><i class="fas fa-file-alt activity-icon"></i>Комбинаторика - увод</div></a>
+                <a href=../4_lekcija/2_lek.html><div class="studioLecture" id=activity-2_lek><i class="fas fa-file-alt activity-icon"></i>Пермутације, варијације, комбинације</div></a>
                 </div>
             </div>
                 
@@ -246,7 +247,8 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../2_lekcija/2_pod.html><div class="studioLecture" id=activity-2_pod><i class="fas fa-file-alt activity-icon"></i>Подаци</div></a>
-                <a href=../2_lekcija/2_pod.html><div class="studioLecture" id=activity-2_pod><i class="fas fa-file-alt activity-icon"></i>Дескриптивна статистика</div></a>
+                <a href=../2_lekcija/3_stat.html><div class="studioLecture" id=activity-3_stat><i class="fas fa-file-alt activity-icon"></i>Дескриптивна статистика</div></a>
+                <a href=../2_lekcija/3_prim.html><div class="studioLecture" id=activity-3_prim><i class="fas fa-file-alt activity-icon"></i>Примена</div></a>
                 </div>
             </div>
                 
@@ -332,21 +334,28 @@
 <figure class="align-center">
 <a class="reference internal image-reference" href="../_images/stablo.jpg"><img alt="../_images/stablo.jpg" src="../_images/stablo.jpg" style="width: 450px;" /></a>
 </figure>
-<p>Подаци о распрострањености крвних група у Хрватској из састава АБО и подаци уз састава RhD приказају се преко стабла вероватноће.</p>
-<p>Прво гранање показује да је у Хрватској 85% становништва <span class="math notranslate nohighlight">\(R_{h}\)</span> позитивно, а 15% Rh негативно, односно вероватноћа да је особа <span class="math notranslate nohighlight">\(R_{h}\)</span> позитивна износи 0,85 а да је <span class="math notranslate nohighlight">\(R_{h}\)</span> негативна 0,15.</p>
-<p>Друго гранање наставља се на сваку од претходних грана, а показује вероватноћу да нека особа има крвну групу 0, А, Б или АБ.</p>
-<p>Уколико се користе подаци са једне гране са првог и једне гране са другог гранања која је са њом повезана може се израчунати вероватноћа свих комбинација крвне групе и <span class="math notranslate nohighlight">\(R_{h}\)</span> фактора.</p>
-<p>На пример, будући да 34% особа има крвну групу 0, рачунамо да ће 34% од 85% <span class="math notranslate nohighlight">\(R_{h}\)</span> позитивних особа имати крвну групу 0, па је
-:math`:p(0+) = 0,34 cdot 0,85 = 0,289`.</p>
+<p>Подаци о распрострањености крвних група у Хрватској из састава АБО и подаци уз састава
+RhD приказају се преко стабла вероватноће.</p>
+<p>Прво гранање показује да је у Хрватској 85% становништва <span class="math notranslate nohighlight">\(R_{h}\)</span>
+позитивно, а 15% Rh негативно, односно вероватноћа да је особа <span class="math notranslate nohighlight">\(R_{h}\)</span>
+позитивна износи 0,85 а да је <span class="math notranslate nohighlight">\(R_{h}\)</span> негативна 0,15.</p>
+<p>Друго гранање наставља се на сваку од претходних грана, а показује вероватноћу да
+нека особа има крвну групу 0, А, Б или АБ.</p>
+<p>Уколико се користе подаци са једне гране са првог и једне гране са другог
+гранања која је са њом повезана може се израчунати вероватноћа свих комбинација
+крвне групе и <span class="math notranslate nohighlight">\(R_{h}\)</span> фактора.</p>
+<p>На пример, будући да 34% особа има крвну групу 0, рачунамо да ће 34% од 85%
+<span class="math notranslate nohighlight">\(R_{h}\)</span> позитивних особа имати крвну групу 0, па је
+<span class="math notranslate nohighlight">\(p(0+) = 0,34 \cdot 0,85 = 0,289\)</span>.</p>
 <p>Слично се рачуна и за остале комбинације:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(p (А+) = 0,85 \cdot 0,42 = 0,357\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(p (Б+) = 0,85 \cdot 0,17 = 0,1445\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(p (АБ+) = 0,85 \cdot 0,07 = 0,0595\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(p (\textup{А}+) = 0,85 \cdot 0,42 = 0,357\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(p (\textup{Б}+) = 0,85 \cdot 0,17 = 0,1445\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(p (\textup{АБ}+) = 0,85 \cdot 0,07 = 0,0595\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(p (0-) = 0,15 \cdot 0,34 = 0,051\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(p (А-) = 0,15 \cdot 0,42 = 0,063\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(p (Б-) = 0,15 \cdot 0,17 = 0,0255\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(p (АБ-) = 0,15 \cdot 0,07 = 0,0105\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(p (\textup{А}-) = 0,15 \cdot 0,42 = 0,063\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(p (\textup{Б}-) = 0,15 \cdot 0,17 = 0,0255\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(p (\textup{АБ}-) = 0,15 \cdot 0,07 = 0,0105\)</span></p></li>
 </ul>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../_images/kg.jpg"><img alt="../_images/kg.jpg" src="../_images/kg.jpg" style="width: 450px;" /></a>
@@ -386,26 +395,28 @@
 <li><p>Б = {на коцки је пао број 4}</p></li>
 </ol>
 <ul class="simple">
-<li><p>Одредимо вероватноћу p (А) и p (Б).</p></li>
+<li><p>Одредимо вероватноћу <span class="math notranslate nohighlight">\(p (\textup{А})\)</span> и <span class="math notranslate nohighlight">\(p (\textup{Б})\)</span>.</p></li>
 <li><p>Колика је вероватноћа да је пало писмо и број 4?</p></li>
 </ul>
-<p>Израчунати умножак <span class="math notranslate nohighlight">\(p (А) \cdot p (Б)\)</span> и упоредити резултате.</p>
+<p>Израчунати умножак <span class="math notranslate nohighlight">\(p (\textup{А}) \cdot p (\textup{Б})\)</span> и упоредити резултате.</p>
 <p><strong>Решење</strong></p>
 <ul class="simple">
-<li><p>Бацање новчића има 2 једнако вероватна исхода па је <span class="math notranslate nohighlight">\(P (А) = \frac{1}{2}\)</span></p></li>
-<li><p>Бацање коцке има 6 једнако вероватних исхода па је <span class="math notranslate nohighlight">\(P (Б) = \frac{1}{6}\)</span></p></li>
-<li><p>Бацање новчића и коцке има 2∙6 једнако вероватних исхода па је <span class="math notranslate nohighlight">\(P (А ∩ Б) = \frac{1}{12}\)</span></p></li>
+<li><p>Бацање новчића има 2 једнако вероватна исхода па је <span class="math notranslate nohighlight">\(P (\textup{А}) = \frac{1}{2}\)</span></p></li>
+<li><p>Бацање коцке има 6 једнако вероватних исхода па је <span class="math notranslate nohighlight">\(P (\textup{Б}) = \frac{1}{6}\)</span></p></li>
+<li><p>Бацање новчића и коцке има <span class="math notranslate nohighlight">\(2 \cdot 6\)</span> једнако вероватних исхода па
+је <span class="math notranslate nohighlight">\(P (\textup{А} ∩ \textup{Б}) = \frac{1}{12}\)</span></p></li>
 </ul>
 <p>Дакле,</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(P (А ∩ Б) = P (А) \cdot P (Б)\)</span></p></li>
-<li><p>Видели смо у претходном примеру да за независне догађаје вреди <span class="math notranslate nohighlight">\(P (А ∩ Б)= P (А) \cdot P (Б)\)</span>.
+<li><p><span class="math notranslate nohighlight">\(P (\textup{А} ∩ \textup{Б}) = P (\textup{А}) \cdot P (\textup{Б})\)</span></p></li>
+<li><p>Видели смо у претходном примеру да за независне догађаје вреди
+<span class="math notranslate nohighlight">\(P (\textup{А} ∩ \textup{Б})= P (\textup{А}) \cdot P (\textup{Б})\)</span>.
 То се често користи и као дефинција вероватно независних догађаја.</p></li>
 </ul>
 <p><em>Дефинција</em></p>
 <ul class="simple">
 <li><p>За два догађаја А и Б кажемо да су независни ако важи:</p></li>
-<li><p><span class="math notranslate nohighlight">\(p (А ∩ Б) = p (А) \cdot p (Б)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(p (\textup{А} ∩ \textup{Б}) = p (\textup{А}) \cdot p (\textup{Б})\)</span></p></li>
 </ul>
 <p>Ако је интуитивно јасно или из текста задатка да су догађаји независни,
 дефиниција незвисности се употребљава за рачунање <em>вероватних пресека</em>.</p>
@@ -427,11 +438,11 @@
 </ul>
 <p>Након што извучемо једну куглицу, вратимо је у кутију. За друго извлачење имамо 13 куглица у кутији па је јасно да исход првог извлачења не утиче на исход другог извалачења, односно да су догађаји А и Б независни.</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(p (А ∩ Б) = p (А) \cdot p (Б) = \frac{8}{13} \cdot $\frac{5}{13}$ = \frac{40}{169}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(p (\textup{А} ∩ \textup{Б}) = p (\textup{А}) \cdot p (\textup{Б}) = \frac{8}{13} \cdot \frac{5}{13} = \frac{40}{169}\)</span></p></li>
 <li><p>Догађај Ц = {извучене су црвена и плава куглица} можемо записати као унију догађаја {прва куглица је црвена, друга куглица је плава} и {прва куглица је плава, друга куглица је црвена}.</p></li>
 <li><p>Догађај {прва куглица је плава} = {друга куглица није плава} = Г</p></li>
 <li><p>Аналогно, {друга куглица је црвена} = {друга куглица није плава} = Д</p></li>
-<li><p>Сада је <span class="math notranslate nohighlight">\(p (Ц) = p ((А ∩ Б) ∪ (Г ∩ Д)) = p (А ∩ Б) + p (Г ∩ Д) = (\frac{8}{13} \cdot \frac{5}{13}) + (\frac{5}{13} \cdot \frac{8}{13}) = \frac{80}{169}\)</span></p></li>
+<li><p>Сада је <span class="math notranslate nohighlight">\(p (\textup{Ц}) = p ((\textup{А} ∩ \textup{Б}) ∪ (\textup{Г} ∩ \textup{Д})) = p (\textup{А} ∩ \textup{Б}) + p (\textup{Г} ∩ \textup{Д}) = (\frac{8}{13} \cdot \frac{5}{13}) + (\frac{5}{13} \cdot \frac{8}{13}) = \frac{80}{169}\)</span></p></li>
 </ul>
 <p><strong>Задатак за самосталан рад</strong></p>
 <figure class="align-center">
@@ -461,18 +472,17 @@
 <li><p>Ц = {трећи стрелац је погодио мету}</p></li>
 </ul>
 <p>Овде је задато да су догађаји А, Б и Ц независни.</p>
-<p>Сада је <span class="math notranslate nohighlight">\(p (А ∩ Б ∩ Ц) = p (А) \cdot p (Б) \cdot p (Ц) = \frac{3}{5} \cdot \frac{2}{3} \cdot \frac{5}{6} = \frac{1}{3}\)</span></p>
-<ul class="simple">
+<p>Сада је <span class="math notranslate nohighlight">\(p (\textup{А} ∩ \textup{Б} ∩ \textup{Ц}) = p (\textup{А}) \cdot p (\textup{Б}) \cdot p (\textup{Ц}) = \frac{3}{5} \cdot \frac{2}{3} \cdot \frac{5}{6} = \frac{1}{3}\)</span></p>
+<blockquote>
+<div><ul>
 <li><p>Догађај {тачно један стрелац је погодио мету} = {први је погодио и други није погодио и трећи није погодио или први није погодио и други није погодио и трећи је погодио}</p></li>
-<li><p>Сва три случаја се међусобно искључују, а погодак или промашај једног од стрелаца не утиче на остала два стрелца. Сада је: <span class="math notranslate nohighlight">\(p ((А ∩ Б&quot; ∩ Ц&quot;)) ∪ ((Ā ∩ Б ∩ Ц&quot;)) ∪ ((Ā ∩ Б&quot; ∩ Ц)) = p ((А ∩ Б&quot; ∩ Ц&quot;)) + ((Ā ∩ Б ∩ Ц&quot;)) + ((Ā ∩ Б&quot; ∩ Ц)) = p (А) \cdot p (Б&quot;) \cdot p (Ц&quot;) + p (Ā) ∙ p (Б) ∙ p (Ц&quot;) + p (Ā) \cdot p (Б&quot;) \cdot p (Ц) = \frac{3}{5} \cdot \frac{1}{3}$ \cdot $\frac{1}{6} + \frac{2}{5}$ \cdot \frac{2}{3} \cdot \frac{1}{6} + \frac{2}{5} \cdot \frac{1}{3} \cdot \frac{5}{6} = \frac{17}{90}\)</span></p></li>
+<li><p>Сва три случаја се међусобно искључују, а погодак или промашај једног од стрелаца не утиче на остала два стрелца. Сада је: <span class="math notranslate nohighlight">\(p ((\textup{А} ∩ \textup{Б} ∩ \textup{Ц})) ∪ ((\bar{\textup{A}} ∩ \textup{Б} ∩ \textup{Ц})) ∪ ((\bar{\textup{A}} ∩ \textup{Б} ∩ \textup{Ц})) = p ((\textup{А} ∩ \textup{Б} ∩ \textup{Ц})) + ((\bar{\textup{A}} ∩ \textup{Б} ∩ \textup{Ц})) + ((\bar{\textup{A}} ∩ \textup{Б} ∩ \textup{Ц})) = p (\textup{А}) \cdot p (\textup{Б}) \cdot p (\textup{Ц}) + p (\bar{\textup{A}}) \cdot p (\textup{Б}) \cdot p (\textup{Ц}) + p (\bar{\textup{A}}) \cdot p (\textup{Б}) \cdot p (\textup{Ц}) = \frac{3}{5} \cdot \frac{1}{3} \cdot \frac{1}{6} + \frac{2}{5}\cdot \frac{2}{3} \cdot \frac{1}{6} + \frac{2}{5} \cdot \frac{1}{3} \cdot \frac{5}{6} = \frac{17}{90}\)</span></p></li>
 <li><p>Догађај (барем је један стрелац погодио мету) је унија догађаја А, Б и Ц, односно мету је погодио тачно један стрелац или тачно два стрелца или тачно три стрелца. Међутим, тај догађај је супротан догађају {ниједан стрелац није погодио}, што је једноставније израчунати.</p></li>
-<li><p>p {барем је један стрелац погодио} = 1 - p {ниједан стрелац није погодио}</p></li>
+<li><p>p {барем је један стрелац погодио} = 1 - p {ниједан стрелац није погодио}</p>
+<p><span class="math notranslate nohighlight">\(p (\textup{А} ∩ \textup{Б} ∩ \textup{Ц}) = 1 - p (\bar{\textup{A}} ∩ \textup{Б} ∩ \textup{Ц}) = 1 - \frac{2}{5} \cdot \frac{1}{3} \cdot \frac{1}{6} = \frac{44}{45}\)</span></p>
+</li>
 </ul>
-<aside class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/home/milena/Desktop/maturanti/_intermediate/7_lekcija/2_deo.rst</span>, line 197)</p>
-<p>Bullet list ends without a blank line; unexpected unindent.</p>
-</aside>
-<p><span class="math notranslate nohighlight">\(p (А ∩ B ∩ Ц) = 1 - p (Ā ∩ Б&quot; ∩ Ц&quot;) = 1 - \frac{2}{5} \cdot \frac{1}{3} \cdot \frac{1}{6} = \frac{44}{45}\)</span></p>
+</div></blockquote>
 </section>
 <section id="id3">
 <h2>Задатак за самосталан рад 2<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
@@ -504,18 +514,18 @@
 <a class="reference internal image-reference" href="../_images/stablo6.jpg"><img alt="../_images/stablo6.jpg" src="../_images/stablo6.jpg" style="width: 450px;" /></a>
 </figure>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(p (А) \cdot p (Б) = \frac{2}{8} \cdot \frac{4}{8} = \frac{1}{8} = p (А ∩ Б)\)</span> чиме смо доказали да су догађаји А и Б независни.</p></li>
-<li><p>Из <span class="math notranslate nohighlight">\(Б ∩ Ц = {ЖММ, МЖМ, ММЖ}\)</span> следи <span class="math notranslate nohighlight">\(p (Б) \cdot p (Ц) = \frac{4}{8} \cdot \frac{6}{8} = \frac{3}{8} = p (Б ∩ Ц)\)</span> па су и догађаји Б и Ц независни.</p></li>
-<li><p>Видимо да је <span class="math notranslate nohighlight">\(А ∩ Ц = {ЖЖЖ}\)</span> па је <span class="math notranslate nohighlight">\(p (А) \cdot p (Ц) = \frac{2}{8} \cdot $\frac{7}{8} = \frac{7}{32}\)</span> што није <span class="math notranslate nohighlight">\(p (А ∩ Ц) = \frac{1}{8}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(p (\textup{А}) \cdot p (\textup{Б}) = \frac{2}{8} \cdot \frac{4}{8} = \frac{1}{8} = p (\textup{А} ∩ \textup{Б})\)</span> чиме смо доказали да су догађаји А и Б независни.</p></li>
+<li><p>Из <span class="math notranslate nohighlight">\(\textup{Б} ∩ \textup{Ц} = {\textup{ЖММ}, \textup{МЖМ}, \textup{ММЖ}}\)</span> следи <span class="math notranslate nohighlight">\(p (\textup{Б}) \cdot p (\textup{Ц}) = \frac{4}{8} \cdot \frac{6}{8} = \frac{3}{8} = p (\textup{Б} ∩ \textup{Ц})\)</span> па су и догађаји Б и Ц независни.</p></li>
+<li><p>Видимо да је <span class="math notranslate nohighlight">\(\textup{А} ∩ \textup{Ц} = {\textup{ЖЖЖ}}\)</span> па је <span class="math notranslate nohighlight">\(p (\textup{А}) \cdot p (\textup{Ц}) = \frac{2}{8} \cdot \frac{7}{8} = \frac{7}{32}\)</span> што није <span class="math notranslate nohighlight">\(p (\textup{А} ∩ \textup{Ц}) = \frac{1}{8}\)</span></p></li>
 <li><p>Следи да А и Ц нису независни догађаји.</p></li>
 </ul>
 <p><strong>Дефиниција:</strong></p>
 <ul class="simple">
 <li><p>Три догађаја А, Б и Ц су независна ако је:</p></li>
-<li><p><span class="math notranslate nohighlight">\(p (А ∩ Б) = p (А) \cdot p (Б)\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(p (А ∩ Ц) = p (А) \cdot p (Ц)\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(p (Б ∩ Ц) = p (Б) \cdot p (Ц)\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(p (А ∩ Б ∩ Ц) = p (А) \cdot p (Б) \cdot p (Ц)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(p (\textup{А} ∩ \textup{Б}) = p (\textup{А}) \cdot p (\textup{Б})\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(p (\textup{А} ∩ \textup{Ц}) = p (\textup{А}) \cdot p (\textup{Ц})\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(p (\textup{Б} ∩ \textup{Ц}) = p (\textup{Б}) \cdot p (\textup{Ц})\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(p (\textup{А} ∩ \textup{Б} ∩ \textup{Ц}) = p (\textup{А}) \cdot p (\textup{Б}) \cdot p (\textup{Ц})\)</span></p></li>
 </ul>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../_images/ie.png"><img alt="../_images/ie.png" src="../_images/ie.png" style="width: 450px;" /></a>
@@ -531,13 +541,13 @@
 <p><strong>Решење</strong></p>
 <p>Сваки од 36 елементарних догађаја једнако је могућ па знамо израчунати вероватноћу:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(p (А) =  \frac{18}{36}= $\frac{1}{2}\)</span>, <span class="math notranslate nohighlight">\(p (Б) = \frac{18}{36} = \frac{1}{2}\)</span>, <span class="math notranslate nohighlight">\(p (Ц) = \frac{4}{36} =  \frac{1}{9}\)</span></p></li>
-<li><p>Будући да је <span class="math notranslate nohighlight">\(А ∩ Б ∩ Ц = {(3,6)}\)</span>, следи</p></li>
-<li><p><span class="math notranslate nohighlight">\(p (А ∩ Б ∩ Ц) = \frac{1}{36} = p (А) \cdot p (Б) \cdot p (Ц)\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(p (\textup{А}) =  \frac{18}{36}= \frac{1}{2}\)</span>, <span class="math notranslate nohighlight">\(p (\textup{Б}) = \frac{18}{36} = \frac{1}{2}\)</span>, <span class="math notranslate nohighlight">\(p (\textup{Ц}) = \frac{4}{36} =  \frac{1}{9}\)</span></p></li>
+<li><p>Будући да је <span class="math notranslate nohighlight">\(\textup{А} ∩ \textup{Б} ∩ \textup{Ц} = {(3,6)}\)</span>, следи</p></li>
+<li><p><span class="math notranslate nohighlight">\(p (\textup{А} ∩ \textup{Б} ∩ \textup{Ц}) = \frac{1}{36} = p (\textup{А}) \cdot p (\textup{Б}) \cdot p (\textup{Ц})\)</span>.</p></li>
 <li><p>Треба још израчунати и вероватноћу по паровима:</p></li>
-<li><p><span class="math notranslate nohighlight">\(p (А ∩ Б) = \frac{9}{36} = \frac{1}{4} = p (А) \cdot p (Б)\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(p (А ∩ Ц) = \frac{1}{36} = p (А) \cdot p (Ц)\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(p (Б ∩ Ц) = \frac{1}{12} = p (Б) \cdot p (Ц)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(p (\textup{А} ∩ \textup{Б}) = \frac{9}{36} = \frac{1}{4} = p (\textup{А}) \cdot p (\textup{Б})\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(p (\textup{А} ∩ \textup{Ц}) = \frac{1}{36} = p (\textup{А}) \cdot p (\textup{Ц})\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(p (\textup{Б} ∩ \textup{Ц}) = \frac{1}{12} = p (\textup{Б}) \cdot p (\textup{Ц})\)</span></p></li>
 </ul>
 <p>Закључак је да сва три догађаја <em>нису</em> међусобно независна.</p>
 </section>
@@ -564,7 +574,7 @@
                 <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
                 <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="question172">
-            <p>Q-37: Три пута бацамо коцку. Колика је вероватноћа да смо добили:</p>
+            <p>Q-44: Три пута бацамо коцку. Колика је вероватноћа да смо добили:</p>
 
             <li data-component="answer"  id="question172_opt_a">барем једну шестицу</li><li data-component="feedback" id="question172_opt_a">Нетачно</li>
             
@@ -586,7 +596,7 @@
                 <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
                 <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="question171">
-            <p>Q-38: Матеја и Немања бирају место за годишњи одмор. У ужем избору су им заливи Крк, Пашман и Дуги оток а на копну градови Сплит, Задар, Пула, Макрска и Цриквеница. Сва места су написали на папириће и извлаче два папирића. Колика је вероватноћа да ће извући (означи тачан одговор):</p>
+            <p>Q-45: Матеја и Немања бирају место за годишњи одмор. У ужем избору су им заливи Крк, Пашман и Дуги оток а на копну градови Сплит, Задар, Пула, Макрска и Цриквеница. Сва места су написали на папириће и извлаче два папирића. Колика је вероватноћа да ће извући (означи тачан одговор):</p>
 
             <li data-component="answer"  id="question171_opt_a">оба места на мору</li><li data-component="feedback" id="question171_opt_a">Нетачно</li>
             
@@ -608,7 +618,7 @@
                 <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
                 <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="question1790">
-            <p>Q-39: Када су догађаји А, Б и Ц независни? Када је:</p>
+            <p>Q-46: Када су догађаји А, Б и Ц независни? Када је:</p>
 
             <li data-component="answer"  id="question1790_opt_a">p (А ∩ Б) = p (А) ∙ p (Ц)</li><li data-component="feedback" id="question1790_opt_a">Нетачно</li>
             
@@ -630,7 +640,7 @@
                 <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
                 <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
             <ul data-component="multiplechoice" data-multipleanswers="true"  id="question179090">
-            <p>Q-40: Изабери тачне тврдње о независним догађајима:</p>
+            <p>Q-47: Изабери тачне тврдње о независним догађајима:</p>
 
             <li data-component="answer" data-correct id="question179090_opt_a">ако су догађаји А и Б независни, барем један од њих је немогућ догађај</li><li data-component="feedback" id="question179090_opt_a">Тачно</li>
             
