@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Функција расподеле</title>
+    <title>Случајне променљиве и расподеле</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
@@ -130,6 +130,7 @@
     <script src="../_static/jszip.js"></script>
     <script src="../_static/editor-i18n.en.js"></script>
     <script src="../_static/editor-i18n.y.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../_static/jquery-fix.js"></script>
     <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
@@ -240,6 +241,18 @@
             </div>
                 
                 <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-0_lekcija>
+                    <h5>Биномна формула</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../0_lekcija/1_binomna.html><div class="studioLecture" id=activity-1_binomna><i class="fas fa-file-alt activity-icon"></i>Биномна теорема</div></a>
+                <a href=../0_lekcija/2_b.html><div class="studioLecture" id=activity-2_b><i class="fas fa-file-alt activity-icon"></i>Биномни коефицијент</div></a>
+                <a href=../0_lekcija/3_b.html><div class="studioLecture" id=activity-3_b><i class="fas fa-file-alt activity-icon"></i>Формуле са биномним коефицијентима</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
                 <div class="lecture-div courseContentsSectionHeadline" id=lecture-2_lekcija>
                     <h5>Подаци</h5>
                     <i class="fas fa-angle-down caret-position "> </i>
@@ -317,61 +330,118 @@
     <div id="main-content">
     
   <section id="id1">
-<h1>Функција расподеле<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
-<p>У овој лекцији научићеш:
--
--
--</p>
-<p>До потпуних карактеристика за случајну променљиву долазимо ако посматрамо догађаје X&lt;x, а не X=x. Вероватноћа догађаја X&lt;x, зависи од x, односно је функција од x. Tа функција се назива функција расподеле вероватноћа или функцијом расподеле.</p>
-<p>Функција расподеле је статистичка карактеристика случајне променљиве која омогућава да се израчуна вероватноћа, да случајна променљива узме вредност на неком интервалу на x оси.
-<em>Напомена:</em> Случајна променљива нема одређену вредност, већ се само може говорити о вероватноћама да узме неку вредност.</p>
-<p>Особине функције расподеле:</p>
-<p>1.
-2.
-3.
-4.
-5.
-Функција расподеле одређује све битне особине случајне променљиве. Вредност случајне променљиве не може се предвидети пре обављеног експеримента, али функција расподеле се зна. Она је њена потпуно позната математичка функција и јер је X је случајан број, x је реалан број. У сваком појединачном експерименту случајна променљива X је случајна вредност и зато се проучавање своди на њено понашање у пуно понављања екперимента, односно на вероварноћу. Из ових разлога предмет проучавања теорије вероватноће нису случане променљиве, већ њихове расподеле и функције расподела.</p>
-<p><strong>*Пример*</strong>  У бацању 3 новчића број грбова који се може појавити на горњим странама динара је 0,1,2, или 3. Ако случајна променљива X представља број грбова, прикажи функцију расподеле случајне променљиве X.</p>
+<h1>Случајне променљиве и расподеле<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<section id="id2">
+<h2>Функција расподеле<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<p><strong>У овој лекцији научићеш:</strong></p>
+<ul class="simple">
+<li><p>шта је функција расподеле</p></li>
+<li><p>које су особине те функције</p></li>
+<li><p>на шта се односи појам функција густине</p></li>
+</ul>
+<p>До потпуних карактеристика за случајну променљиву долазимо ако посматрамо
+догађаје <span class="math notranslate nohighlight">\(X&lt;x\)</span>, а не <span class="math notranslate nohighlight">\(X=x\)</span>. Вероватноћа догађаја <span class="math notranslate nohighlight">\(X&lt;x\)</span>,
+зависи од x, односно је функција од x. Tа функција се назива функција расподеле
+вероватноћа или функцијом расподеле.</p>
+<p>Функција расподеле је статистичка карактеристика случајне променљиве која
+омогућава да се израчуна вероватноћа, да случајна променљива узме вредност на
+неком интервалу на x оси.</p>
+<p><em>Напомена:</em> Случајна променљива нема одређену вредност, већ се само
+може говорити о вероватноћама да узме неку вредност.</p>
+<p>Функција расподеле одређује све битне особине случајне променљиве.
+Вредност случајне променљиве не може се предвидети пре обављеног
+експеримента, али функција расподеле се зна. Она је њена потпуно позната
+математичка функција и јер је X је случајан број, x је реалан број.
+У сваком појединачном експерименту случајна променљива X је случајна вредност
+и зато се проучавање своди на њено понашање у пуно понављања екперимента,
+односно на вероварноћу. Из ових разлога предмет проучавања теорије вероватноће
+нису случане променљиве, већ њихове расподеле и функције расподела.</p>
+<p><strong>Пример</strong>  У бацању 3 новчића број грбова који се може појавити на
+горњим странама динара је 0,1,2, или 3. Ако случајна променљива X представља број
+грбова, прикажи функцију расподеле случајне променљиве X.</p>
 <p>Расподела вероватноће грбова је ![Ovo je slika](raspodela1.png)</p>
-<p>Предходна табела састављена је од парова бројева (xi, pi) и показује како се број грбова мења случајно. Број грбова је случајна променљива и вероватноће су P(X=0)=1/8,  P(X=1)=3/8,  P(X=2)=2/8, P(X=3)=1/8.</p>
-<p>Функција расподеле гласи: ![Ovo je slika](raspodela2.png)</p>
+<p>Предходна табела састављена је од парова бројева <span class="math notranslate nohighlight">\((x_i, p_i)\)</span>
+и показује како се број грбова мења случајно. Број грбова је случајна
+променљива и вероватноће су <span class="math notranslate nohighlight">\(P(X=0)=\frac{1}{8}\)</span>,  <span class="math notranslate nohighlight">\(P(X=1)=\frac{3}{8}\)</span>,
+<span class="math notranslate nohighlight">\(P(X=2)=\frac{2}{8}\)</span>, <span class="math notranslate nohighlight">\(P(X=3)=\frac{1}{8}\)</span>.</p>
+<p>Функција расподеле гласи:</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/raspodela2.png"><img alt="../_images/raspodela2.png" src="../_images/raspodela2.png" style="width: 450px;" /></a>
+</figure>
 <p><strong>Особине функције расподеле</strong>
 Нека је F функција расподеле случајне променљиве X. Тада је:</p>
-<p>1. ![Ovo je slika](raspodela3.png)
-2.
-3.
-4.
-5.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/raspodela3.png"><img alt="../_images/raspodela3.png" src="../_images/raspodela3.png" style="width: 450px;" /></a>
+</figure>
 <p><strong>Функција густине</strong>
 Нека је X случајна променљива и F њена функција расподеле.</p>
-<p><strong>*Дефиниција*</strong> Како је функција расподеле случајне величине непрекидна и неопадајућа функција онда постоји функција f, таква да је f(x) = F′(x) , и назива се функцијом густине.</p>
-<p>Функција густине вероватноће омогућава као и функција расподеле, да се израчуна вероватноћа да се реализација случајне величине нађе у неком интервалу. Та вероватноћа је једнака површини која је ограничена функцијом густине и границама датог интервала.</p>
-<p>![Ovo je slika](gustina1.png)</p>
-<p><strong>*Дефиниција*</strong> Нека је X случајна променљива и F њена функција расподеле. Ако постоји ненегативна функција f дефинисана на R таква да је</p>
-<p>![Ovo je slika](gustina2.png)</p>
+<p><em>Дефиниција</em> Како је функција расподеле случајне величине непрекидна и
+неопадајућа функција онда постоји функција f, таква да је <span class="math notranslate nohighlight">\(f(x) = F′(x)\)</span> ,
+и назива се функцијом густине.</p>
+<p>Функција густине вероватноће омогућава као и функција расподеле,
+да се израчуна вероватноћа да се реализација случајне величине нађе у неком интервалу.
+Та вероватноћа је једнака површини која је ограничена функцијом густине и
+границама датог интервала.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/gustina1.png"><img alt="../_images/gustina1.png" src="../_images/gustina1.png" style="width: 450px;" /></a>
+</figure>
+<p><em>Дефиниција</em> Нека је X случајна променљива и F њена функција расподеле.
+Ако постоји ненегативна функција f дефинисана на R таква да је</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/gustina2.png"><img alt="../_images/gustina2.png" src="../_images/gustina2.png" style="width: 450px;" /></a>
+</figure>
 <p>Геометријски, функција F је површина испод криве густине, лево од тачке x</p>
-<p>![Ovo je slika](gustina3.png)</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/gustina3.png"><img alt="../_images/gustina3.png" src="../_images/gustina3.png" style="width: 450px;" /></a>
+</figure>
 <p>Особине функције густине:</p>
-<p>1. ![Ovo je slika](gustina4.png)
-2.
-3.</p>
-<p><strong>*Задаци*</strong>
-<em>Пример 1</em> У круг полупречника l на случајан начин се бира нека тачка. Нека је R растојање одабране тачке од средишта круга.
-1. Одредити функцију расподеле и густину за R
-2. Наћи вероватноћу да је тачка ближа кружници него центру круга</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/raspodela4.jpg"><img alt="../_images/raspodela4.jpg" src="../_images/raspodela4.jpg" style="width: 450px;" /></a>
+</figure>
+<p><strong>Задаци</strong>
+<strong>Пример 1</strong> У круг полупречника l на случајан начин се бира нека тачка.
+Нека је R растојање одабране тачке од средишта круга.</p>
+<ol class="arabic simple">
+<li><p>Одредити функцију расподеле и густину за R</p></li>
+<li><p>Наћи вероватноћу да је тачка ближа кружници него центру круга</p></li>
+</ol>
 <p><strong>Решење</strong></p>
-<p><em>Пример 2</em>  Растојање од циља које падобранац постиже приликом скока је случајна променљива X са функцијом расподеле УБАЦИ СЛИКУ. Ако је X&lt;10, добија се X негативних бодова, ако је 10≤X&lt;20, добија се 15 негативних бодова, а ако је X≥20, добија се 30 негативних бодова. Нека је Y број негативних бодова падобранаца. Одредити функцију расподеле за Y.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/raspodela4.jpg"><img alt="../_images/raspodela4.jpg" src="../_images/raspodela4.jpg" style="width: 450px;" /></a>
+</figure>
+<p><em>Пример 2</em>  Растојање од циља које падобранац постиже приликом скока је случајна променљива X са функцијом расподеле ![Ovo je slika](raspodela5.jpg). Ако је X&lt;10, добија се X негативних бодова, ако је 10≤X&lt;20, добија се 15 негативних бодова, а ако је X≥20, добија се 30 негативних бодова. Нека је Y број негативних бодова падобранаца. Одредити функцију расподеле за Y.</p>
 <p><strong>Решење</strong></p>
-<p><em>Пример 3</em>  Висина човека је случајна променљива са расподелом N(170; $(8)^2$). Колики је проценат људи виших од 190 cm, а колики нижих од 160 cm. Колико их је у интервалу 165-180 cm?</p>
+<p><span class="math notranslate nohighlight">\(Fr(r)=P(R&lt;r)=\frac{r^{2}π}{l^{2}π}=\frac{r^{2}}{l^{2}}\)</span>, 0&lt;r≤l
+<span class="math notranslate nohighlight">\(Fr(r)=0\)</span>, r≤0, Fr(r)=1, r&gt;l
+Густина <span class="math notranslate nohighlight">\(fr(r)=Fr(r)=\frac{2r}{l^{2}}\)</span>, 0&lt;r&lt;l, fr(r)=0, r≤0 или r≥l.</p>
+<p><span class="math notranslate nohighlight">\(P(R&gt;\frac{l}{2})=1-P(R≤\frac{l}{2})=1-P(R&lt;\frac{l}{2})=1-F(\frac{l}{2})=1-(\frac{l}{2}^2 \frac{l}{l}^2)=\frac{3}{4}\)</span></p>
+<p><strong>Пример 3</strong>  Висина човека је случајна променљива са
+расподелом N(170; <span class="math notranslate nohighlight">\((8)^2\)</span>). Колики је проценат људи виших
+од 190 cm, а колики нижих од 160 cm. Колико их је у интервалу 165-180 cm?</p>
 <p><strong>Решење</strong></p>
-<p><em>Пример 4</em> Нека је број деце у породици случајна променљива X са расподелом P(2). Колика је вероватноћа да у породици:
-- а) нема ниједно дете
-- б) има бар 2 детета
-- в) има од 1 до 4 детета</p>
+<p><span class="math notranslate nohighlight">\(P(X&gt;190)=P(X&gt;2,5)=1-F(2,5)=0,0062=0,62%\)</span>
+<span class="math notranslate nohighlight">\(P(X&lt;160)=P(X&lt;-1,25)=F(-1,25)=1-F(1,25)=0,1056=10,56%\)</span>
+<span class="math notranslate nohighlight">\(P(165&lt;X&lt;180)=P(-0,625&lt;X&lt;1,25)=F(1,25)-F(0,625)=0,6284=62,84%\)</span></p>
+<p><strong>Пример 4</strong> Нека је број деце у породици случајна променљива X са расподелом P(2). Колика је вероватноћа да у породици:</p>
+<ul class="simple">
+<li><p>а) нема ниједно дете</p></li>
+<li><p>б) има бар 2 детета</p></li>
+<li><p>в) има од 1 до 4 детета</p></li>
+</ul>
 <p><strong>Решење</strong></p>
-<p><em>Пример 5</em> Број саобраћајних удеса у току године, по аутомобилу, је случајна променљива са расподелом P(0,3). Колика је вероватноћа да ће два случајно одабрана аутомобила имати исти број удеса у току године?</p>
+<p>а) <span class="math notranslate nohighlight">\(P(X=0)=e^{-2}\)</span> <span class="math notranslate nohighlight">\(\frac{2^0}{0!}=0,1353\)</span>
+б) <span class="math notranslate nohighlight">\(P(X≥)=1-P(X&lt;2)=1-(e^{-2} \frac{2^0}{0!}+ e^{-2} frac{1}{1!})=1-0,4060=0,5940\)</span>
+в) <span class="math notranslate nohighlight">\(P(1≤X≤4)=\sum_{4}{0} e^{-2} \frac{2^k}{k!} - e^{-2} \frac{2^0}{0!}=0,9473-0,1353=0,8120\)</span></p>
+<p><strong>Пример 5</strong> Број саобраћајних удеса у току године, по аутомобилу, је случајна променљива са расподелом P(0,3). Колика је вероватноћа да ће два случајно одабрана аутомобила имати исти број удеса у току године?</p>
 <p><strong>Решење</strong></p>
+<p><span class="math notranslate nohighlight">\(X_i\)</span> - број удеса i-тог аутомобила,
+i=1,2. X1 и X2 су независне, са <span class="math notranslate nohighlight">\(P(0,3)\)</span>;
+<span class="math notranslate nohighlight">\(P(X1=X2)=P(X1=0,X2=0)+P(X1=1,X2=1)+...=\)</span>
+<span class="math notranslate nohighlight">\(P(X1=0)P(X2=0)+P(X1=1)P(X2=1)+...\)</span>
+<span class="math notranslate nohighlight">\(=\sum_{∞}{0}\)</span></p>
+<p><span class="math notranslate nohighlight">\(e^-0,3 \frac{0,3^k}{k!} e^{-0,3} \frac{0,3^k}{k!}≈0,5993\)</span></p>
+<p>За додатно објашњење функције расподеле погледај следећи видео [link](<a class="reference external" href="https://www.youtube.com/watch?v=wcoMkpgzAlw">https://www.youtube.com/watch?v=wcoMkpgzAlw</a>).</p>
+</section>
 </section>
 
 

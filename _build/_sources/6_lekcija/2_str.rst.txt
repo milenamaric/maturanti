@@ -160,7 +160,8 @@ X:\binom{k-c}{0,7} \binom{4frac{k}{3}-c}{0,21} \binom{5frac{k}{3}}{0,063} \binom
 
 **Решење** 
 
-:math:`X:B(4;frac{1}{5}); P(X=k)=binom{4}{k}(binom{1}{5})^k(binom{4}{5})^{4-k}`, k=0,1,2,3,4.
+:math:`X:B(4;frac{1}{5}); P(X=k)=binom{4}{k}(binom{1}{5})^k(binom{4}{5})^{4-k}`, 
+k=0,1,2,3,4.
 :mat:`X:\binom{0}{0,4096} \binom{1}{0,4096} \binom{2}{0,1536} \binom{3}{0,0256} \binom{4}{0,0016}`
 
 

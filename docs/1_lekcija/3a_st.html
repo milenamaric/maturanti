@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Увод и основни појмови у комбинаторици</title>
+    <title>Елементи математичке статистике и примене</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
@@ -130,7 +130,6 @@
     <script src="../_static/jszip.js"></script>
     <script src="../_static/editor-i18n.en.js"></script>
     <script src="../_static/editor-i18n.y.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../_static/jquery-fix.js"></script>
     <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
@@ -330,95 +329,121 @@
     <div id="main-content">
     
   <section id="id1">
-<h1>Увод и основни појмови у комбинаторици<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<h1>Елементи математичке статистике и примене<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
 <section id="id2">
-<h2>Увод<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
-<p>Комбинаторика је једна од грана математике која се бави скуповима и начинима на који се могу
-комбиновати. Уско је повезана са многобројним гранама математике и примењене информатике попут
-алгебре, геометрије, рачунарству, статистичкој физици и др.
-Скупови као основни појмови у модерној математици се не дефиничу, међутим скупове можемо
-посматрати као колекцију различитих елемената у некој целини.
-Скупове могу бити одређени елементима тог скупа или задатим правилима који задовољавају
-елементи скупа.
-Основни појамови у комбинаторици, и најпримењенији јесу факторијел и биномни коефицијент.</p>
+<h2>Примена и значај статистике<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<p><strong>У овој лекцији научићеш:</strong></p>
+<ul class="simple">
+<li><p>у којим се све гранама и дисциплинама данас користи математичка статистика</p></li>
+<li><p>зашто је развој математичке статистике веома важан за свакодневни живот</p></li>
+</ul>
+<p>Математичка статистика је важна у свакодневном животу јер помаже у доношењу информисаних одлука на основу података,
+као и у анализи трендова и извлачењу закључака из информација. Од временске прогнозе до инжењерства, статистика се користи
+за разумевање света око нас и доношење бољих одлука.</p>
+<p>Статистику користимо у свакодневном животу, а да тога можда нисмо ни свесни. Ово су само неки од многобројних
+примера свакодневног коришћења математичке статистике:</p>
+<ul class="simple">
+<li><p><em>Користи се у спорту</em> - Спортски тимови прате аспекте као на пример колико је голова или поена сваки играч постигао, у колико је утакмица победио или изгубио и још много тога. Тренери користе ове статистике да донесу одлуке о томе ко треба да игра у утакмицама, које позиције треба да игра, па чак и како треба да тренира.</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/statsinsport.png"><img alt="../_images/statsinsport.png" src="../_images/statsinsport.png" style="width: 450px;" /></a>
+</figure>
+<ul class="simple">
+<li><p><em>У трговини</em> - Продавци користе статистику да би схватили које производе да продају и колико да наплате за њих. Они посматрају податке као што су куповне навике купаца, популарни производи и трендови продаје. Ово им помаже да донесу одлуке о томе које производе да имају у залихама, како да им одређују цену и како да их пласирају купцима.</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/statsintrade.jpg"><img alt="../_images/statsintrade.jpg" src="../_images/statsintrade.jpg" style="width: 450px;" /></a>
+</figure>
+<ul class="simple">
+<li><p><em>У пољопривреди</em> - Пољопривредници статистику користе за анализу приноса усева, квалитета земљишта и временских образаца како би се информисали о пољопривредним праксама и побољшали производњу хране.</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/statsinagri.jpg"><img alt="../_images/statsinagri.jpg" src="../_images/statsinagri.jpg" style="width: 450px;" /></a>
+</figure>
+<ul class="simple">
+<li><p><em>На радном месту</em> - Mатематичка статистика се често користи за анализу података који говоре шта најбоље функционише за маркетиншку стратегију компаније или како распоредити посао међу запосленима. Статистика рада запослених такође утиче и на одлуку менаџера коме да повећа плату, а кога да отпусти.</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/statsinbis.jpg"><img alt="../_images/statsinbis.jpg" src="../_images/statsinbis.jpg" style="width: 450px;" /></a>
+</figure>
+<ul class="simple">
+<li><p><em>У здравству</em> - Лекари и научници користе статистику да проучавају болести и пронађу боље третмане. Они прикупљају податке о факторима као што су симптоми, резултати тестова и резултати пацијената. Затим анализирају ове податке како би открили шта најбоље функционише за сваког пацијента и како побољшати опште здравствене резултате.</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/statsinhealth.jpg"><img alt="../_images/statsinhealth.jpg" src="../_images/statsinhealth.jpg" style="width: 450px;" /></a>
+</figure>
+<ul class="simple">
+<li><p><em>У политици</em> - Политичари користе статистику за доношење одлука о политикама и кампањама. Они прикупљају податке о стварима као што су преференције бирача, јавно мњење и демографски трендови. Затим користе ове податке за креирање порука које ће допрети до бирача и доносити информисане одлуке о питањима политике.</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/statsinpoli.jpg"><img alt="../_images/statsinpoli.jpg" src="../_images/statsinpoli.jpg" style="width: 450px;" /></a>
+</figure>
+<ul class="simple">
+<li><p><em>У образовању</em> - Статистика се користи за процену учинка ђака, процену ефикасности образовних програма и идентификацију области у којима је потребно побољшање. Наставници и школе користе статистику да прате напредак ученика и идентификују области у којима ученицима може бити потребна додатна подршка.</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/statsinedu.jpg"><img alt="../_images/statsinedu.jpg" src="../_images/statsinedu.jpg" style="width: 450px;" /></a>
+</figure>
+<ul class="simple">
+<li><p>Математичка статистика је такође врло важна у <em>демографији</em> - Користи се у виду пописа ради одређивања броја становника, природног прираштаја, броја запослених, ради одређивања полно-старосне структуре, степена удела различитих националности и религија, и многих других фактора.</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/statsindemo.jpg"><img alt="../_images/statsindemo.jpg" src="../_images/statsindemo.jpg" style="width: 450px;" /></a>
+</figure>
+<ul class="simple">
+<li><p>Врло често статистика се користи за <em>процену ризика</em> - Може помоћи људима да процене ризик у различитим ситуацијама. На пример, статистичари користе математичку статистику да израчунају вероватноћу догађаја као што су несреће, болести или природне катастрофе.</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/evalofrisk.jpg"><img alt="../_images/evalofrisk.jpg" src="../_images/evalofrisk.jpg" style="width: 450px;" /></a>
+</figure>
+<p>Укратко, важност статистике у свакодневном животу је да води евиденцију, израчунава вероватноће и пружа додатно знање. Користећи податке за доношење бољих одлука, можемо побољшати резултате и учинити свет бољим за живот. Због свих наведених разлога, потреба за &quot;статистичком писменошћу&quot; и обухватним статистичким образовањем, у друштвеним наукама и пракси постаје све изразитија.</p>
 </section>
 <section id="id3">
-<h2>Факторијал<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
-<p>Факторијел неког природни броја јесте производ свих природних бројева који су мањи
-или једнаки њему. Факторијел се означава са узвичником !.</p>
-<p>факторијел се израчунава на следећи начин: <span class="math notranslate nohighlight">\(n!= n·(n-1)·(n-2)·(n-3)·...·(n-(n-1))\)</span></p>
-<p>Дакле израчунавање факторијела неког природног броја се своди на множење свих природних
-бројева од 1 до тог природног броја чији се факторијел рачуна.</p>
-<p>Односно факторијел брија 5 био би : <span class="math notranslate nohighlight">\(5! = 5·4·3·2·1 = 120\)</span></p>
-</section>
-<section id="id4">
-<h2>Биномни коефицијент<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
-<p>Следећи важан појам јесте биномни коефицијент који се означава са:</p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/binomnikoeficijent.png"><img alt="../_images/binomnikoeficijent.png" src="../_images/binomnikoeficijent.png" style="width: 30px;" /></a>
-</figure>
-<p>Oвај израз чита се као n над k. и рачуна се по формули:</p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/израчунавањебиномногкоефицијента.png"><img alt="../_images/%D0%B8%D0%B7%D1%80%D0%B0%D1%87%D1%83%D0%BD%D0%B0%D0%B2%D0%B0%D1%9A%D0%B5%D0%B1%D0%B8%D0%BD%D0%BE%D0%BC%D0%BD%D0%BE%D0%B3%D0%BA%D0%BE%D0%B5%D1%84%D0%B8%D1%86%D0%B8%D1%98%D0%B5%D0%BD%D1%82%D0%B0.png" src="../_images/%D0%B8%D0%B7%D1%80%D0%B0%D1%87%D1%83%D0%BD%D0%B0%D0%B2%D0%B0%D1%9A%D0%B5%D0%B1%D0%B8%D0%BD%D0%BE%D0%BC%D0%BD%D0%BE%D0%B3%D0%BA%D0%BE%D0%B5%D1%84%D0%B8%D1%86%D0%B8%D1%98%D0%B5%D0%BD%D1%82%D0%B0.png" style="width: 150px;" /></a>
-</figure>
-<p>Oдносно 7 над 4 би се по овој формули израчунао на следећи начин:</p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/bin.png"><img alt="../_images/bin.png" src="../_images/bin.png" style="width: 450px;" /></a>
-</figure>
-<p><strong>Примери:</strong></p>
-<section id="id5">
-<h3>Пример 1.<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h3>
-<p>На колико начина Петар, Јована, Милош, Ана, Никола,
-Александар и Ђорђе могу да стоје у реду за касу у продавници?
-Пошто их на каси у продавници има седморо, можемо их посматрати као
-скуп природних бројева од 1 до 7. Односно преформулисати питање на лакши начин.
-Тј. на колико начина можемо поређати бројеве од 1 до 7.</p>
-<p>Решење овог задатка био би факторијел од 7.
-Дакле решење је 7! а то је 7·6·5·4·3·2·1 , што је једнако 5040 начина на које се могу
-поређати ових седам људи у реду на каси.</p>
-</section>
-<section id="id6">
-<h3>Пример 2.<a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h3>
-<p>На колико начина Петар, Јована, Милош, Ана, Никола, Александар и
-Ђорђе могу седети заједно у биоскопу, у реду од седам седишта, тако да Петар и Јована
-седе једно поред другог?</p>
-</section>
-<section id="id7">
-<h3>Решење 2.<a class="headerlink" href="#id7" title="Permalink to this heading">¶</a></h3>
-<p>Њих такође и у овом примеру можемо посматрати као скуп бројева, али уз малу модификацију.
-Односно како је у примеру задато да двоје морају седети једно крај другог њих не можемо
-посматрати као две целине већ као једну, тј. у овом случају наш скуп би садржао 6 целина
-од којих је 5 по један човек док су двоје једна засебна целина. Дакле имамо сличан случај
-као у претходном примеру али нам двоје чини једну целину па наш скуп се састоји од 6 целина
-и тако га треба посматрати. Решење задатка било би 6!, што је 720 начина да они седе у
-једном реду у биоскопу, тако да Јована и Петар седе заједно.</p>
-<section id="id8">
-<h4>Задаци за самосталан рад<a class="headerlink" href="#id8" title="Permalink to this heading">¶</a></h4>
-<p>Задатак 1.</p>
-<p>На колико начина могу шест особа да седну за округли сто ако има:</p>
-<p>а) шест места,
-б) девет места за округлим столом?</p>
-<p>Задатак 2.</p>
-<p>На колико начина:</p>
-<p>а) можемо ставити 9 књига на полицу,
-б) можемо ставити 4 књиге из физике, 3 књиге из хемије и 2 из математике на исту полицу тако да књиге из истих предмета стоје једна поред друге?</p>
-<p>Предстојећи видео ће вам помоћи за решавање задатака самостално.</p>
+<h2>Задаци и питања за вежбу:<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
 
-    <div  id="v1iy4sMkz0o" class="ytvideo"  style="text-align: center; margin: 15px; cursor:pointer;">
-        <div style="background-image: url('https://img.youtube.com/vi/v1iy4sMkz0o/mqdefault.jpg'); background-repeat: no-repeat;background-position: center; height: 210px; width: 310px; margin: 0 auto; border: 1px solid #20c997">
-            <img src="../_static/images/play_button.svg" style="margin-top: 78px;" /> 
-        </div>
-      
+    <div class="quiz-question">
 
-        </div>
-    <div id="modal-v1iy4sMkz0o" class="ytvideoclose" style="display: none; background-color: transparent; z-index: 10000;">
-        <div style="background-color: white; position: relative; width:  780px; height:  500px; z-index: 100;" id="YTmodal-v1iy4sMkz0o">
-        </div>
+            <div class="course-box course-box-question course-content petlja-problem-box choice-question">
+                <div class="image-background"></div>
+                <div class="petlja-problem-box-icon-holder"> </div>
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="question31789">
+            <p>Q-9: Избаци уљеза. Математичка статистика:</p>
+
+            <li data-component="answer"  id="question31789_opt_a">користи се за процену ризика.</li><li data-component="feedback" id="question31789_opt_a">Нетачно</li>
+            
+            <li data-component="answer" data-correct id="question31789_opt_b">не бави се теоријом вероватноће.</li><li data-component="feedback" id="question31789_opt_b">Тачно</li>
+            
+            <li data-component="answer"  id="question31789_opt_c">важна је за опис демографије државе.</li><li data-component="feedback" id="question31789_opt_c">Нетачно</li>
+            
+
+            </ul>
+            </div>
+            
     </div>
-    
-    
-    </section>
-</section>
+
+    <div class="quiz-question">
+
+            <div class="course-box course-box-question course-content petlja-problem-box choice-question">
+                <div class="image-background"></div>
+                <div class="petlja-problem-box-icon-holder"> </div>
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="question324567">
+            <p>Q-10: Одреди тачне тврдње. Знање из математичке статистике:</p>
+
+            <li data-component="answer" data-correct id="question324567_opt_a">се примењује у великом броју аспеката свакодневног живота.</li><li data-component="feedback" id="question324567_opt_a">Тачно</li>
+            
+            <li data-component="answer"  id="question324567_opt_b">није потребно у пракси или при запошљавању.</li><li data-component="feedback" id="question324567_opt_b">Нетачно</li>
+            
+            <li data-component="answer" data-correct id="question324567_opt_c">помаже да доносимо боље одлуке и добијамо боље резултате.</li><li data-component="feedback" id="question324567_opt_c">Тачно</li>
+            
+
+            </ul>
+            </div>
+            
+    </div>
 </section>
 </section>
 
@@ -427,9 +452,8 @@
     
     <div>
 <div class="lecture-prev-next-toggle">
-  <a  href="index.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Previous chapter </span> </a>
+  <a  href="#" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span>Previous chapter</span> </a>
   
-  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Next chapter</span>  <i class="fas fa-arrow-right fa"></i> </a>
 </div>
 
 <script type="text/javascript">

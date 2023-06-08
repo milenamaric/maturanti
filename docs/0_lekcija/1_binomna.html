@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Увод и основни појмови у комбинаторици</title>
+    <title>Биномна теорема</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
@@ -330,95 +330,77 @@
     <div id="main-content">
     
   <section id="id1">
-<h1>Увод и основни појмови у комбинаторици<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
-<section id="id2">
-<h2>Увод<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
-<p>Комбинаторика је једна од грана математике која се бави скуповима и начинима на који се могу
-комбиновати. Уско је повезана са многобројним гранама математике и примењене информатике попут
-алгебре, геометрије, рачунарству, статистичкој физици и др.
-Скупови као основни појмови у модерној математици се не дефиничу, међутим скупове можемо
-посматрати као колекцију различитих елемената у некој целини.
-Скупове могу бити одређени елементима тог скупа или задатим правилима који задовољавају
-елементи скупа.
-Основни појамови у комбинаторици, и најпримењенији јесу факторијел и биномни коефицијент.</p>
-</section>
-<section id="id3">
-<h2>Факторијал<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
-<p>Факторијел неког природни броја јесте производ свих природних бројева који су мањи
-или једнаки њему. Факторијел се означава са узвичником !.</p>
-<p>факторијел се израчунава на следећи начин: <span class="math notranslate nohighlight">\(n!= n·(n-1)·(n-2)·(n-3)·...·(n-(n-1))\)</span></p>
-<p>Дакле израчунавање факторијела неког природног броја се своди на множење свих природних
-бројева од 1 до тог природног броја чији се факторијел рачуна.</p>
-<p>Односно факторијел брија 5 био би : <span class="math notranslate nohighlight">\(5! = 5·4·3·2·1 = 120\)</span></p>
-</section>
-<section id="id4">
-<h2>Биномни коефицијент<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
-<p>Следећи важан појам јесте биномни коефицијент који се означава са:</p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/binomnikoeficijent.png"><img alt="../_images/binomnikoeficijent.png" src="../_images/binomnikoeficijent.png" style="width: 30px;" /></a>
-</figure>
-<p>Oвај израз чита се као n над k. и рачуна се по формули:</p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/израчунавањебиномногкоефицијента.png"><img alt="../_images/%D0%B8%D0%B7%D1%80%D0%B0%D1%87%D1%83%D0%BD%D0%B0%D0%B2%D0%B0%D1%9A%D0%B5%D0%B1%D0%B8%D0%BD%D0%BE%D0%BC%D0%BD%D0%BE%D0%B3%D0%BA%D0%BE%D0%B5%D1%84%D0%B8%D1%86%D0%B8%D1%98%D0%B5%D0%BD%D1%82%D0%B0.png" src="../_images/%D0%B8%D0%B7%D1%80%D0%B0%D1%87%D1%83%D0%BD%D0%B0%D0%B2%D0%B0%D1%9A%D0%B5%D0%B1%D0%B8%D0%BD%D0%BE%D0%BC%D0%BD%D0%BE%D0%B3%D0%BA%D0%BE%D0%B5%D1%84%D0%B8%D1%86%D0%B8%D1%98%D0%B5%D0%BD%D1%82%D0%B0.png" style="width: 150px;" /></a>
-</figure>
-<p>Oдносно 7 над 4 би се по овој формули израчунао на следећи начин:</p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/bin.png"><img alt="../_images/bin.png" src="../_images/bin.png" style="width: 450px;" /></a>
-</figure>
-<p><strong>Примери:</strong></p>
-<section id="id5">
-<h3>Пример 1.<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h3>
-<p>На колико начина Петар, Јована, Милош, Ана, Никола,
-Александар и Ђорђе могу да стоје у реду за касу у продавници?
-Пошто их на каси у продавници има седморо, можемо их посматрати као
-скуп природних бројева од 1 до 7. Односно преформулисати питање на лакши начин.
-Тј. на колико начина можемо поређати бројеве од 1 до 7.</p>
-<p>Решење овог задатка био би факторијел од 7.
-Дакле решење је 7! а то је 7·6·5·4·3·2·1 , што је једнако 5040 начина на које се могу
-поређати ових седам људи у реду на каси.</p>
-</section>
-<section id="id6">
-<h3>Пример 2.<a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h3>
-<p>На колико начина Петар, Јована, Милош, Ана, Никола, Александар и
-Ђорђе могу седети заједно у биоскопу, у реду од седам седишта, тако да Петар и Јована
-седе једно поред другог?</p>
-</section>
-<section id="id7">
-<h3>Решење 2.<a class="headerlink" href="#id7" title="Permalink to this heading">¶</a></h3>
-<p>Њих такође и у овом примеру можемо посматрати као скуп бројева, али уз малу модификацију.
-Односно како је у примеру задато да двоје морају седети једно крај другог њих не можемо
-посматрати као две целине већ као једну, тј. у овом случају наш скуп би садржао 6 целина
-од којих је 5 по један човек док су двоје једна засебна целина. Дакле имамо сличан случај
-као у претходном примеру али нам двоје чини једну целину па наш скуп се састоји од 6 целина
-и тако га треба посматрати. Решење задатка било би 6!, што је 720 начина да они седе у
-једном реду у биоскопу, тако да Јована и Петар седе заједно.</p>
-<section id="id8">
-<h4>Задаци за самосталан рад<a class="headerlink" href="#id8" title="Permalink to this heading">¶</a></h4>
-<p>Задатак 1.</p>
-<p>На колико начина могу шест особа да седну за округли сто ако има:</p>
-<p>а) шест места,
-б) девет места за округлим столом?</p>
-<p>Задатак 2.</p>
-<p>На колико начина:</p>
-<p>а) можемо ставити 9 књига на полицу,
-б) можемо ставити 4 књиге из физике, 3 књиге из хемије и 2 из математике на исту полицу тако да књиге из истих предмета стоје једна поред друге?</p>
-<p>Предстојећи видео ће вам помоћи за решавање задатака самостално.</p>
+<h1>Биномна теорема<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<p>Биномна теорема је теорема елементарне алгебре и описује коефицијенте степена бинома
+када је он представљен у развијеној форми.
+По овој теореми, могуће је представити израз <span class="math notranslate nohighlight">\({(x + y)}^n\)</span> сумом сабирака
+облика <span class="math notranslate nohighlight">\(ax^b*y^c\)</span>,
+где су коефицијенти <span class="math notranslate nohighlight">\(а\)</span> позитивни цели бројеви,
+при чему је збир експонената <span class="math notranslate nohighlight">\(x\)</span> и <span class="math notranslate nohighlight">\(y\)</span> једнак <span class="math notranslate nohighlight">\(n\)</span> за сваки сабирак.</p>
+<p><strong>На пример:</strong></p>
+<p><span class="math notranslate nohighlight">\({(x + y)}^4 = x^4 + 4 \cdot x^3 \cdot y + 6 \cdot x^2 \cdot y^2 + 4 x \cdot y^3 + y^4\)</span></p>
+<p>Коефицијенти који се појављују у биномном развоју називају се <strong>биномни коефицијенти</strong>.</p>
+<p>Они су идентични бројевима који се појављују у <strong>Паскаловом троуглу</strong>.</p>
+<p>Ови бројеви се могу израчунати једноставном формулом која користи факторијел.
+Исти ови коефицијенти се јављају у комбинаторици, где је израз <span class="math notranslate nohighlight">\(x^{n-k}\cdot y^k\)</span>
+једнак броју различитих комбинација <span class="math notranslate nohighlight">\(k\)</span> елемената који се бирају из
+скупа од <span class="math notranslate nohighlight">\(n\)</span> чланова.</p>
+<p>У математици, а посебно у комбинаторици, биномни коефицијент природног
+броја <span class="math notranslate nohighlight">\(n\)</span> и целог броја <span class="math notranslate nohighlight">\(k\)</span> дефинисан је као природни број:</p>
+<p><span class="math notranslate nohighlight">\(\binom{n}{k} = \frac{n!}{k!\cdot (n-k)!} = \prod_{i=0}^k (\frac{n+1-i}{i})\)</span>, <span class="math notranslate nohighlight">\(n \ge k \ge 0\)</span>
+и
+<span class="math notranslate nohighlight">\(\binom{n}{k} = 0\)</span> ako је k&lt;0 или k&gt;n.</p>
+<p>(За природни број m, m! означава факторијел броја m.)</p>
+<a class="reference internal image-reference" href="../_images/mb_1.png"><img alt="../_images/mb_1.png" class="align-center" src="../_images/mb_1.png" style="width: 450px;" /></a>
 
-    <div  id="v1iy4sMkz0o" class="ytvideo"  style="text-align: center; margin: 15px; cursor:pointer;">
-        <div style="background-image: url('https://img.youtube.com/vi/v1iy4sMkz0o/mqdefault.jpg'); background-repeat: no-repeat;background-position: center; height: 210px; width: 310px; margin: 0 auto; border: 1px solid #20c997">
+    <div  id="xlY6Ail3QA0" class="ytvideo"  style="text-align: center; margin: 15px; cursor:pointer;">
+        <div style="background-image: url('https://img.youtube.com/vi/xlY6Ail3QA0/mqdefault.jpg'); background-repeat: no-repeat;background-position: center; height: 210px; width: 310px; margin: 0 auto; border: 1px solid #20c997">
             <img src="../_static/images/play_button.svg" style="margin-top: 78px;" /> 
         </div>
       
 
         </div>
-    <div id="modal-v1iy4sMkz0o" class="ytvideoclose" style="display: none; background-color: transparent; z-index: 10000;">
-        <div style="background-color: white; position: relative; width:  780px; height:  500px; z-index: 100;" id="YTmodal-v1iy4sMkz0o">
+    <div id="modal-xlY6Ail3QA0" class="ytvideoclose" style="display: none; background-color: transparent; z-index: 10000;">
+        <div style="background-color: white; position: relative; width:  780px; height:  500px; z-index: 100;" id="YTmodal-xlY6Ail3QA0">
         </div>
     </div>
     
     
-    </section>
+    <p><strong>Исказ теореме</strong></p>
+<p>Сваки степен израза <span class="math notranslate nohighlight">\(x + y\)</span> могуће је представити у форми:</p>
+<p><span class="math notranslate nohighlight">\({(x+y)}^n = \binom{n}{0} \cdot x^n \cdot y^0+\binom{n}{1} \cdot x^{n-1} \cdot y^1+\binom{n}{2} \cdot x^{n-2} \cdot y^2+\binom{n}{3} \cdot x^{n-3} \cdot y^3+\)</span>...:math:<cite>+binom{n}{n-1} cdot x^1 cdot y^{n-1}+binom{0}{n} cdot x^0 cdot y^n</cite>,
+где <span class="math notranslate nohighlight">\(\binom{n}{k}\)</span> означава одговарајући биномни коефицијент.
+Други начин записивања ове формуле је:</p>
+<p><span class="math notranslate nohighlight">\((x+y)^n = \sum {k=0}^n \binom{n}{k} \cdot x^{n-k} \cdot y^k\)</span>.</p>
+<section id="id2">
+<h2>Задаци<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<p><strong>1. задатак</strong></p>
+<p>Развити бином <span class="math notranslate nohighlight">\({(x+2)}^6\)</span>:</p>
+<p><strong>Решење:</strong></p>
+<p><span class="math notranslate nohighlight">\((x+2)^6 = \binom{6}{0} \cdot x^6 \cdot 2^0+\binom{6}{1} \cdot x^{6-1}*2^1+\binom{6}{2} \cdot x^{6-2} \cdot 2^2+\binom{6}{3} \cdot x^{6-3} \cdot 2^3+\binom{6}{4} \cdot x^{6-4} \cdot 2^4+\binom{6}{5} \cdot x^{6-5} \cdot 2^5+\binom{6}{6} \cdot x^0 \cdot 2^6\)</span></p>
+<p><strong>2. задатак</strong>
+Развити бином <span class="math notranslate nohighlight">\({(2*x+4)}^4\)</span>:</p>
+<p><span class="math notranslate nohighlight">\((2 \cdot x+4)^4 = \binom{4}{0} \cdot 2 \cdot x^4 \cdot 2^0+\binom{4}{1} \cdot 2 \cdot x^{4-1} \cdot 4^1+\binom{4}{2} \cdot x^{4-2} \cdot 4^2+\binom{4}{3} \cdot x^{4-3} \cdot 4^3+\binom{4}{4} \cdot x^{4-4} \cdot 4^4\)</span></p>
+<p><strong>3. задатак</strong>
+Oдредити шести члан у развоју бинома <span class="math notranslate nohighlight">\({(x+y)}^{15}\)</span>:</p>
+<p><strong>Решење:</strong>
+<span class="math notranslate nohighlight">\(T_6 = \binom{15}{5} \cdot x^10 \cdot y^5 = \frac{15 \cdot 14 \cdot 13 \cdot 12 \cdot 11}{5 \cdot 4 \cdot 3 \cdot 2 \cdot 1} \cdot x^10 \cdot y^5 = 3003 \cdot x^10 \cdot y^5\)</span></p>
+<p><strong>4. задатак</strong>
+Oдредити шести члан у развоју бинома <span class="math notranslate nohighlight">\((\sqrt{x}-\sqrt{y})^12\)</span>:</p>
+<p><strong>Решење:</strong></p>
+<p><span class="math notranslate nohighlight">\(T_6 = \binom{12}{4} \cdot \sqrt{x}^8 \cdot (-\sqrt{y})^4 = \frac{12 \cdot 11 \cdot 10 \cdot 9}{4 \cdot 3 \cdot 2 \cdot 1} \cdot x^4 \cdot y^2 = 495 \cdot x^4 \cdot y^2\)</span></p>
+<p><strong>5. задатак</strong></p>
+<p>Oдредити биномни коефицијент уз пети члан у развоју бинома <span class="math notranslate nohighlight">\((2 \cdot \sqrt{x}-1)^8\)</span>:</p>
+<p><strong>Решење:</strong></p>
+<p><span class="math notranslate nohighlight">\(\binom{8}{4} = \frac{8 \cdot 7 \cdot 6 \cdot 5}{4 \cdot 3 \cdot 2 \cdot 1} = 70\)</span></p>
 </section>
+<section id="id3">
+<h2>Питања:<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<p>1.Како гласи биномна формула?</p>
+<p>2.Шта је биномни коефицијент?</p>
+<p>3.Какву улогу имају биномни коефицијенти у комбинаторици?</p>
+<p>4.Како гласи уопштени биномни коефицијент?</p>
+<p>5.Ко је први дошао до идеје о биномној формули?</p>
 </section>
 </section>
 

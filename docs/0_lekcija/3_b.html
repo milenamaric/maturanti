@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Увод и основни појмови у комбинаторици</title>
+    <title>Комнбинаторика и статистика</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
@@ -330,95 +330,60 @@
     <div id="main-content">
     
   <section id="id1">
-<h1>Увод и основни појмови у комбинаторици<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<h1>Комнбинаторика и статистика<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<p>Биномни коефицијенти су од велике важности у комбинаторици јер нуде
+готове формуле за честе проблеме пребројавања:</p>
+<p>Сваки скуп са n поседује тачно <span class="math notranslate nohighlight">\(\binom{n}{k}\)</span> различитих подскупова
+који имају k елемената</p>
+<p>Број бинарних бројева дужине n које садрже k јединица и n − k нула је <span class="math notranslate nohighlight">\(\binom{n}{k}\)</span>.</p>
+<p>Број бинарних бројева који садрже k јединица и n нула тако да никоје две нису суседне је <span class="math notranslate nohighlight">\(\binom{n+1}{k}\)</span>.</p>
+<p>Број различитих секвенци од n природних бројева чији је укупни збир k је <span class="math notranslate nohighlight">\(\binom{n+k-1}{k}\)</span>;
+ово је такође број различитих начина да се из скупа са n елемената изабере k
+елемената уколико је дозвољено понављање.</p>
+<p>Биномни коефицијенти се појављују и у формули за биномну расподелу у статистици,
+као и у формули за <em>Безијерову криву</em>.</p>
 <section id="id2">
-<h2>Увод<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
-<p>Комбинаторика је једна од грана математике која се бави скуповима и начинима на који се могу
-комбиновати. Уско је повезана са многобројним гранама математике и примењене информатике попут
-алгебре, геометрије, рачунарству, статистичкој физици и др.
-Скупови као основни појмови у модерној математици се не дефиничу, међутим скупове можемо
-посматрати као колекцију различитих елемената у некој целини.
-Скупове могу бити одређени елементима тог скупа или задатим правилима који задовољавају
-елементи скупа.
-Основни појамови у комбинаторици, и најпримењенији јесу факторијел и биномни коефицијент.</p>
+<h2>Формуле са биномним коефицијентима<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<p>Следеће формуле могу бити корисне:</p>
+<p><span class="math notranslate nohighlight">\(C(n,k) = C(n,n-k)\)</span>
+Ово следи из развоја (2) користећи <span class="math notranslate nohighlight">\({(x + y)}^n = {(y + x)}^n,
+и огледа се у нумеричкој симетричности Паскаловог троугла.
+:math:\)</span>sum {k=0}^n C(n,k) = 2^n`</p>
+<p>Из развоја (2) стављајући x = y = 1. Види се и из Паскаловог троугла да је
+сума свих чланова једног реда једнака степену двојке.
+<span class="math notranslate nohighlight">\(\sum {k=1}^n \kC(n,k) = n \cdot 2^{n-1}\)</span></p>
+<p>Из развоја (2) после диференцирања и замењујући x = y = 1.</p>
+<p><span class="math notranslate nohighlight">\(\sum {j=0}^k \C(m,j)C(n,k-j) = C(m+n,k)\)</span></p>
+<p>Развијајући <span class="math notranslate nohighlight">\({(x + y)}^n \cdot {(x + y)}^m = {(x + y)}^{m+n} из (2) (C(n, k)
+је дефинисано као 0 за k &gt; n). Ова једначина генерализује (3).
+:math:\)</span>sum {k=0}^n C(n,k)^2 = C(2n,n)`</p>
+<p>Из развоја (7) стављајући m = k = n и користећи једначину (4).</p>
+<p><span class="math notranslate nohighlight">\(\sum {k=0}^n \C(n-k,k) = F(n+1)\)</span></p>
+<p>Овде, <span class="math notranslate nohighlight">\(F(n + 1)\)</span> представља Фибоначијеве бројеве.</p>
+<p><span class="math notranslate nohighlight">\(\sum {j=k}^n \C(j,k) = C(n+1,k+1)\)</span></p>
+<p>Ова једначина може бити доказана индукцијом по n користећи (3).</p>
 </section>
 <section id="id3">
-<h2>Факторијал<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
-<p>Факторијел неког природни броја јесте производ свих природних бројева који су мањи
-или једнаки њему. Факторијел се означава са узвичником !.</p>
-<p>факторијел се израчунава на следећи начин: <span class="math notranslate nohighlight">\(n!= n·(n-1)·(n-2)·(n-3)·...·(n-(n-1))\)</span></p>
-<p>Дакле израчунавање факторијела неког природног броја се своди на множење свих природних
-бројева од 1 до тог природног броја чији се факторијел рачуна.</p>
-<p>Односно факторијел брија 5 био би : <span class="math notranslate nohighlight">\(5! = 5·4·3·2·1 = 120\)</span></p>
+<h2>Генерализација са комплексним аргументом<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<p>Биномни коефицијент <span class="math notranslate nohighlight">\(\binom{z}{k}\)</span> може се дефинисати за било који
+комплексни број z и било који природни број k:</p>
+<p><span class="math notranslate nohighlight">\(\binom{z}{k} = \frac{1}{k!}\prod_{n=0}^{k-1} (z-n)= \frac{z \cdot (z-1) \cdot (z-2) \cdot \cdot \cdot (z-k+1)}{k!}\)</span></p>
+<p>Ова генерализација је позната као уопштени биномни коефицијент и користи се при
+формулацији биномне теореме, а задовољава и својства (3) и (7).</p>
+<p>За константно k, израз <span class="math notranslate nohighlight">\(\binom{z}{k}\)</span> је полином по z степена k
+са рационалним коефицијентима.
+Сваки полимом p(z) степена d може се написати у форми</p>
+<p><span class="math notranslate nohighlight">\(p(z) = \sum {k=0}^d a_k \binom{z}{k}\)</span></p>
+<p>са одговарајућим коефицијентима <span class="math notranslate nohighlight">\(a_k\)</span> .</p>
+<p>Ово је нарочито важно у теорији диференцијалних једначина и
+може се посматрати као дискретна аналогија <em>Тејлорове теореме</em>.</p>
 </section>
 <section id="id4">
-<h2>Биномни коефицијент<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
-<p>Следећи важан појам јесте биномни коефицијент који се означава са:</p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/binomnikoeficijent.png"><img alt="../_images/binomnikoeficijent.png" src="../_images/binomnikoeficijent.png" style="width: 30px;" /></a>
-</figure>
-<p>Oвај израз чита се као n над k. и рачуна се по формули:</p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/израчунавањебиномногкоефицијента.png"><img alt="../_images/%D0%B8%D0%B7%D1%80%D0%B0%D1%87%D1%83%D0%BD%D0%B0%D0%B2%D0%B0%D1%9A%D0%B5%D0%B1%D0%B8%D0%BD%D0%BE%D0%BC%D0%BD%D0%BE%D0%B3%D0%BA%D0%BE%D0%B5%D1%84%D0%B8%D1%86%D0%B8%D1%98%D0%B5%D0%BD%D1%82%D0%B0.png" src="../_images/%D0%B8%D0%B7%D1%80%D0%B0%D1%87%D1%83%D0%BD%D0%B0%D0%B2%D0%B0%D1%9A%D0%B5%D0%B1%D0%B8%D0%BD%D0%BE%D0%BC%D0%BD%D0%BE%D0%B3%D0%BA%D0%BE%D0%B5%D1%84%D0%B8%D1%86%D0%B8%D1%98%D0%B5%D0%BD%D1%82%D0%B0.png" style="width: 150px;" /></a>
-</figure>
-<p>Oдносно 7 над 4 би се по овој формули израчунао на следећи начин:</p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/bin.png"><img alt="../_images/bin.png" src="../_images/bin.png" style="width: 450px;" /></a>
-</figure>
-<p><strong>Примери:</strong></p>
-<section id="id5">
-<h3>Пример 1.<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h3>
-<p>На колико начина Петар, Јована, Милош, Ана, Никола,
-Александар и Ђорђе могу да стоје у реду за касу у продавници?
-Пошто их на каси у продавници има седморо, можемо их посматрати као
-скуп природних бројева од 1 до 7. Односно преформулисати питање на лакши начин.
-Тј. на колико начина можемо поређати бројеве од 1 до 7.</p>
-<p>Решење овог задатка био би факторијел од 7.
-Дакле решење је 7! а то је 7·6·5·4·3·2·1 , што је једнако 5040 начина на које се могу
-поређати ових седам људи у реду на каси.</p>
-</section>
-<section id="id6">
-<h3>Пример 2.<a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h3>
-<p>На колико начина Петар, Јована, Милош, Ана, Никола, Александар и
-Ђорђе могу седети заједно у биоскопу, у реду од седам седишта, тако да Петар и Јована
-седе једно поред другог?</p>
-</section>
-<section id="id7">
-<h3>Решење 2.<a class="headerlink" href="#id7" title="Permalink to this heading">¶</a></h3>
-<p>Њих такође и у овом примеру можемо посматрати као скуп бројева, али уз малу модификацију.
-Односно како је у примеру задато да двоје морају седети једно крај другог њих не можемо
-посматрати као две целине већ као једну, тј. у овом случају наш скуп би садржао 6 целина
-од којих је 5 по један човек док су двоје једна засебна целина. Дакле имамо сличан случај
-као у претходном примеру али нам двоје чини једну целину па наш скуп се састоји од 6 целина
-и тако га треба посматрати. Решење задатка било би 6!, што је 720 начина да они седе у
-једном реду у биоскопу, тако да Јована и Петар седе заједно.</p>
-<section id="id8">
-<h4>Задаци за самосталан рад<a class="headerlink" href="#id8" title="Permalink to this heading">¶</a></h4>
-<p>Задатак 1.</p>
-<p>На колико начина могу шест особа да седну за округли сто ако има:</p>
-<p>а) шест места,
-б) девет места за округлим столом?</p>
-<p>Задатак 2.</p>
-<p>На колико начина:</p>
-<p>а) можемо ставити 9 књига на полицу,
-б) можемо ставити 4 књиге из физике, 3 књиге из хемије и 2 из математике на исту полицу тако да књиге из истих предмета стоје једна поред друге?</p>
-<p>Предстојећи видео ће вам помоћи за решавање задатака самостално.</p>
-
-    <div  id="v1iy4sMkz0o" class="ytvideo"  style="text-align: center; margin: 15px; cursor:pointer;">
-        <div style="background-image: url('https://img.youtube.com/vi/v1iy4sMkz0o/mqdefault.jpg'); background-repeat: no-repeat;background-position: center; height: 210px; width: 310px; margin: 0 auto; border: 1px solid #20c997">
-            <img src="../_static/images/play_button.svg" style="margin-top: 78px;" /> 
-        </div>
-      
-
-        </div>
-    <div id="modal-v1iy4sMkz0o" class="ytvideoclose" style="display: none; background-color: transparent; z-index: 10000;">
-        <div style="background-color: white; position: relative; width:  780px; height:  500px; z-index: 100;" id="YTmodal-v1iy4sMkz0o">
-        </div>
-    </div>
-    
-    
-    </section>
-</section>
+<h2>Границе биномних коефицијената<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
+<p>За биномни коефицијент <span class="math notranslate nohighlight">\(C(n, k)\)</span> важе следеће границе:</p>
+<p><span class="math notranslate nohighlight">\(\binom{n}{k} \le \frac{n^k}{k!}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\binom{n}{k} \le (\frac{n \cdot e}{k})^k\)</span></p>
+<p><span class="math notranslate nohighlight">\(\binom{n}{k} \ge (\frac{n}{k})^k\)</span></p>
 </section>
 </section>
 
@@ -427,7 +392,7 @@
     
     <div>
 <div class="lecture-prev-next-toggle">
-  <a  href="index.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Previous chapter </span> </a>
+  <a  href="2_b.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Previous chapter </span> </a>
   
   <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Next chapter</span>  <i class="fas fa-arrow-right fa"></i> </a>
 </div>
