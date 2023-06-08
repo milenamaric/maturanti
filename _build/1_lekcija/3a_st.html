@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="y">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Елементи математичке статистике и примене</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/runestonevideo.js"></script>
+    <script src="../_static/matrixeq.js"></script>
+    <script src="../_static/animationbase.js"></script>
+    <script src="../_static/lib/prettify.js"></script>
+    <script src="../_static/lib/hammer.min.js"></script>
+    <script src="../_static/parsons.js"></script>
+    <script src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="../_static/parsons-i18n.en.js"></script>
+    <script src="../_static/parsons-i18n.y.js"></script>
+    <script src="../_static/timedparsons.js"></script>
+    <script src="../_static/poll.js"></script>
+    <script src="../_static/showEval.js"></script>
+    <script src="../_static/tabbedstuff.js"></script>
+    <script src="../_static/mchoice.js"></script>
+    <script src="../_static/timedmc.js"></script>
+    <script src="../_static/timed.js"></script>
+    <script src="../_static/mchoice-i18n.en.js"></script>
+    <script src="../_static/mchoice-i18n.y.js"></script>
+    <script src="../_static/reveal.js"></script>
+    <script src="../_static/jquery.highlight.js"></script>
+    <script src="../_static/bookfuncs.js"></script>
+    <script src="../_static/codemirror.js"></script>
+    <script src="../_static/xml.js"></script>
+    <script src="../_static/css.js"></script>
+    <script src="../_static/python.js"></script>
+    <script src="../_static/htmlmixed.js"></script>
+    <script src="../_static/javascript.js"></script>
+    <script src="../_static/activecode-i18n.en.js"></script>
+    <script src="../_static/activecode-i18n.y.js"></script>
+    <script src="../_static/activecode.js"></script>
+    <script src="../_static/clike.js"></script>
+    <script src="../_static/timed_activecode.js"></script>
+    <script src="../_static/d3.v2.min.js"></script>
+    <script src="../_static/jquery.ba-bbq.min.js"></script>
+    <script src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script src="../_static/pytutor.js"></script>
+    <script src="../_static/codelens.js"></script>
+    <script src="../_static/clickable.js"></script>
+    <script src="../_static/timedclickable.js"></script>
+    <script src="../_static/shortanswer.js"></script>
+    <script src="../_static/timed_shortanswer.js"></script>
+    <script src="../_static/dragndrop.js"></script>
+    <script src="../_static/timeddnd.js"></script>
+    <script src="../_static/dragndrop-i18n.en.js"></script>
+    <script src="../_static/dragndrop-i18n.y.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script src="../_static/datafile.js"></script>
+    <script src="../_static/fitb.js"></script>
+    <script src="../_static/timedfitb.js"></script>
+    <script src="../_static/fitb-i18n.en.js"></script>
+    <script src="../_static/fitb-i18n.y.js"></script>
+    <script src="../_static/webglinteractive.js"></script>
+    <script src="../_static/FileSaver.min.js"></script>
+    <script src="../_static/Blob.js"></script>
+    <script src="../_static/karelCorner.js"></script>
+    <script src="../_static/karelRobot.js"></script>
+    <script src="../_static/karelWorld.js"></script>
+    <script src="../_static/karelChat.js"></script>
+    <script src="../_static/karelRobotDrawer.js"></script>
+    <script src="../_static/karelUI.js"></script>
+    <script src="../_static/karel.js"></script>
+    <script src="../_static/karel-i18n.en.js"></script>
+    <script src="../_static/karel-i18n.y.js"></script>
+    <script src="../_static/notes.js"></script>
+    <script src="../_static/pygamelib-init.js"></script>
+    <script src="../_static/gallery.js"></script>
+    <script src="../_static/associations.js"></script>
+    <script src="../_static/associations-i18n.en.js"></script>
+    <script src="../_static/associations-i18n.y.js"></script>
+    <script src="../_static/editor.js"></script>
+    <script src="../_static/jszip.js"></script>
+    <script src="../_static/editor-i18n.en.js"></script>
+    <script src="../_static/editor-i18n.y.js"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../_static/course-errors.js"></script>
+    <script src="../_static/petlja.js"></script>
+    <script src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'verovatnocaStatistika';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'verovatnocaStatistika';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Useful links</div>
+          <div class="useful-link">
+            <a href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html" target="_blank">Sphinx Docs</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/Petlja/PetljaDoc/blob/master/README.md" target="_blank">Petljadoc</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/RunestoneInteractive/overview" target="_blank">Runestone Interactive</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Курс вероватноће и статистике за средњу школу</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Table of content </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-4_lekcija>
+                    <h5>Комбинаторика</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../4_lekcija/1_lek.html><div class="studioLecture" id=activity-1_lek><i class="fas fa-file-alt activity-icon"></i>Комбинаторика - увод</div></a>
+                <a href=../4_lekcija/2_lek.html><div class="studioLecture" id=activity-2_lek><i class="fas fa-file-alt activity-icon"></i>Пермутације, варијације, комбинације</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-0_lekcija>
+                    <h5>Биномна формула</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../0_lekcija/1_binomna.html><div class="studioLecture" id=activity-1_binomna><i class="fas fa-file-alt activity-icon"></i>Биномна теорема</div></a>
+                <a href=../0_lekcija/2_b.html><div class="studioLecture" id=activity-2_b><i class="fas fa-file-alt activity-icon"></i>Биномни коефицијент</div></a>
+                <a href=../0_lekcija/3_b.html><div class="studioLecture" id=activity-3_b><i class="fas fa-file-alt activity-icon"></i>Формуле са биномним коефицијентима</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-2_lekcija>
+                    <h5>Подаци</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../2_lekcija/2_pod.html><div class="studioLecture" id=activity-2_pod><i class="fas fa-file-alt activity-icon"></i>Подаци</div></a>
+                <a href=../2_lekcija/3_stat.html><div class="studioLecture" id=activity-3_stat><i class="fas fa-file-alt activity-icon"></i>Дескриптивна статистика</div></a>
+                <a href=../2_lekcija/3_prim.html><div class="studioLecture" id=activity-3_prim><i class="fas fa-file-alt activity-icon"></i>Примена</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-3_lekcija>
+                    <h5>Вероватноћа</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../3_lekcija/0_uvod.html><div class="studioLecture" id=activity-0_uvod><i class="fas fa-file-alt activity-icon"></i>Кратка историја вероватноће</div></a>
+                <a href=../3_lekcija/1_lekcija.html><div class="studioLecture" id=activity-1_lekcija><i class="fas fa-file-alt activity-icon"></i>Емпиријска вероватноћа</div></a>
+                <a href=../3_lekcija/2_lekcija.html><div class="studioLecture" id=activity-2_lekcija><i class="fas fa-file-alt activity-icon"></i>Геометријска вероватноћа</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-6_lekcija>
+                    <h5>Случајне променљиве</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../6_lekcija/1_str.html><div class="studioLecture" id=activity-1_str><i class="fas fa-file-alt activity-icon"></i>Случајне променљиве</div></a>
+                <a href=../6_lekcija/2_str.html><div class="studioLecture" id=activity-2_str><i class="fas fa-file-alt activity-icon"></i>Дискретне случајне променљиве</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-7_lekcija>
+                    <h5>Условна вероватноћа</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../7_lekcija/1_deo.html><div class="studioLecture" id=activity-1_deo><i class="fas fa-file-alt activity-icon"></i>Условна вероватноћа, Бајесова формула и независни догађаји</div></a>
+                <a href=../7_lekcija/2_deo.html><div class="studioLecture" id=activity-2_deo><i class="fas fa-file-alt activity-icon"></i>Стабло вероватноће</div></a>
+                <a href=../7_lekcija/3_deo.html><div class="studioLecture" id=activity-3_deo><i class="fas fa-file-alt activity-icon"></i>Бернулијева шема</div></a>
+                <a href=../7_lekcija/4_deo.html><div class="studioLecture" id=activity-4_deo><i class="fas fa-file-alt activity-icon"></i>Условна вероватноћа</div></a>
+                <a href=../7_lekcija/5_deo.html><div class="studioLecture" id=activity-5_deo><i class="fas fa-file-alt activity-icon"></i>Потпуна вероватноћа</div></a>
+                <a href=../7_lekcija/6_deo.html><div class="studioLecture" id=activity-6_deo><i class="fas fa-file-alt activity-icon"></i>Бајесова формула</div></a>
+                <a href=../7_lekcija/7_deo.html><div class="studioLecture" id=activity-7_deo><i class="fas fa-file-alt activity-icon"></i>Резиме</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-1_lekcija>
+                    <h5>Статистика</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../1_lekcija/1_st.html><div class="studioLecture" id=activity-1_st><i class="fas fa-file-alt activity-icon"></i>Појам статистике и њени елементи</div></a>
+                <a href=../1_lekcija/2_st.html><div class="studioLecture" id=activity-2_st><i class="fas fa-file-alt activity-icon"></i>Дискретне случајне променљиве</div></a>
+                <a href=../1_lekcija/3_st.html><div class="studioLecture" id=activity-3_st><i class="fas fa-file-alt activity-icon"></i>Примена и значај статистике</div></a>
+                <a href=../1_lekcija/4_str.html><div class="studioLecture" id=activity-4_str><i class="fas fa-file-alt activity-icon"></i>Примена статистике у музици</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <section id="id1">
+<h1>Елементи математичке статистике и примене<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<section id="id2">
+<h2>Примена и значај статистике<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<p><strong>У овој лекцији научићеш:</strong></p>
+<ul class="simple">
+<li><p>у којим се све гранама и дисциплинама данас користи математичка статистика</p></li>
+<li><p>зашто је развој математичке статистике веома важан за свакодневни живот</p></li>
+</ul>
+<p>Математичка статистика је важна у свакодневном животу јер помаже у доношењу информисаних одлука на основу података,
+као и у анализи трендова и извлачењу закључака из информација. Од временске прогнозе до инжењерства, статистика се користи
+за разумевање света око нас и доношење бољих одлука.</p>
+<p>Статистику користимо у свакодневном животу, а да тога можда нисмо ни свесни. Ово су само неки од многобројних
+примера свакодневног коришћења математичке статистике:</p>
+<ul class="simple">
+<li><p><em>Користи се у спорту</em> - Спортски тимови прате аспекте као на пример колико је голова или поена сваки играч постигао, у колико је утакмица победио или изгубио и још много тога. Тренери користе ове статистике да донесу одлуке о томе ко треба да игра у утакмицама, које позиције треба да игра, па чак и како треба да тренира.</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/statsinsport.png"><img alt="../_images/statsinsport.png" src="../_images/statsinsport.png" style="width: 450px;" /></a>
+</figure>
+<ul class="simple">
+<li><p><em>У трговини</em> - Продавци користе статистику да би схватили које производе да продају и колико да наплате за њих. Они посматрају податке као што су куповне навике купаца, популарни производи и трендови продаје. Ово им помаже да донесу одлуке о томе које производе да имају у залихама, како да им одређују цену и како да их пласирају купцима.</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/statsintrade.jpg"><img alt="../_images/statsintrade.jpg" src="../_images/statsintrade.jpg" style="width: 450px;" /></a>
+</figure>
+<ul class="simple">
+<li><p><em>У пољопривреди</em> - Пољопривредници статистику користе за анализу приноса усева, квалитета земљишта и временских образаца како би се информисали о пољопривредним праксама и побољшали производњу хране.</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/statsinagri.jpg"><img alt="../_images/statsinagri.jpg" src="../_images/statsinagri.jpg" style="width: 450px;" /></a>
+</figure>
+<ul class="simple">
+<li><p><em>На радном месту</em> - Mатематичка статистика се често користи за анализу података који говоре шта најбоље функционише за маркетиншку стратегију компаније или како распоредити посао међу запосленима. Статистика рада запослених такође утиче и на одлуку менаџера коме да повећа плату, а кога да отпусти.</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/statsinbis.jpg"><img alt="../_images/statsinbis.jpg" src="../_images/statsinbis.jpg" style="width: 450px;" /></a>
+</figure>
+<ul class="simple">
+<li><p><em>У здравству</em> - Лекари и научници користе статистику да проучавају болести и пронађу боље третмане. Они прикупљају податке о факторима као што су симптоми, резултати тестова и резултати пацијената. Затим анализирају ове податке како би открили шта најбоље функционише за сваког пацијента и како побољшати опште здравствене резултате.</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/statsinhealth.jpg"><img alt="../_images/statsinhealth.jpg" src="../_images/statsinhealth.jpg" style="width: 450px;" /></a>
+</figure>
+<ul class="simple">
+<li><p><em>У политици</em> - Политичари користе статистику за доношење одлука о политикама и кампањама. Они прикупљају податке о стварима као што су преференције бирача, јавно мњење и демографски трендови. Затим користе ове податке за креирање порука које ће допрети до бирача и доносити информисане одлуке о питањима политике.</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/statsinpoli.jpg"><img alt="../_images/statsinpoli.jpg" src="../_images/statsinpoli.jpg" style="width: 450px;" /></a>
+</figure>
+<ul class="simple">
+<li><p><em>У образовању</em> - Статистика се користи за процену учинка ђака, процену ефикасности образовних програма и идентификацију области у којима је потребно побољшање. Наставници и школе користе статистику да прате напредак ученика и идентификују области у којима ученицима може бити потребна додатна подршка.</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/statsinedu.jpg"><img alt="../_images/statsinedu.jpg" src="../_images/statsinedu.jpg" style="width: 450px;" /></a>
+</figure>
+<ul class="simple">
+<li><p>Математичка статистика је такође врло важна у <em>демографији</em> - Користи се у виду пописа ради одређивања броја становника, природног прираштаја, броја запослених, ради одређивања полно-старосне структуре, степена удела различитих националности и религија, и многих других фактора.</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/statsindemo.jpg"><img alt="../_images/statsindemo.jpg" src="../_images/statsindemo.jpg" style="width: 450px;" /></a>
+</figure>
+<ul class="simple">
+<li><p>Врло често статистика се користи за <em>процену ризика</em> - Може помоћи људима да процене ризик у различитим ситуацијама. На пример, статистичари користе математичку статистику да израчунају вероватноћу догађаја као што су несреће, болести или природне катастрофе.</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/evalofrisk.jpg"><img alt="../_images/evalofrisk.jpg" src="../_images/evalofrisk.jpg" style="width: 450px;" /></a>
+</figure>
+<p>Укратко, важност статистике у свакодневном животу је да води евиденцију, израчунава вероватноће и пружа додатно знање. Користећи податке за доношење бољих одлука, можемо побољшати резултате и учинити свет бољим за живот. Због свих наведених разлога, потреба за &quot;статистичком писменошћу&quot; и обухватним статистичким образовањем, у друштвеним наукама и пракси постаје све изразитија.</p>
+</section>
+<section id="id3">
+<h2>Задаци и питања за вежбу:<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+
+    <div class="quiz-question">
+
+            <div class="course-box course-box-question course-content petlja-problem-box choice-question">
+                <div class="image-background"></div>
+                <div class="petlja-problem-box-icon-holder"> </div>
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="question31789">
+            <p>Q-9: Избаци уљеза. Математичка статистика:</p>
+
+            <li data-component="answer"  id="question31789_opt_a">користи се за процену ризика.</li><li data-component="feedback" id="question31789_opt_a">Нетачно</li>
+            
+            <li data-component="answer" data-correct id="question31789_opt_b">не бави се теоријом вероватноће.</li><li data-component="feedback" id="question31789_opt_b">Тачно</li>
+            
+            <li data-component="answer"  id="question31789_opt_c">важна је за опис демографије државе.</li><li data-component="feedback" id="question31789_opt_c">Нетачно</li>
+            
+
+            </ul>
+            </div>
+            
+    </div>
+
+    <div class="quiz-question">
+
+            <div class="course-box course-box-question course-content petlja-problem-box choice-question">
+                <div class="image-background"></div>
+                <div class="petlja-problem-box-icon-holder"> </div>
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="question324567">
+            <p>Q-10: Одреди тачне тврдње. Знање из математичке статистике:</p>
+
+            <li data-component="answer" data-correct id="question324567_opt_a">се примењује у великом броју аспеката свакодневног живота.</li><li data-component="feedback" id="question324567_opt_a">Тачно</li>
+            
+            <li data-component="answer"  id="question324567_opt_b">није потребно у пракси или при запошљавању.</li><li data-component="feedback" id="question324567_opt_b">Нетачно</li>
+            
+            <li data-component="answer" data-correct id="question324567_opt_c">помаже да доносимо боље одлуке и добијамо боље резултате.</li><li data-component="feedback" id="question324567_opt_c">Тачно</li>
+            
+
+            </ul>
+            </div>
+            
+    </div>
+</section>
+</section>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="#" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span>Previous chapter</span> </a>
+  
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Letters</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

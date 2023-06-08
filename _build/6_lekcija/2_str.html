@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Дискретне случајне променљиве</title>
+    <title>Случајне променљиве и расподеле</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
@@ -130,6 +130,7 @@
     <script src="../_static/jszip.js"></script>
     <script src="../_static/editor-i18n.en.js"></script>
     <script src="../_static/editor-i18n.y.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../_static/jquery-fix.js"></script>
     <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
@@ -240,6 +241,18 @@
             </div>
                 
                 <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-0_lekcija>
+                    <h5>Биномна формула</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../0_lekcija/1_binomna.html><div class="studioLecture" id=activity-1_binomna><i class="fas fa-file-alt activity-icon"></i>Биномна теорема</div></a>
+                <a href=../0_lekcija/2_b.html><div class="studioLecture" id=activity-2_b><i class="fas fa-file-alt activity-icon"></i>Биномни коефицијент</div></a>
+                <a href=../0_lekcija/3_b.html><div class="studioLecture" id=activity-3_b><i class="fas fa-file-alt activity-icon"></i>Формуле са биномним коефицијентима</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
                 <div class="lecture-div courseContentsSectionHeadline" id=lecture-2_lekcija>
                     <h5>Подаци</h5>
                     <i class="fas fa-angle-down caret-position "> </i>
@@ -317,83 +330,121 @@
     <div id="main-content">
     
   <section id="id1">
-<h1>Дискретне случајне променљиве<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
-<p><strong>У овој лекцији научићеш:</strong></p>
+<h1>Случајне променљиве и расподеле<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<section id="id2">
+<h2>Дискретне случајне променљиве<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p><strong>У овој лекцији ћеш учити о томе шта су подаци</strong></p>
 <ul class="simple">
 <li><p>шта су дискретне случајне променљиве</p></li>
 <li><p>шта су расподеле</p></li>
 </ul>
-<p><em>Дефиниција</em> Дискретна случајна променљива је пресликавање скупа исхода на скуп
-Rx={x1,x2,...}. Скуп вероватноћа p(xk)={X=xk}, k=1,2,... одређује расподелу вероватноћа X.</p>
-<p>Како је {X∈Rx}={X=x1}+{X=x2}+... а по дефиницији {X∈Rx}=ɛ, имамо
-да p(x1)+p(x2)+...=1. Ово оправдава термин &quot;расподела&quot;,
-јер p(xk), k=1,2,... показује како се једначина вероватноћа
-&quot;расподељује&quot; на на поједине вредности x1,x2,... Када нам је позната
-расподела вероватноћа p(xk), k=1,2,... за X можемо одредити
-вероватнућу догађаја облика {X∈S}, где је S било какав скуп бројева.
-Заиста, како X узима вредност у Rx={x1,x2,..}. то се догађај {x∈S} {x∈S∩Rx}.
-Ставимо S∩Rx=p{xi1}+p(xi2)+...</p>
+
+    </div></div>
+<p><em>Дефиниција:</em>
+Дискретна случајна променљива је пресликавање скупа исхода на
+скуп <span class="math notranslate nohighlight">\(Rx={x_1,x_2,...}\)</span>.
+Скуп вероватноћа <span class="math notranslate nohighlight">\(p(x_k)={X_k}\)</span>, k=1,2,... одређује расподелу вероватноћа X.</p>
+<p>Како је <span class="math notranslate nohighlight">\({X \in R_x}={X=x_1}+{X=x_2}+...\)</span> а по дефиницији <span class="math notranslate nohighlight">\({X \in R_x}= \varepsilon\)</span>,
+имамо да <span class="math notranslate nohighlight">\(p(x_1)+p(x_2)+...=1\)</span>.
+Ово оправдава термин &quot;расподела&quot;, јер <span class="math notranslate nohighlight">\(p(x_k)\)</span>, k=1,2,...
+показује како се једначина вероватноћа &quot;расподељује&quot; на на поједине
+вредности <span class="math notranslate nohighlight">\(x_1\)</span>,:math:<cite>x_2</cite>,... Када нам је позната расподела вероватноћа
+<span class="math notranslate nohighlight">\(p(x_k)\)</span>, k=1,2,... за X можемо одредити вероватнућу догађаја облика
+<span class="math notranslate nohighlight">\({X \in S}\)</span>, где је S било какав скуп бројева. Заиста, како
+X узима вредност у <span class="math notranslate nohighlight">\(Rx={x_1,x_2,..}\)</span>. то се догађај <span class="math notranslate nohighlight">\({x \in S}\)</span> <span class="math notranslate nohighlight">\({x \in S∩R_x}\)</span>.
+Ставимо <span class="math notranslate nohighlight">\(S∩Rx=p{xi1}+p(xi2)+...\)</span></p>
 <p>Расподелу случајне променљиве често је погодно представити у облику шеме.</p>
-<p>Ако изузмемо тривијалне случајне променљиве где X(e)=x0 за свако e∈ɛ, (тј. X је увек број x0)
-најједноставније случајне променљиве имају скуп Rx двочлан.
+<p>Ако изузмемо тривијалне случајне променљиве где <span class="math notranslate nohighlight">\(X(e)=x_0\)</span> за свако <span class="math notranslate nohighlight">\(e \in \varepsilon\)</span>,
+(тј. X је увек број x0) најједноставније случајне променљиве имају скуп <span class="math notranslate nohighlight">\(R_x\)</span>  двочлан.
 Овде су посебно важне случајне променљиве које се зову индикатори (показивачи) догађаја.</p>
-<p><strong>Индикатор</strong> Ia догађаја А је случајна променљива дефинисана на</p>
-<p>Дакле, {Ia=1}=A, {Ia=0} и расподела</p>
+<p><strong>Индикатор</strong></p>
+<p><span class="math notranslate nohighlight">\(I_a\)</span> догађаја А је случајна променљива дефинисана на</p>
+<p>Дакле, <span class="math notranslate nohighlight">\({I_a=1}=A\)</span>, <span class="math notranslate nohighlight">\({I_a=0}\)</span> и расподела</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../_images/diskretne1.jpg"><img alt="../_images/diskretne1.jpg" src="../_images/diskretne1.jpg" style="width: 450px;" /></a>
 </figure>
-<p>Расподела вероватноћа као потпуна карактеристика важи само за дискретну случајну променљиву.
-Две најважније дискретне расподеле су биномна расподела и њена генерализација Пуасонова расподела.</p>
-<p><strong>Биномна расподела</strong> У експерименту се интересујемо за реализацију догађаја
-А чија је вероватноћа p=P(A). Ставимо q=1-p=P().
+<p>Расподела вероватноћа као потпуна карактеристика важи само за дискретну случајну променљиву. Две најважније
+дискретне расподеле су биномна расподела и њена генерализација Пуасонова расподела.</p>
+<p><strong>Биномна расподела</strong> У експерименту се интересујемо за реализацију догађаја А
+чија је вероватноћа <span class="math notranslate nohighlight">\(p=P(A)\)</span>. Ставимо <span class="math notranslate nohighlight">\(q=1-p=P()\)</span>.
 Експеримент се понавља n пута. Над исходима сложеног експеримента дефинишемо
-случајну промнљиву Sn као број реализација догађаја А.</p>
-<p><em>Пример</em> Изводе се 4 слободна бацања на кош. Промашај у i-том бацању означавамо са
-Оi а погодак са 1i. Укупно има 2^4=16 могућих исхода у та 4 бацања.
+случајну промнљиву <span class="math notranslate nohighlight">\(Sn\)</span> као број реализација догађаја А.</p>
+<p><strong>Пример</strong> Изводе се 4 слободна бацања на кош.
+Промашај у i-том бацању означавамо са Оi а погодак са 1i.
+Укупно има <span class="math notranslate nohighlight">\(2^4=16\)</span> могућих исхода у та 4 бацања.
 Претпоставимо да су бацања независна и да је P(1i)=</p>
 <p>Из тога можемо закључити да је расподела за Sn следећа</p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/diskretne2.jpg"><img alt="../_images/diskretne2.jpg" src="../_images/diskretne2.jpg" style="width: 550px;" /></a>
-</figure>
-<p>Горња расподела се назива биномна расподела. Писаћемо кратко B(n,p) јер су n и p
-параметри који одређују биномну расподелу. Тако је у примеру S4: B(4;0,7).</p>
-<p>Користећи биномну формулу лако је проверити да је
-P{Sn=0} + P{Sn=1} +...+ P{Sn=n}=1. Заиста,</p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/diskretne3.jpg"><img alt="../_images/diskretne3.jpg" src="../_images/diskretne3.jpg" style="width: 550px;" /></a>
-</figure>
+<p><span class="math notranslate nohighlight">\(P{Sn=k}=A=\binom{n}{k} p^k q^{n-k}\)</span></p>
+<p>Горња расподела се назива биномна расподела. Писаћемо кратко <span class="math notranslate nohighlight">\(B(n,p)\)</span> јер су n и
+p параметри који одређују биномну расподелу. Тако је у примеру <span class="math notranslate nohighlight">\(S4: B(4;0,7)\)</span>.</p>
+<p>Користећи биномну формулу лако је проверити да је</p>
+<p><span class="math notranslate nohighlight">\(P{Sn=0} + P{Sn=1} +...+ P{Sn=n}=1\)</span>.</p>
+<p>Заиста,
+<span class="math notranslate nohighlight">\(P{Sn=0} + P{Sn=1} + ... + P{Sn=n}. Заиста, \binom{n}{0}p^0q^n + \binom{n}{1}p^1q^{n-1} + ... + \binom{n}{n}p^nq^0={p+k}^n=1^n=1\)</span>.</p>
 <p><strong>Паусонова расподела</strong>
-Региструју се &quot;догађаји&quot; у случајним тренуцима (рецимо позиви у телефонској централи, емисија радиоактивног извора, пролазак аутомобила кроз наплатну рампу, итд.). Посматрамо случајну променљиву xt - број догађаја на интервалу [0,t). Поделимо интервал на [0,t) на n интервала дужина t/n. Ако замислимо да је n велико вероватноћа да се оствари два и више &quot;догађаја&quot; у сваком таквом интервалу је приближно нула. Такође, логично је претпоставити да је вероватноћа pn да се у неком интервалу оствари један догађај, иста за сваки интервал и да pn→0 када n→∞. Претпоставимо, даље, да је pn приближно пропорционлна дужини интервала: pn=αt/n, α&gt;0. Прецизније, нека npn→αt када n→∞. Најзад, претпоставимо да су појављивања &quot;догађаја&quot; у различитим интервалима независна. Нека је Aj догађај да се у j-ом, j=1, 2, ..., n интервалу појави посматрани догађај.</p>
-<p>По уведеним претпоставкама Aj, j=1, 2,.., n су независни и са једнаким вероватноћама P(Aj)=pn. Тако је xt број реализација догађаја Aj, j=1, 2,.., n. Значи, xt има B(n;pn) расподелу. Ако је n→∞ и npn→αt важи Паусонова теорема тј. ![Ovo je slika](diskretne4.jpg)   за k=0, 1, 2, ... или xt:P(αt)</p>
-<p><em>Пример</em> Број возила која за t минута прођу кроз наплатну рампу има P(αt) расподелу, где је α=2. Колика је вероватноћа да у току 5 минута прође бар једно возило?</p>
-<p>Овде X5: P(10). Вероватноћа која нас интересује је . Практично сигурно ће проћи бар једно возило у току 5 минута са таквим интезитетом саобраћаја. Додајмо да α=2 значи &quot;просечно&quot; 2 возила у минуту.</p>
-<p><em>Пример 1</em> У једној породици има десеторо деце. Сматрајући да је вероватноћа дечака 0,5 и да се полови јављају независно, наћи вероватноћу да је у породици</p>
+Региструју се &quot;догађаји&quot; у случајним тренуцима
+(рецимо позиви у телефонској централи, емисија радиоактивног извора,
+пролазак аутомобила кроз наплатну рампу, итд.).
+Посматрамо случајну променљиву xt - број догађаја на интервалу [0,t).
+Поделимо интервал на [0,t) на n интервала дужина t/n.
+Ако замислимо да је n велико вероватноћа да се оствари два и више
+&quot;догађаја&quot; у сваком таквом интервалу је приближно нула. Такође, логично
+је претпоставити да је вероватноћа pn да се у неком интервалу оствари један догађај, иста за сваки интервал и да pn→0 када n→∞. Претпоставимо, даље, да је pn приближно пропорционлна дужини интервала: pn=αt/n, α&gt;0. Прецизније, нека npn→αt када n→∞. Најзад, претпоставимо да су појављивања &quot;догађаја&quot; у различитим интервалима независна. Нека је Aj догађај да се у j-ом, j=1, 2, ..., n интервалу појави посматрани догађај.</p>
+<p>По уведеним претпоставкама Aj, j=1, 2,.., n су независни и са једнаким вероватноћама P(Aj)=pn. Тако је xt број реализација догађаја Aj, j=1, 2,.., n. Значи, xt има B(n;pn) расподелу. Ако је n→∞ и npn→αt важи Паусонова теорема тј. <span class="math notranslate nohighlight">\(P{Xt=k}=e^{-αt}frac{αt}^k{k!}\)</span>
+за k=0, 1, 2, ... или <span class="math notranslate nohighlight">\(xt:P(αt)\)</span>.</p>
+<p><strong>Пример</strong> Број возила која за t минута прођу кроз наплатну рампу има <span class="math notranslate nohighlight">\(P(αt)\)</span>
+расподелу, где је α=2. Колика је вероватноћа да у току 5 минута прође бар једно возило?</p>
+<p>Овде X5: P(10). Вероватноћа која нас интересује је .
+Практично сигурно ће проћи бар једно возило у току 5
+минута са таквим интезитетом саобраћаја. Додајмо да α=2 значи
+&quot;просечно&quot; 2 возила у минуту.</p>
+<p><strong>Пример 1</strong> У једној породици има десеторо деце.
+Сматрајући да је вероватноћа дечака 0,5 и да се полови јављају независно,
+наћи вероватноћу да је у породици</p>
 <ul class="simple">
 <li><p>а) 5 дечака и 5 девојчица</p></li>
 <li><p>б) број дечака између 3 и 8</p></li>
 </ul>
 <p><strong>Решење</strong></p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/diskretne8.jpg"><img alt="../_images/diskretne8.jpg" src="../_images/diskretne8.jpg" style="width: 550px;" /></a>
-</figure>
-<p><em>Пример 2</em> Серија од 500 производа се прихвата као исправна ако међу 75 случајно изабраних производа има највише два дефектна производа. Ако у серији има 20% неисправних, колика је вероватноћа да се таква серија прихвати као исправна?</p>
+<p>S10-број дечака у породици, S10:B(10;0,5)</p>
+<p>а) <span class="math notranslate nohighlight">\(\binom{10}{5}(0,5)^5(0,5)^5=\binom{10}{5}frac{1}{1024}=0,246\)</span>
+б) <span class="math notranslate nohighlight">\(P(3&lt;S10&lt;8)=\sum_{k=4}{n=7}\binom{10}{5}frac{1}{1024}=0,7734\)</span></p>
+<p><strong>Пример 2</strong> Серија од 500 производа се прихвата као исправна ако међу 75
+случајно изабраних производа има највише два дефектна производа.
+Ако у серији има 20% неисправних, колика је вероватноћа да се таква
+серија прихвати као исправна?</p>
 <p><strong>Решење</strong></p>
-<p>![Ovo je slika](diskretne9.jpg)</p>
-<p><em>Пример 3</em> Лансирање меторолошке ракете се понавља до првог успешног лансирања. Ако успеха нема у 4 покушаја, експеримент се прекида. Нека се покушаји изводе независно и нека је вероватноћа успеха за сваки покушај 0,7. Први покушај кошта K динара, а сваки следећи К/3. Ако је лансирање неуспешно, онда добијена информација обезбеђује зараду од C динара. Ако је X нето цена целог експеримента, наћи расподелу за X.</p>
+<p><span class="math notranslate nohighlight">\(\sum_{k=0}{n=2}\binom{100}{k}\binom{400}{75-k}/\binom{500}{75}≈\sum_{k=0}{n=2}\binom{75}{k}(0,2)^k(0,8)^{75-k}≈3.2 10^-{6}\)</span></p>
+<p><strong>Пример 3</strong> Лансирање меторолошке ракете се понавља до првог успешног лансирања.
+Ако успеха нема у 4 покушаја, експеримент се прекида. Нека се покушаји изводе
+независно и нека је вероватноћа успеха за сваки покушај 0,7. Први покушај кошта K
+динара, а сваки следећи <span class="math notranslate nohighlight">\(\frac{К}{3}\)</span>.
+Ако је лансирање неуспешно, онда добијена информација обезбеђује зараду од C динара.
+Ако је X нето цена целог експеримента, наћи расподелу за X.</p>
 <p><strong>Решење</strong></p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/diskretne6.jpg"><img alt="../_images/diskretne6.jpg" src="../_images/diskretne6.jpg" style="width: 550px;" /></a>
-</figure>
-<p><em>Пример 4</em> На путу кретања аутомобила налазе се редом три семафора који раде независно и за које су вероватноће расподеле редом 0,6 0,4 и 0,2. Нека је X број семафора поред којих аутомобил прође пре првог заустављања. Наћи расподелу за X.</p>
+<p><span class="math notranslate nohighlight">\(0,3 \cdot 0,3 \cdot 0,7=0,063, {0,3}^3 \cdot 0,7=0,0189, {0,3}^4=0,0081
+X:\binom{k-c}{0,7} \binom{4frac{k}{3}-c}{0,21} \binom{5frac{k}{3}}{0,063} \binom{2k-c}{0,0189} \binom{2k}{0,0081}\)</span></p>
+<p><strong>Пример 4</strong> На путу кретања аутомобила налазе се редом три семафора који раде независно и за које су
+вероватноће расподеле редом 0,6 0,4 и 0,2. Нека је X број семафора поред којих аутомобил прође пре првог заустављања. Наћи расподелу за X.</p>
+<p><strong>Решење:</strong></p>
+<p><span class="math notranslate nohighlight">\(X:\binom{0}{0,4} \binom{1}{0,36} \binom{2}{0,192} \binom{3}{0,048}\)</span></p>
+<p><strong>Пример 5</strong> Из кутије која садржи 25 артикала, од којих је 5 дефектно,
+узиају се случајно 4 артикла. Нека је X број дефектних међу њима.
+Наћи расподлу за X ако се артикли узимају без враћања</p>
 <p><strong>Решење</strong></p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/diskretne5.jpg"><img alt="../_images/diskretne5.jpg" src="../_images/diskretne5.jpg" style="width: 550px;" /></a>
-</figure>
-<p><em>Пример 5</em> Из кутије која садржи 25 артикала, од којих је 5 дефектно, узимају се случајно 4 артикла. Нека је X број дефектних међу њима. Наћи расподлу за X ако се артикли узимају без враћања</p>
-<p><strong>Решење</strong></p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/diskretne7.jpg"><img alt="../_images/diskretne7.jpg" src="../_images/diskretne7.jpg" style="width: 550px;" /></a>
-</figure>
+<p><span class="math notranslate nohighlight">\(X:B(4;frac{1}{5}); P(X=k)=binom{4}{k}(binom{1}{5})^k(binom{4}{5})^{4-k}\)</span>, k=0,1,2,3,4.
+<a href="#id3"><span class="problematic" id="id4">:mat:`X:\binom{0}{0,4096} \binom{1}{0,4096} \binom{2}{0,1536} \binom{3}{0,0256} \binom{4}{0,0016}`</span></a></p>
+<aside class="system-message" id="id3">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/home/milena/Desktop/maturanti/_intermediate/6_lekcija/2_str.rst</span>, line 163); <em><a href="#id4">backlink</a></em></p>
+<p>Unknown interpreted text role &quot;mat&quot;.</p>
+</aside>
+<p>За додатно објашњење дискретних случајних променљивих погледај следећи видео</p>
 
     <div  id="xU3ppOEWY3c" class="ytvideo"  style="text-align: center; margin: 15px; cursor:pointer;">
         <div style="background-image: url('https://img.youtube.com/vi/xU3ppOEWY3c/mqdefault.jpg'); background-repeat: no-repeat;background-position: center; height: 210px; width: 310px; margin: 0 auto; border: 1px solid #20c997">
@@ -409,6 +460,7 @@ P{Sn=0} + P{Sn=1} +...+ P{Sn=n}=1. Заиста,</p>
     
     
     </section>
+</section>
 
 
     </div>

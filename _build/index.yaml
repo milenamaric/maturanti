@@ -12,13 +12,17 @@ description:
     <p>Овај курс је намењен свим заинтересованим ученицима за изучавање основних појмова
     из области вероватноће и статистике. Курс је настао као резултат писања матурског
     рада из математике рада осам ученика Девете гимназије &quot;Михаило Петровић Алас&quot;.
-    Професор ментор, Милена Марић.</p>
+
+    У креирању курса учестовали су ученици одељења IV4.</p>
 
     </div>
 
     '
   requirements:
-  - Добра воља!
+  - 1. Милош Бањац, 2. Бојана Вукосав
+  - 3. Катарина Каличанин, 4. Ђорђе Поповић
+  - 5. Данило Ралић, 6. Урош Ралић
+  - 7. Вељко Симић, 8. Тијана Симић
   shortDescription: Курс вероватноће и статистике за средњу школу
   toc:
   - Intro to Petljadoc INDEX.yaml
@@ -47,6 +51,31 @@ lessons:
   guid: c2c6523d-53f3-4a3d-ba4f-650b8422f0bc
   normalized_title: Комбинаторика
   title: Комбинаторика
+- activities:
+  - description: ''
+    file: 1_binomna.html
+    guid: 71c038mn-f7f3-410d-8019-e88d22cb7f01
+    src: 1_binomna.rst
+    title: Биномна теорема
+    type: reading
+  - description: ''
+    file: 2_b.html
+    guid: 7v9038mn-f7f3-410d-8019-e88d22cb7f01
+    src: 2_b.rst
+    title: Биномни коефицијент
+    type: reading
+  - description: ''
+    file: 3_b.html
+    guid: 6h9038mn-f7f3-410d-8019-e88d22cb7f01
+    src: 3_b.rst
+    title: Формуле са биномним коефицијентима
+    type: reading
+  archived-activities: []
+  description: Your first lesson. Description is not required attribute
+  folder: 0_lekcija
+  guid: c2c6523d-53f3-5g3d-ba4f-650b8422f0bc
+  normalized_title: Биномна формула
+  title: Биномна формула
 - activities:
   - description: ''
     file: 2_pod.html

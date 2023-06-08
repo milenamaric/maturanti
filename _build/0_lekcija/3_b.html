@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="y">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Комнбинаторика и статистика</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/runestonevideo.js"></script>
+    <script src="../_static/matrixeq.js"></script>
+    <script src="../_static/animationbase.js"></script>
+    <script src="../_static/lib/prettify.js"></script>
+    <script src="../_static/lib/hammer.min.js"></script>
+    <script src="../_static/parsons.js"></script>
+    <script src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="../_static/parsons-i18n.en.js"></script>
+    <script src="../_static/parsons-i18n.y.js"></script>
+    <script src="../_static/timedparsons.js"></script>
+    <script src="../_static/poll.js"></script>
+    <script src="../_static/showEval.js"></script>
+    <script src="../_static/tabbedstuff.js"></script>
+    <script src="../_static/mchoice.js"></script>
+    <script src="../_static/timedmc.js"></script>
+    <script src="../_static/timed.js"></script>
+    <script src="../_static/mchoice-i18n.en.js"></script>
+    <script src="../_static/mchoice-i18n.y.js"></script>
+    <script src="../_static/reveal.js"></script>
+    <script src="../_static/jquery.highlight.js"></script>
+    <script src="../_static/bookfuncs.js"></script>
+    <script src="../_static/codemirror.js"></script>
+    <script src="../_static/xml.js"></script>
+    <script src="../_static/css.js"></script>
+    <script src="../_static/python.js"></script>
+    <script src="../_static/htmlmixed.js"></script>
+    <script src="../_static/javascript.js"></script>
+    <script src="../_static/activecode-i18n.en.js"></script>
+    <script src="../_static/activecode-i18n.y.js"></script>
+    <script src="../_static/activecode.js"></script>
+    <script src="../_static/clike.js"></script>
+    <script src="../_static/timed_activecode.js"></script>
+    <script src="../_static/d3.v2.min.js"></script>
+    <script src="../_static/jquery.ba-bbq.min.js"></script>
+    <script src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script src="../_static/pytutor.js"></script>
+    <script src="../_static/codelens.js"></script>
+    <script src="../_static/clickable.js"></script>
+    <script src="../_static/timedclickable.js"></script>
+    <script src="../_static/shortanswer.js"></script>
+    <script src="../_static/timed_shortanswer.js"></script>
+    <script src="../_static/dragndrop.js"></script>
+    <script src="../_static/timeddnd.js"></script>
+    <script src="../_static/dragndrop-i18n.en.js"></script>
+    <script src="../_static/dragndrop-i18n.y.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script src="../_static/datafile.js"></script>
+    <script src="../_static/fitb.js"></script>
+    <script src="../_static/timedfitb.js"></script>
+    <script src="../_static/fitb-i18n.en.js"></script>
+    <script src="../_static/fitb-i18n.y.js"></script>
+    <script src="../_static/webglinteractive.js"></script>
+    <script src="../_static/FileSaver.min.js"></script>
+    <script src="../_static/Blob.js"></script>
+    <script src="../_static/karelCorner.js"></script>
+    <script src="../_static/karelRobot.js"></script>
+    <script src="../_static/karelWorld.js"></script>
+    <script src="../_static/karelChat.js"></script>
+    <script src="../_static/karelRobotDrawer.js"></script>
+    <script src="../_static/karelUI.js"></script>
+    <script src="../_static/karel.js"></script>
+    <script src="../_static/karel-i18n.en.js"></script>
+    <script src="../_static/karel-i18n.y.js"></script>
+    <script src="../_static/notes.js"></script>
+    <script src="../_static/pygamelib-init.js"></script>
+    <script src="../_static/gallery.js"></script>
+    <script src="../_static/associations.js"></script>
+    <script src="../_static/associations-i18n.en.js"></script>
+    <script src="../_static/associations-i18n.y.js"></script>
+    <script src="../_static/editor.js"></script>
+    <script src="../_static/jszip.js"></script>
+    <script src="../_static/editor-i18n.en.js"></script>
+    <script src="../_static/editor-i18n.y.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../_static/course-errors.js"></script>
+    <script src="../_static/petlja.js"></script>
+    <script src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'verovatnocaStatistika';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'verovatnocaStatistika';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+    <div id="usefulLinksToggle" class="useful-links-toggle">
+        <a class="dropdown-toggle dropdown-toggle-burger" role="button" href="#" id="usefulLinksDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu dropdown-nav-links shadow-lg" aria-labelledby="usefulLinksDropdown" x-placement="bottom-start" style="position: absolute; transform: translate3d(-55px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+          <div class="links-title"> Useful links</div>
+          <div class="useful-link">
+            <a href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html" target="_blank">Sphinx Docs</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/Petlja/PetljaDoc/blob/master/README.md" target="_blank">Petljadoc</a></div>
+          <div class="useful-link">
+            <a href="https://github.com/RunestoneInteractive/overview" target="_blank">Runestone Interactive</a></div>
+          
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Курс вероватноће и статистике за средњу школу</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Table of content </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-4_lekcija>
+                    <h5>Комбинаторика</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../4_lekcija/1_lek.html><div class="studioLecture" id=activity-1_lek><i class="fas fa-file-alt activity-icon"></i>Комбинаторика - увод</div></a>
+                <a href=../4_lekcija/2_lek.html><div class="studioLecture" id=activity-2_lek><i class="fas fa-file-alt activity-icon"></i>Пермутације, варијације, комбинације</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-0_lekcija>
+                    <h5>Биномна формула</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../0_lekcija/1_binomna.html><div class="studioLecture" id=activity-1_binomna><i class="fas fa-file-alt activity-icon"></i>Биномна теорема</div></a>
+                <a href=../0_lekcija/2_b.html><div class="studioLecture" id=activity-2_b><i class="fas fa-file-alt activity-icon"></i>Биномни коефицијент</div></a>
+                <a href=../0_lekcija/3_b.html><div class="studioLecture" id=activity-3_b><i class="fas fa-file-alt activity-icon"></i>Формуле са биномним коефицијентима</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-2_lekcija>
+                    <h5>Подаци</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../2_lekcija/2_pod.html><div class="studioLecture" id=activity-2_pod><i class="fas fa-file-alt activity-icon"></i>Подаци</div></a>
+                <a href=../2_lekcija/3_stat.html><div class="studioLecture" id=activity-3_stat><i class="fas fa-file-alt activity-icon"></i>Дескриптивна статистика</div></a>
+                <a href=../2_lekcija/3_prim.html><div class="studioLecture" id=activity-3_prim><i class="fas fa-file-alt activity-icon"></i>Примена</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-3_lekcija>
+                    <h5>Вероватноћа</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../3_lekcija/0_uvod.html><div class="studioLecture" id=activity-0_uvod><i class="fas fa-file-alt activity-icon"></i>Кратка историја вероватноће</div></a>
+                <a href=../3_lekcija/1_lekcija.html><div class="studioLecture" id=activity-1_lekcija><i class="fas fa-file-alt activity-icon"></i>Емпиријска вероватноћа</div></a>
+                <a href=../3_lekcija/2_lekcija.html><div class="studioLecture" id=activity-2_lekcija><i class="fas fa-file-alt activity-icon"></i>Геометријска вероватноћа</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-6_lekcija>
+                    <h5>Случајне променљиве</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../6_lekcija/1_str.html><div class="studioLecture" id=activity-1_str><i class="fas fa-file-alt activity-icon"></i>Случајне променљиве</div></a>
+                <a href=../6_lekcija/2_str.html><div class="studioLecture" id=activity-2_str><i class="fas fa-file-alt activity-icon"></i>Дискретне случајне променљиве</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-7_lekcija>
+                    <h5>Условна вероватноћа</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../7_lekcija/1_deo.html><div class="studioLecture" id=activity-1_deo><i class="fas fa-file-alt activity-icon"></i>Условна вероватноћа, Бајесова формула и независни догађаји</div></a>
+                <a href=../7_lekcija/2_deo.html><div class="studioLecture" id=activity-2_deo><i class="fas fa-file-alt activity-icon"></i>Стабло вероватноће</div></a>
+                <a href=../7_lekcija/3_deo.html><div class="studioLecture" id=activity-3_deo><i class="fas fa-file-alt activity-icon"></i>Бернулијева шема</div></a>
+                <a href=../7_lekcija/4_deo.html><div class="studioLecture" id=activity-4_deo><i class="fas fa-file-alt activity-icon"></i>Условна вероватноћа</div></a>
+                <a href=../7_lekcija/5_deo.html><div class="studioLecture" id=activity-5_deo><i class="fas fa-file-alt activity-icon"></i>Потпуна вероватноћа</div></a>
+                <a href=../7_lekcija/6_deo.html><div class="studioLecture" id=activity-6_deo><i class="fas fa-file-alt activity-icon"></i>Бајесова формула</div></a>
+                <a href=../7_lekcija/7_deo.html><div class="studioLecture" id=activity-7_deo><i class="fas fa-file-alt activity-icon"></i>Резиме</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-1_lekcija>
+                    <h5>Статистика</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../1_lekcija/1_st.html><div class="studioLecture" id=activity-1_st><i class="fas fa-file-alt activity-icon"></i>Појам статистике и њени елементи</div></a>
+                <a href=../1_lekcija/2_st.html><div class="studioLecture" id=activity-2_st><i class="fas fa-file-alt activity-icon"></i>Дискретне случајне променљиве</div></a>
+                <a href=../1_lekcija/3_st.html><div class="studioLecture" id=activity-3_st><i class="fas fa-file-alt activity-icon"></i>Примена и значај статистике</div></a>
+                <a href=../1_lekcija/4_str.html><div class="studioLecture" id=activity-4_str><i class="fas fa-file-alt activity-icon"></i>Примена статистике у музици</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <section id="id1">
+<h1>Комнбинаторика и статистика<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<p>Биномни коефицијенти су од велике важности у комбинаторици јер нуде
+готове формуле за честе проблеме пребројавања:</p>
+<p>Сваки скуп са n поседује тачно <span class="math notranslate nohighlight">\(\binom{n}{k}\)</span> различитих подскупова
+који имају k елемената</p>
+<p>Број бинарних бројева дужине n које садрже k јединица и n − k нула је <span class="math notranslate nohighlight">\(\binom{n}{k}\)</span>.</p>
+<p>Број бинарних бројева који садрже k јединица и n нула тако да никоје две нису суседне је <span class="math notranslate nohighlight">\(\binom{n+1}{k}\)</span>.</p>
+<p>Број различитих секвенци од n природних бројева чији је укупни збир k је <span class="math notranslate nohighlight">\(\binom{n+k-1}{k}\)</span>;
+ово је такође број различитих начина да се из скупа са n елемената изабере k
+елемената уколико је дозвољено понављање.</p>
+<p>Биномни коефицијенти се појављују и у формули за биномну расподелу у статистици,
+као и у формули за <em>Безијерову криву</em>.</p>
+<section id="id2">
+<h2>Формуле са биномним коефицијентима<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<p>Следеће формуле могу бити корисне:</p>
+<p><span class="math notranslate nohighlight">\(C(n,k) = C(n,n-k)\)</span>
+Ово следи из развоја (2) користећи <span class="math notranslate nohighlight">\({(x + y)}^n = {(y + x)}^n,
+и огледа се у нумеричкој симетричности Паскаловог троугла.
+:math:\)</span>sum {k=0}^n C(n,k) = 2^n`</p>
+<p>Из развоја (2) стављајући x = y = 1. Види се и из Паскаловог троугла да је
+сума свих чланова једног реда једнака степену двојке.
+<span class="math notranslate nohighlight">\(\sum {k=1}^n \kC(n,k) = n \cdot 2^{n-1}\)</span></p>
+<p>Из развоја (2) после диференцирања и замењујући x = y = 1.</p>
+<p><span class="math notranslate nohighlight">\(\sum {j=0}^k \C(m,j)C(n,k-j) = C(m+n,k)\)</span></p>
+<p>Развијајући <span class="math notranslate nohighlight">\({(x + y)}^n \cdot {(x + y)}^m = {(x + y)}^{m+n} из (2) (C(n, k)
+је дефинисано као 0 за k &gt; n). Ова једначина генерализује (3).
+:math:\)</span>sum {k=0}^n C(n,k)^2 = C(2n,n)`</p>
+<p>Из развоја (7) стављајући m = k = n и користећи једначину (4).</p>
+<p><span class="math notranslate nohighlight">\(\sum {k=0}^n \C(n-k,k) = F(n+1)\)</span></p>
+<p>Овде, <span class="math notranslate nohighlight">\(F(n + 1)\)</span> представља Фибоначијеве бројеве.</p>
+<p><span class="math notranslate nohighlight">\(\sum {j=k}^n \C(j,k) = C(n+1,k+1)\)</span></p>
+<p>Ова једначина може бити доказана индукцијом по n користећи (3).</p>
+</section>
+<section id="id3">
+<h2>Генерализација са комплексним аргументом<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<p>Биномни коефицијент <span class="math notranslate nohighlight">\(\binom{z}{k}\)</span> може се дефинисати за било који
+комплексни број z и било који природни број k:</p>
+<p><span class="math notranslate nohighlight">\(\binom{z}{k} = \frac{1}{k!}\prod_{n=0}^{k-1} (z-n)= \frac{z \cdot (z-1) \cdot (z-2) \cdot \cdot \cdot (z-k+1)}{k!}\)</span></p>
+<p>Ова генерализација је позната као уопштени биномни коефицијент и користи се при
+формулацији биномне теореме, а задовољава и својства (3) и (7).</p>
+<p>За константно k, израз <span class="math notranslate nohighlight">\(\binom{z}{k}\)</span> је полином по z степена k
+са рационалним коефицијентима.
+Сваки полимом p(z) степена d може се написати у форми</p>
+<p><span class="math notranslate nohighlight">\(p(z) = \sum {k=0}^d a_k \binom{z}{k}\)</span></p>
+<p>са одговарајућим коефицијентима <span class="math notranslate nohighlight">\(a_k\)</span> .</p>
+<p>Ово је нарочито важно у теорији диференцијалних једначина и
+може се посматрати као дискретна аналогија <em>Тејлорове теореме</em>.</p>
+</section>
+<section id="id4">
+<h2>Границе биномних коефицијената<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
+<p>За биномни коефицијент <span class="math notranslate nohighlight">\(C(n, k)\)</span> важе следеће границе:</p>
+<p><span class="math notranslate nohighlight">\(\binom{n}{k} \le \frac{n^k}{k!}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\binom{n}{k} \le (\frac{n \cdot e}{k})^k\)</span></p>
+<p><span class="math notranslate nohighlight">\(\binom{n}{k} \ge (\frac{n}{k})^k\)</span></p>
+</section>
+</section>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="2_b.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Previous chapter </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Next chapter</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Letters</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>
